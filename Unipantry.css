@@ -1,8 +1,52 @@
+body {
+   background-color: rgb(40,40,40);
+}
+
 .topNav {
     background-color: rgb(93,188,210);
     margin-top: -6px;
     margin-left: -6px;
     margin-right: -6px;
+}
+
+.hook {
+    background-image: url("https://homepages.cae.wisc.edu/~ece533/images/tulips.png");
+    height: 580px;
+    margin-top: -50px;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.join {
+  background-color: rgb(92,201,178);
+  margin-top: -24px;
+  margin-left: -6px;
+  margin-right: -6px;
+  height: 65px;
+}
+.circle1 {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  float: left;
+  margin-left: 670px;
+}
+.circle2 {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(255,255,255,0.5);
+  border-radius: 50%;
+  float: left;
+  margin-left: 30px;
+}
+.circle3 {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(255,255,255,0.5);
+  border-radius: 50%;
+  float: left;
+  margin-left: 30px;
 }
 
 #logo {
@@ -37,14 +81,6 @@
     margin-bottom: 12px;
 }
 
-.hook {
-    background-image: url("https://homepages.cae.wisc.edu/~ece533/images/tulips.png");
-    height: 540px;
-    margin-top: -50px;
-    margin-left: -6px;
-    margin-right: -6px;
-}
-
 #line1 {
     text-align: center;
     font-size: 50px;
@@ -57,4 +93,21 @@
     font-size: 50px;
     color: white;
     margin-top: -40px;
+}
+
+#button01a {
+    width: 270px;
+    height: 50px;
+    margin-left: 580px;
+    margin-top: 12px;
+}
+
+#circles {
+   margin-top: 130px;
+}
+
+#joinlink {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 16px;
 }
