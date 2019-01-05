@@ -1,0 +1,19 @@
+{
+  "name": "unipantry",
+  "version": "1.0.0",
+  "description": "Repository marking changes made in the construction of the website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniPantry/UniPantry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UniPantry/UniPantry/issues"
+  },
+  "homepage": "https://github.com/UniPantry/UniPantry#readme"
+}
