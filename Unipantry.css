@@ -11,7 +11,9 @@ body {
 
 .hook {
     background-image: url("https://homepages.cae.wisc.edu/~ece533/images/tulips.png");
-    height: 580px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 500px;
     margin-top: -50px;
     margin-left: -6px;
     margin-right: -6px;
