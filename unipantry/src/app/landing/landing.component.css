@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+.topNav {
+    background-color: rgb(93, 188, 210);
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: -6px;
+}
+
+.hook {
+    background-image: url("https://homepages.cae.wisc.edu/~ece533/images/tulips.png");
+    height: 580px;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: -50px;
+}
+
+.join {
+    background-color: rgb(92, 201, 178);
+    height: 65px;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: -24px;
+}
+
+.circle1 {
+    background-color: white;
+    border-radius: 50%;
+    height: 15px;
+    margin-left: 750px;
+    width: 15px;
+}
+
+.circle2 {
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 50%;
+    height: 15px;
+    margin-left: 30px;
+    width: 15px;
+}
+
+.circle3 {
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 50%;
+    height: 15px;
+    margin-left: 30px;
+    width: 15px;
+}
+
+.circles {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 175px;
+}
+
+#line1 {
+    color: white;
+    font-size: 50px;
+    padding-top: 160px;
+    text-align: center;
+}
+
+#line2 {
+    color: white;
+    font-size: 50px;
+    margin-top: -40px;
+    text-align: center;
+}
+
+
+#joinlink {
+    font-size: 24px;
+    padding-top: 16px;
+    text-align: center;
+}
