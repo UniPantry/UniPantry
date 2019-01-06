@@ -27,27 +27,48 @@
 
   <div class="DormEssentials">
     <h1>Dorm Room Essentials</h1>
-    <button id="ViewAll">View All</button>
+    <div class="row justify-content-end" style="margin: 0px;">
+      <button class="btn btn-primary" type="button" style="margin-right: 60px;">View All ></button>
+    </div>
+    <app-card-carousel></app-card-carousel> 
   </div>
   <div class="NewYear">
     <h1>New Year, New You</h1>
-    <button id="ViewAll">View All</button>
+    <div class="row justify-content-end" style="margin: 0px;">
+      <button class="btn btn-primary" type="button" style="margin-right: 60px;">View All ></button>
+    </div>
   </div>
   <div class="DormEssentials">
     <h1>Tine to Restock</h1>
-    <button id="ViewAll">View All</button>
+    <div class="row justify-content-end" style="margin: 0px;">
+      <button class="btn btn-primary" type="button" style="margin-right: 60px;">View All ></button>
+    </div>
   </div>
   <app-browse-all></app-browse-all>
-</body> 
-<footer>
-  <button>Home</button>
-  <button>About</button>
-  <button>Contact Us</button>
-  <button>Log In</button>
-  <button>Sign Up</button>
-  <div>
-    <h1>UniPantry</h1>
-  </div>
-</footer>
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-bottom">
+    <div class="container">
+      <div class="d-flex flex-column align-items-start w-100">
+        <ul class="navbar-nav centered-nav">
+          <li class="nav-item active footer-link">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item active footer-link">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item active footer-link">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item active footer-link">
+            <a class="nav-link" href="#">Log In</a>
+          </li>
+          <li class="nav-item active footer-link">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+        </ul>
+        <div class="nav-link centered-nav my-5" style="font-size: 36px;">UniPantry</div>
+      </div>
+    </div>
+  </nav>
+</body>
 
 </html>
