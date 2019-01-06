@@ -1,0 +1,124 @@
+<div class="container-fluid">
+        <div id="carousel-2" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row mx-auto" style="width: 82.5%;">
+            <div class="carousel-item col-sm-3 active">
+              <div class="card material-elevation mdc-elevation--z15">
+                <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-title">1 lb.</p>
+                  <p class="card-text">Fuji Apples</p>
+                  <p class="card-text" style="color: blue">$1.19 <del style="color:gray">$1.49</del></p>
+                  <button class="btn btn-primary btn-large" type="button" style="background-color: orange; border: none; display: block;">
+                    Sign Up to Order Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-sm-3">
+              <div class="card material-elevation mdc-elevation--z15">
+                <img class="card-img-top img-fluid" [src]="images[1]" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-title">1 Ct.</p>
+                    <p class="card-text">Brita Water Filter</p>
+                    <p class="card-text" style="color: blue">$1.19 <del style="color:gray">$1.49</del></p>
+                    <button class="btn btn-primary btn-large" type="button" style="background-color: orange; border: none; display: block;">
+                      Sign Up to Order Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-sm-3">
+              <div class="card material-elevation mdc-elevation--z15">
+                <img class="card-img-top img-fluid" [src]="images[2]" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-title">15.1 Oz.</p>
+                    <p class="card-text">Quaker Instant Oatmeal</p>
+                    <p class="card-text" style="color: blue">$1.19 <del style="color:gray">$1.49</del></p>
+                    <button class="btn btn-primary btn-large" type="button" style="background-color: orange; border: none; display: block;">
+                      Sign Up to Order Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-sm-3">
+              <div class="card material-elevation mdc-elevation--z15">
+                <img class="card-img-top img-fluid" [src]="images[3]" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-title">8 Pack - 12 Oz. Bottles</p>
+                    <p class="card-text">Dasani Water</p>
+                    <p class="card-text" style="color: blue">$1.19 <del style="color:gray">$1.49</del></p>
+                    <button class="btn btn-primary btn-large" type="button" style="background-color: orange; border: none; display: block;">
+                      Sign Up to Order Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-sm-3">
+              <div class="card material-elevation mdc-elevation--z15">
+                <img class="card-img-top img-fluid" [src]="images[4]" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-title">21.2 Oz. - 4-Pack</p>
+                    <p class="card-text">Activia Greek Vanilla Nonfat Yogurt</p>
+                    <p class="card-text" style="color: blue">$1.19 <del style="color:gray">$1.49</del></p>
+                    <button class="btn btn-primary btn-large" type="button" style="background-color: orange; border: none; display: block;">
+                      Sign Up to Order Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-sm-3">
+              <div class="card material-elevation mdc-elevation--z15">
+                <img class="card-img-top img-fluid" [src]="images[5]" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-title">24 Oz.</p>
+                    <p class="card-text">Arnold Whole Grain Classic</p>
+                    <p class="card-text" style="color: blue">$1.19 <del style="color:gray">$1.49</del></p>
+                    <button class="btn btn-primary btn-large" type="button" style="background-color: orange; border: none; display: block;">
+                      Sign Up to Order Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-sm-3">
+              <div class="card material-elevation mdc-elevation--z15">
+                <img class="card-img-top img-fluid" [src]="images[6]" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-title">6 Oz</p>
+                    <p class="card-text">Smartfood White Cheddar Popcorn</p>
+                    <p class="card-text" style="color: blue">$1.19 <del style="color:gray">$1.49</del></p>
+                    <button class="btn btn-primary btn-large" type="button" style="background-color: orange; border: none; display: block;">
+                      Sign Up to Order Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-control-prev">
+            <a class="material-icons" style="font-size: 100px; margin-right: 50px; text-decoration: none;" href="#carousel-2" role="button" data-slide="prev" aria-hidden="true">chevron_left</a>
+            <span class="sr-only">Previous</span>
+          </div>
+          <div class="carousel-control-next">
+            <a class="material-icons" style="font-size: 100px; margin-left: 50px; text-decoration: none;" href="#carousel-2" role="button" data-slide="next" aria-hidden="true">chevron_right</a>
+            <span class="sr-only">Next</span>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function () {
+          $("#carousel-2").on("slide.bs.carousel", function (e) {
+            var $e = $(e.relatedTarget);
+            var idx = $e.index();
+            var itemsPerSlide = 4;
+            var totalItems = $(".carousel-item").length;
+      
+            if (idx >= totalItems - (itemsPerSlide - 1)) {
+              var it = itemsPerSlide - (totalItems - idx);
+              for (var i = 0; i < it; i++) {
+                // append slides to end
+                if (e.direction == "left") {
+                  $(".carousel-item")
+                    .eq(i)
+                    .appendTo(".carousel-inner");
+                } else {
+                  $(".carousel-item")
+                    .eq(0)
+                    .appendTo($(this).find(".carousel-inner"));
+                }
+              }
+            }
+          });
+        });
+      </script>

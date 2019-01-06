@@ -118,13 +118,17 @@ footer div {
 }
 
 .centered-nav {
-	float:none; 
-	margin:0 auto; 
-	display: block; 
+	float: none;
+	margin: 0 auto;
+	display: block;
 	text-align: center;
 }
 
 .footer-link {
-	display: inline-block; 
+	display: inline-block;
 	float: none;
+}
+
+.carousels {
+	margin-top: 100px;
 }

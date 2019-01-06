@@ -7,7 +7,10 @@ import { LandingComponent } from './landing/landing.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingCarouselComponent } from './landing/landing-carousel.component';
 import { BrowseAllComponent } from './landing/landing-browse-all.component';
-import { CardCarouselComponent } from './card-carousel/card-carousel.component';
+import { CardCarousel1Component } from './card-carousel/card-carousel-1.component';
+import { CardCarousel2Component } from './card-carousel/card-carousel-2.component';
+import { CardCarousel3Component } from './card-carousel/card-carousel-3.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { CardCarouselComponent } from './card-carousel/card-carousel.component';
     LandingComponent,
     LandingCarouselComponent,
     BrowseAllComponent,
-    CardCarouselComponent
+    CardCarousel1Component,
+    CardCarousel2Component,
+    CardCarousel3Component,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
