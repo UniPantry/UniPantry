@@ -1,50 +1,53 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>UniPantry</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Landing</title>
 </head>
-<div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
 
-  <body>
-    <nav class="navbar navbar-expand-xl navbar-dark" style="background-color: rgb(93, 188, 210);">
-      <div class="row" style="width: 100%;">
-        <div class="col-3">
-          <a class="navbar-brand" href="#">UniPantry</a>
-        </div>
-        <div class="col-5"></div>
-        <div class="col-4">
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Buy a Gift Card</a>
-              </li>
-              <li class="nav-item" style="padding-left: 10px;">
-                <a class="nav-link" href="#">Log In</a>
-              </li>
-              <form class="form-inline" style="padding-left: 10px;">
-                <button class="btn btn-warning btn-large" type="button">Sign Up For Free</button>
-              </form>
-            </ul>
-          </div>
-        </div>
-      </div>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top justify-content-end">
+      <a class="navbar-brand" href="#">
+        UniPantry
+        <!-- <img src="logo.jpg" alt="Logo" style="width:40px;"> -->
+      </a>
+      <a class="nav-link active ml-auto" href="#">
+        <i class="material-icons" id="redeem">redeem</i> Buy a Gift Card</a>
+      <a class="nav-link active" href="#">Log In</a>
+      <button class="btn btn-primary" href="#" id="signup">Sign Up For Free</button>
     </nav>
-    <div class="hook">
-      <p id="line1">Everything You Need,</p>
-      <p id="line2">Delivered Right To Your Doorstep</p>
-      <button class="btn btn-light btn-large" type="button" style="display:block; margin-left: auto; margin-right: auto;"> See How It Works! ></button>
-      <div class="circles" class="row">
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-        <div class="circle3"></div>
-      </div>
-    </div>
+    <app-landing-carousel></app-landing-carousel>
     <div class="join">
-      <p id='joinlink'> <a href='https://www.google.com'>Join today</a> and get your first month free!</p>
+      <p id="joinlink"> <a id="joinlink" href='#'>Join today</a> and get your first month free!</p>
     </div>
-  </body>
-</div>
+  </div>
+
+  <div class="DormEssentials">
+    <h1>Dorm Room Essentials</h1>
+    <button id="ViewAll">View All</button>
+  </div>
+  <div class="NewYear">
+    <h1>New Year, New You</h1>
+    <button id="ViewAll">View All</button>
+  </div>
+  <div class="DormEssentials">
+    <h1>Tine to Restock</h1>
+    <button id="ViewAll">View All</button>
+  </div>
+  <app-browse-all></app-browse-all>
+</body> 
+<footer>
+  <button>Home</button>
+  <button>About</button>
+  <button>Contact Us</button>
+  <button>Log In</button>
+  <button>Sign Up</button>
+  <div>
+    <h1>UniPantry</h1>
+  </div>
+</footer>
 
 </html>

@@ -1,0 +1,27 @@
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+        <img [src]="images[0]" alt="First slide">
+        <div class="carousel-caption">
+            <h1>Everything You Need,</h1>
+            <h1>Delivered Right to Your Doorstep</h1>
+            <button class="btn btn-light btn-large" type="button" style="color: orange; display: block; margin-left: auto; margin-right: auto;">
+                See How It Works! ></button>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <img [src]="images[1]" alt="Second slide">
+        <div class="carousel-caption">
+            <h1>Second slide label</h1>
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <button class="btn btn-light btn-large" type="button" style="color: orange; display: block; margin-left: auto; margin-right: auto;">
+                    See Why Students Love UniPantry ></button>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <img [src]="images[2]" alt="Third slide">
+        <div class="carousel-caption">
+            <h1>Third slide label</h1>
+            <h1>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</h1>
+        </div>
+    </ng-template>
+</ngb-carousel>
