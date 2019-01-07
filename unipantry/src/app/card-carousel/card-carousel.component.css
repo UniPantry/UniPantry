@@ -60,3 +60,39 @@
     perspective: 1000px;
   }
 }
+
+#left-chevron {
+  color: turquoise;
+  font-size: 100px;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+#right-chevron {
+  color: turquoise;
+  font-size: 100px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+#signup-btn {
+  background-color: orange;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#price {
+  color: turquoise;
+  font-size: 21px;
+}
+
+#item {
+  font-weight: 500; 
+  font-size: 16px;
+}
+
+.card-title {
+  margin-bottom: 0px;
+}

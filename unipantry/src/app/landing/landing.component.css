@@ -2,11 +2,6 @@
 	padding: 0px;
 }
 
-.join {
-	background-color: rgba(0, 173, 255, 0.54);
-	height: 65px;
-}
-
 .nav-link {
 	color: white;
 	font-size: 22px;
@@ -23,11 +18,18 @@
 	font-size: 22px;
 }
 
-#joinlink {
+.join {
+	background-color: turquoise;
 	color: white;
 	font-size: 24px;
-	padding-top: 16px;
+	height: 85px;
+	padding-top: 24px;
 	text-align: center;
+}
+
+#joinlink {
+	color: white;
+	text-decoration: underline;
 }
 
 #redeem {
@@ -39,33 +41,11 @@
 
 #signup {
 	background-color: orange;
+	border-color: orange;
 	font-size: 22px;
 	margin-bottom: 5px;
 	margin-right: 50px;
 	margin-top: 5px;
-}
-
-#a1 {
-	color: orange;
-	background-color: white;
-	height: 70px;
-	width: 40%;
-	margin-left: 30%;
-	margin-right: 30%;
-	text-align: center;
-}
-
-#divider {
-	color: white;
-	background-color: teal;
-	text-align: center;
-}
-
-#ViewAll {
-	background-color: rgb(0, 255, 255);
-	color: white;
-	text-align: center;
-	float: right;
 }
 
 .Browse {
@@ -78,15 +58,6 @@
 
 .Browse button {
 	margin: 50px;
-}
-
-.TooBusy button {
-	background-color: teal;
-	color: white;
-}
-
-.TooBusy {
-	width: 100%;
 }
 
 footer {
@@ -113,7 +84,7 @@ footer div {
 }
 
 #chevron {
-	color: rgba(0, 173, 255, 0.54);
+	color: turquoise;
 	vertical-align: middle;
 }
 
@@ -131,4 +102,56 @@ footer div {
 
 .carousels {
 	margin-top: 100px;
+}
+
+.carousel-caption {
+	bottom: 80px;
+}
+
+#carousel-btn-1 {
+	color: orange;
+	display: block;
+	font-size: 22px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 11px 22px;
+}
+
+#carousel-btn-2 {
+	background-color: orange;
+	border-color: orange;
+	font-size: 22px;
+	padding: 11px 22px;
+}
+
+#carousel-btn-3 {
+	color: orange;
+	font-size: 22px;
+	margin-left: 50px;
+	padding: 11px 22px;
+}
+
+#carousel-icon {
+	font-size: 80px;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+
+.carousel-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: start
+}
+
+#view-all {
+	margin-right: 175px;
+	background-color: turquoise;
+	border-color: turquoise;
+}
+
+#too-busy {
+	background-color: turquoise;
+	border-color: turquoise;
+	font-size: 22px;
 }
