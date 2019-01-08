@@ -16,7 +16,7 @@ export class CardCarousel3Component {
 
 $(document).ready(function () {
   $('#carousel-3').on('slide.bs.carousel', function (e) {
-    const $e = $(e.relatedTarget);
+    const $e = $((e as any).relatedTarget);
     const idx = $e.index();
     const itemsPerSlide = 4;
     const totalItems = 7;
@@ -24,7 +24,7 @@ $(document).ready(function () {
       const it = itemsPerSlide - (totalItems - idx);
       for (let i = 0; i < it; i++) {
         // append slides to end
-        if (e.direction === 'left') {
+        if ((e as any).direction === 'left') {
           $('#c3')
             .eq(i)
             .appendTo('.inner-3');
