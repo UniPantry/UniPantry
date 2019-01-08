@@ -71,7 +71,7 @@ footer div {
 }
 
 .carousels {
-	margin-top: 100px;
+	margin-top: 125px;
 }
 
 #carousel-btn-1 {
@@ -113,7 +113,9 @@ footer div {
 #view-all {
 	margin-right: 175px;
 	background-color: #0BCDB2;
-	border-color: #0BCDB2;
+  border-color: #0BCDB2;
+  font-size: 18px;
+  width: 125px;
 }
 
 #too-busy {
@@ -251,4 +253,9 @@ footer div {
 
 .browse-all-card {
 	width: 225px;
+}
+
+.nav-logo {
+	margin-left: 25px;
+	width: 160px;
 }

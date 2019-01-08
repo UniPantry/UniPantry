@@ -1,0 +1,190 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-sm navbar-dark justify-content-end material-elevation mdc-elevation--z16">
+    <a class="navbar-brand" href="#">
+      UniPantry
+      <!-- <img src="logo.jpg" alt="Logo" style="width:40px;"> -->
+    </a>
+    <a class="nav-link active ml-auto" href="#">
+      <!-- Search form -->
+      <form class="form-inline">
+        <i id="searchbar" class="fas fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+      </form>
+    </a>
+    <a class="nav-link active" href="#">Refer a Friend</a>
+    <a class="btn btn-primary" href="#" id="signup">My Account</a>
+  </nav>
+  <nav class="navbar navbar-expand-sm navbar-dark justify-content-end material-elevation mdc-elevation--z16" id="secnavbar">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Shop By Category
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Shop Lists
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+    <p id="secGiftCard">Gift Card</p>
+    <a class="nav-link active ml-auto" href="#">
+      <i class="material-icons" id="redeem">redeem</i></a>
+    <a class="btn btn-primary" href="#" id="signup">Your Cart</a>
+  </nav>
+</div>
+<div class="row justify-content-between" style="margin-bottom: 25px; margin-left: 0px; margin-right: 0px;">
+  <h3 style="margin-left: 405px; margin-top: 30px">All Products</h3>
+  <p id="sort">Sort By:</p>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Popularity
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</div>
+<div class="cards">
+  <div class="row1">
+    <div class="card material-elevation mdc-elevation--z7" id="card1">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+    <div class="card material-elevation mdc-elevation--z7" id="card2">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+    <div class="card material-elevation mdc-elevation--z7" id="card3">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+    <div class="card material-elevation mdc-elevation--z7" id="card4">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="row2">
+    <div class="card material-elevation mdc-elevation--z7" id="card5">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+    <div class="card material-elevation mdc-elevation--z7" id="card6">
+      <img class="card-img-top img-fluid" [src]="images[1]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 Ct.</p>
+        <p class="card-text" id="item">Brita Water Filter</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+    <div class="card material-elevation mdc-elevation--z7" id="card7">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+    <div class="card material-elevation mdc-elevation--z7" id="card8">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="row3">
+    <div class="card material-elevation mdc-elevation--z7" id="card9">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+    <div class="card material-elevation mdc-elevation--z7" id="card10">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+    <div class="card material-elevation mdc-elevation--z7" id="card11">
+      <img class="card-img-top img-fluid" [src]="" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+    <div class="card material-elevation mdc-elevation--z7" id="card12">
+      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">1 lb.</p>
+        <p class="card-text" id="item">Fuji Apples</p>
+        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+        <button class="btn btn-primary btn-large" id="signup-btn" type="button">
+          Sign Up to Order Now</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<app-footer></app-footer>

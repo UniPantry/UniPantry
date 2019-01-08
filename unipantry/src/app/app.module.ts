@@ -15,6 +15,10 @@ import { PaywallModalComponent } from './paywall-modal/paywall-modal.component';
 import * as $ from 'jquery';
 import { LoggedInLandingComponent } from './logged-in-landing/logged-in-landing.component';
 import { LoggedInBrowseAllComponent } from './logged-in-landing/logged-in-browse-all.component';
+import { BrowseComponent } from './browse/browse.component';
+import { LoggedInCardCarousel1Component } from './logged-in-card-carousel/logged-in-card-carousel-1.component';
+import { LoggedInCardCarousel2Component } from './logged-in-card-carousel/logged-in-card-carousel-2.component';
+import { LoggedInCardCarousel3Component } from './logged-in-card-carousel/logged-in-card-carousel-3.component';
 
 
 
@@ -30,7 +34,11 @@ import { LoggedInBrowseAllComponent } from './logged-in-landing/logged-in-browse
     FooterComponent,
     PaywallModalComponent,
     LoggedInLandingComponent,
-    LoggedInBrowseAllComponent
+    LoggedInBrowseAllComponent,
+    BrowseComponent,
+    LoggedInCardCarousel1Component,
+    LoggedInCardCarousel2Component,
+    LoggedInCardCarousel3Component
   ],
   imports: [
     BrowserModule,
