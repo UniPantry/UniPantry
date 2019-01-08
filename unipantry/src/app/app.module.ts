@@ -13,6 +13,9 @@ import { CardCarousel3Component } from './card-carousel/card-carousel-3.componen
 import { FooterComponent } from './footer/footer.component';
 import { PaywallModalComponent } from './paywall-modal/paywall-modal.component';
 import * as $ from 'jquery';
+import { LoggedInLandingComponent } from './logged-in-landing/logged-in-landing.component';
+import { LoggedInBrowseAllComponent } from './logged-in-landing/logged-in-browse-all.component';
+
 
 
 @NgModule({
@@ -25,7 +28,9 @@ import * as $ from 'jquery';
     CardCarousel2Component,
     CardCarousel3Component,
     FooterComponent,
-    PaywallModalComponent
+    PaywallModalComponent,
+    LoggedInLandingComponent,
+    LoggedInBrowseAllComponent
   ],
   imports: [
     BrowserModule,

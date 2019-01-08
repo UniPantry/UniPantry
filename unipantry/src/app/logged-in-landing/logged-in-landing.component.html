@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Logged In Landing</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-sm navbar-dark justify-content-end material-elevation mdc-elevation--z16">
+      <a class="navbar-brand" href="#">
+        UniPantry
+        <!-- <img src="logo.jpg" alt="Logo" style="width:40px;"> -->
+      </a>
+      <div class="col-3">
+        <input id="nav-search" class="form-control mr-md-2" type="search" placeholder="&#xF002; Search all products"
+          aria-label="Search">
+      </div>
+      <a class="nav-link active ml-auto" href="#">Refer a Friend</a>
+      <a class="nav-link active" href="#">My Account</a>
+    </nav>
+    <nav class="navbar navbar-expand-sm navbar-light justify-content-end material-elevation mdc-elevation--z7" style="background: white; height: 60px;">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown has-megamenu">
+            <a class="btn btn-secondary btn-lg dropdown-toggle category" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Shop By Category
+            </a>
+            <div class="dropdown-menu category-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="column">
+                    <a class="dropdown-item disabled" href="#"><strong>Groceries</strong></a>
+                    <a class="dropdown-item disabled" href="#">Produce</a>
+                    <a class="dropdown-item disabled" href="#">Meat & Fish</a>
+                    <a class="dropdown-item disabled" href="#">Bakery</a>
+                    <a class="dropdown-item disabled" href="#">Dairy & Eggs</a>
+                    <a class="dropdown-item disabled" href="#">Beverages</a>
+                    <a class="dropdown-item disabled" href="#">Snacks</a>
+                    <a class="dropdown-item disabled" href="#">Packaged Foods</a>
+                    <a class="dropdown-item disabled" href="#">Frozen Foods</a>
+                    <a class="dropdown-item disabled" href="#">Baking Supplies</a>
+                    <a class="dropdown-item disabled" href="#">Specialty & Allergy-Friendly</a>
+                  </div>
+                  <div>
+                    <a class="dropdown-item disabled" href="#"><strong>Personal Care</strong></a>
+                    <a class="dropdown-item disabled" href="#">Hygiene</a>
+                    <a class="dropdown-item disabled" href="#">Health</a>
+                    <a class="dropdown-item disabled" href="#">Paper Goods</a>
+                    <a class="dropdown-item disabled" href="#">Cleaning Supplies</a>
+                    <a class="dropdown-item disabled" href="#">Laundry Supplies</a>
+                    <br>
+                    <a class="dropdown-item disabled" href="#"><strong>Browse All Products</strong></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="btn btn-secondary btn-lg dropdown-toggle shop-lists" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Shop Lists
+            </a>
+            <div class="dropdown-menu lists-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item disabled" href="#"><strong>My Lists</strong></a>
+              <a class="dropdown-item disabled" href="#"><strong>Premade Lists</strong></a>
+            </div>
+
+          </li>
+          <a class="nav-link active" href="#" id="gift-cards">Gift Cards<i class="material-icons" id="redeem">redeem</i></a>
+        </ul>
+        <a class="nav-link active ml-auto" id="cart-btn" href="#"><i class="material-icons" id="cart">shopping_cart</i>Your
+          Cart</a>
+      </div>
+    </nav>
+    <div class="alert alert-dismissible fade show" role="alert">
+        Want to earn some extra $? <a href="#" id="refer-link">Refer your friends to UniPantry!</a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+  </div>
+
+  <div class="carousels">
+    <div class="row justify-content-between" style="margin-bottom: 25px; margin-left: 0px; margin-right: 0px;">
+      <h3 style="margin-left: 165px;">Dorm Room Essentials</h3>
+      <button class="btn btn-primary" type="button" id="view-all" data-toggle="modal" data-target="#paywallModal">View
+        All ></button>
+    </div>
+    <app-card-carousel-1></app-card-carousel-1>
+  </div>
+  <div class="carousels">
+    <div class="row justify-content-between" style="margin-bottom: 25px; margin-left: 0px; margin-right: 0px;">
+      <h3 style="margin-left: 165px;">New Year, New You</h3>
+      <button class="btn btn-primary" type="button" id="view-all" data-toggle="modal" data-target="#paywallModal">View
+        All ></button>
+    </div>
+    <app-card-carousel-2></app-card-carousel-2>
+  </div>
+  <div class="carousels">
+    <div class="row justify-content-between" style="margin-bottom: 25px; margin-left: 0px; margin-right: 0px;">
+      <h3 style="margin-left: 165px;">Time to Restock</h3>
+      <button class="btn btn-primary" type="button" id="view-all" data-toggle="modal" data-target="#paywallModal">View
+        All ></button>
+    </div>
+    <app-card-carousel-3></app-card-carousel-3>
+  </div>
+  <app-logged-in-browse-all></app-logged-in-browse-all>
+  <app-footer></app-footer>
+</body>
+
+</html>

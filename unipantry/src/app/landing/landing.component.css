@@ -11,7 +11,7 @@
 }
 
 .navbar {
-	background-color: rgba(0, 173, 255, 0.54);
+	background-color: #0CB7CC;
 }
 
 .navbar-brand {
@@ -19,7 +19,7 @@
 }
 
 .join {
-	background-color: turquoise;
+	background-color: #0BCDB2;
 	color: white;
 	font-size: 24px;
 	height: 85px;
@@ -40,8 +40,8 @@
 }
 
 #signup {
-	background-color: orange;
-	border-color: orange;
+	background-color: #F89833;
+	border-color: #F89833;
 	font-size: 22px;
 	margin-bottom: 5px;
 	margin-right: 50px;
@@ -77,14 +77,8 @@ footer div {
 	color: White;
 }
 
-.card-title {
-	color: black;
-	font-size: 18px;
-	font-weight: 500;
-}
-
 #chevron {
-	color: turquoise;
+	color: #0BCDB2;
 	vertical-align: middle;
 }
 
@@ -105,11 +99,12 @@ footer div {
 }
 
 .carousel-caption {
-	bottom: 80px;
+	bottom: 150px;
+	text-shadow: 1px 1px #000000;
 }
 
 #carousel-btn-1 {
-	color: orange;
+	color: #F89833;
 	display: block;
 	font-size: 22px;
 	margin-left: auto;
@@ -118,14 +113,14 @@ footer div {
 }
 
 #carousel-btn-2 {
-	background-color: orange;
-	border-color: orange;
+	background-color: #F89833;
+	border-color: #F89833;
 	font-size: 22px;
 	padding: 11px 22px;
 }
 
 #carousel-btn-3 {
-	color: orange;
+	color: #F89833;
 	font-size: 22px;
 	margin-left: 50px;
 	padding: 11px 22px;
@@ -146,19 +141,19 @@ footer div {
 
 #view-all {
 	margin-right: 175px;
-	background-color: turquoise;
-	border-color: turquoise;
+	background-color: #0BCDB2;
+	border-color: #0BCDB2;
 }
 
 #too-busy {
-	background-color: turquoise;
-	border-color: turquoise;
+	background-color: #0BCDB2;
+	border-color: #0BCDB2;
 	font-size: 22px;
 }
 
 #paywall-btn-1 {
-	background-color: orange;
-	border-color: orange;
+	background-color: #F89833;
+	border-color: #F89833;
 	display: block;
 	font-size: 22px;
 	margin-bottom: 20px;
@@ -168,11 +163,20 @@ footer div {
 }
 
 #paywall-btn-2 {
-	border-color: orange;
-	color: orange;
+	border-color: #F89833;
+	color: #F89833;
 	display: block;
 	font-size: 22px;
 	margin-bottom: 20px;
 	padding: 11px 22px;
 	width: 100%;
+}
+
+.browse-all-card {
+	width: 225px;
+}
+
+#carousel-img {
+	filter:contrast(50%);
+	height: 675px;
 }

@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./landing.component.css']
 })
 export class LandingCarouselComponent {
-  images = [1, 2, 3].map(() => `https://picsum.photos/1600/680?random&t=${Math.random()}`);
-
   constructor() {}
 }

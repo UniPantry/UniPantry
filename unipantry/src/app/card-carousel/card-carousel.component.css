@@ -62,21 +62,21 @@
 }
 
 #left-chevron {
-  color: turquoise;
+  color: #0BCDB2;
   font-size: 100px;
   margin-right: 50px;
   text-decoration: none;
 }
 
 #right-chevron {
-  color: turquoise;
+  color: #0BCDB2;
   font-size: 100px;
   margin-left: 50px;
   text-decoration: none;
 }
 
 #signup-btn {
-  background-color: orange;
+  background-color: #F89833;
   border: none;
   display: block;
   margin-left: auto;
@@ -84,7 +84,7 @@
 }
 
 #price {
-  color: turquoise;
+  color: #0BCDB2;
   font-size: 21px;
 }
 

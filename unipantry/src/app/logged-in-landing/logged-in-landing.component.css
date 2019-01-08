@@ -1,0 +1,254 @@
+.container-fluid {
+	padding: 0px;
+}
+
+.nav-link {
+	color: white;
+	font-size: 22px;
+	margin-bottom: 5px;
+	margin-right: 50px;
+	margin-top: 5px;
+}
+
+.navbar {
+	background-color: #0CB7CC;
+}
+
+.navbar-brand {
+	font-size: 22px;
+}
+
+.Browse {
+	float: center;
+	text-align: justify;
+	padding: 1.2em 1em 0;
+	margin: 1em;
+	border-radius: 0.25em;
+}
+
+.Browse button {
+	margin: 50px;
+}
+
+footer {
+	background-color: black;
+}
+
+footer button {
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+}
+
+footer div {
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+	color: White;
+}
+
+.card-title {
+	color: black;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+#chevron {
+	color: #0BCDB2;
+	vertical-align: middle;
+}
+
+.centered-nav {
+	float: none;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+
+.footer-link {
+	display: inline-block;
+	float: none;
+}
+
+.carousels {
+	margin-top: 100px;
+}
+
+#carousel-btn-1 {
+	color: #F89833;
+	display: block;
+	font-size: 22px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 11px 22px;
+}
+
+#carousel-btn-2 {
+	background-color: #F89833;
+	border-color: #F89833;
+	font-size: 22px;
+	padding: 11px 22px;
+}
+
+#carousel-btn-3 {
+	color: #F89833;
+	font-size: 22px;
+	margin-left: 50px;
+	padding: 11px 22px;
+}
+
+#carousel-icon {
+	font-size: 80px;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+
+.carousel-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: start
+}
+
+#view-all {
+	margin-right: 175px;
+	background-color: #0BCDB2;
+	border-color: #0BCDB2;
+}
+
+#too-busy {
+	background-color: #0BCDB2;
+	border-color: #0BCDB2;
+	font-size: 22px;
+}
+
+#nav-search {
+	background: lightblue;
+	color: white;
+	font-family: FontAwesome, Arial;
+	font-style: normal;
+	font-weight: 500;
+	vertical-align: center;
+}
+
+::placeholder {
+	color: #0CB7CC;
+	font-weight: 500;
+}
+
+.shop-lists::after {
+	color: #0BCDB2;
+}
+
+.dropdown:hover>.dropdown-menu {
+	display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+	pointer-events: none;
+}
+
+.category {
+	background: #0BCDB2;
+	border: #0BCDB2;
+	color: white;
+	height: 35px;
+	margin-left: 35px;
+	margin-right: 30px;
+	margin-top: 8px;
+	padding-top: 3px;
+}
+
+.dropdown.has-megamenu {
+	position: static;
+}
+
+.category-menu {
+	background: white;
+	border-color: #0BCDB2;
+	border-style: solid;
+	border-width: 3px;
+	margin-top: -18px;
+	margin-left: 51px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 200px;
+}
+
+.disabled{
+	color: black;
+}
+
+.shop-lists {
+	background: white;
+	border: white;
+	color: black;
+	height: 35px;
+	margin-top: 8px;
+	margin-right: 30px;
+	padding-top: 3px;
+}
+
+.lists-menu {
+	background: white;
+	border-color: #0BCDB2;
+	border-style: solid;
+	border-width: 3px;
+	margin-top: -12px;
+	padding-bottom: 10px;
+}
+
+#gift-cards {
+	color: black;
+	height: 35px;
+	font-size: 20px;
+	margin-top: 8px;
+	padding-top: 3px;
+}
+
+#redeem {
+	color: #0BCDB2;
+	height: 20px;
+	margin-bottom: 8px;
+	margin-left: 9px;
+	vertical-align: middle;
+	width: 20px;
+}
+
+#cart {
+	color: #0BCDB2;
+	height: 20px;
+	margin-bottom: 8px;
+	margin-right: 9px;
+	vertical-align: middle;
+	width: 20px;
+}
+
+#cart-btn {
+	background: white;
+	border-color: #0BCDB2;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	color: black;
+	font-size: 20px;
+	height: 35px;
+	margin-top: 7px;
+	padding-top: 3px;
+}
+
+.alert {
+	background: #0BCDB2;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+#refer-link {
+	color: white;
+	text-decoration: underline;
+}
+
+.browse-all-card {
+	width: 225px;
+}
