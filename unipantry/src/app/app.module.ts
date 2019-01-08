@@ -19,6 +19,7 @@ import { BrowseComponent } from './browse/browse.component';
 import { LoggedInCardCarousel1Component } from './logged-in-card-carousel/logged-in-card-carousel-1.component';
 import { LoggedInCardCarousel2Component } from './logged-in-card-carousel/logged-in-card-carousel-2.component';
 import { LoggedInCardCarousel3Component } from './logged-in-card-carousel/logged-in-card-carousel-3.component';
+import { LoggedInLandingNavComponent } from './logged-in-landing-nav/logged-in-landing-nav.component';
 
 
 
@@ -38,7 +39,8 @@ import { LoggedInCardCarousel3Component } from './logged-in-card-carousel/logged
     BrowseComponent,
     LoggedInCardCarousel1Component,
     LoggedInCardCarousel2Component,
-    LoggedInCardCarousel3Component
+    LoggedInCardCarousel3Component,
+    LoggedInLandingNavComponent
   ],
   imports: [
     BrowserModule,
