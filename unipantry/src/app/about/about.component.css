@@ -1,0 +1,153 @@
+.container-fluid {
+  padding: 0px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 5px;
+  margin-right: 50px;
+  margin-top: 5px;
+}
+
+.navbar {
+  background-color: #0CB7CC;
+}
+
+.navbar-brand {
+  font-size: 22px;
+}
+
+.btn-primary {
+  background-color: #F89833;
+  border-color: #F89833;
+}
+
+.top-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.getup {
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 100px;
+  padding-top: 20px;
+  padding-bottom: 150px;
+  text-align: center;
+}
+
+.top-pic {
+  width: 100%;
+}
+
+.aboutTxt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  text-shadow: -1px 1px #000000
+}
+
+.join {
+  background-color: #0BCDB2;
+  color: white;
+  font-size: 24px;
+  height: 85px;
+  padding-top: 24px;
+  text-align: center;
+}
+
+#joinlink {
+  color: white;
+  text-decoration: underline;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  color: black;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 200;
+}
+
+.column1 {
+  float: left;
+  color: black;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 200;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+.hanpic {
+  display: block;
+  margin-left: auto;
+  margin-right: 0px;
+  margin-top: 40px;
+  width: 70%;
+}
+
+.hanpic2 {
+  display: block;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 40px;
+  width: 40%;
+}
+
+.head1 {
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.par1 {
+  font-size: 20px;
+}
+
+.head2 {
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.par2 {
+  font-size: 20px;
+}
+
+#carousel-btn-2 {
+  background-color: #F89833;
+  border-color: #F89833;
+  font-size: 22px;
+  padding: 11px 22px;
+}
+
+.nav-logo {
+	margin-left: 25px;
+	margin-right: 15px;
+	width: 160px;
+}
+
+#signup {
+	background-color: #F89833;
+	border-color: #F89833;
+	border-radius: 5px;
+	font-size: 22px;
+	margin-bottom: 5px;
+	margin-right: 50px;
+	margin-top: 5px;
+	width: 200px;
+}

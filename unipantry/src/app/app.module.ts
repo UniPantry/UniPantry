@@ -20,6 +20,11 @@ import { LoggedInCardCarousel1Component } from './logged-in-card-carousel/logged
 import { LoggedInCardCarousel2Component } from './logged-in-card-carousel/logged-in-card-carousel-2.component';
 import { LoggedInCardCarousel3Component } from './logged-in-card-carousel/logged-in-card-carousel-3.component';
 import { LoggedInLandingNavComponent } from './logged-in-landing-nav/logged-in-landing-nav.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { AboutComponent } from './about/about.component';
+import { TypeaheadComponent } from './typeahead/typeahead.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -40,12 +45,17 @@ import { LoggedInLandingNavComponent } from './logged-in-landing-nav/logged-in-l
     LoggedInCardCarousel1Component,
     LoggedInCardCarousel2Component,
     LoggedInCardCarousel3Component,
-    LoggedInLandingNavComponent
+    LoggedInLandingNavComponent,
+    ProductsComponent,
+    ProductDetailComponent,
+    AboutComponent,
+    TypeaheadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

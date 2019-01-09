@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark justify-content-end material-elevation mdc-elevation--z18" style="margin-bottom: 2px;">
   <img class="nav-logo" src="assets/images/Logos/UniPantry Logo.png" alt="Logo">
   <div class="col-3">
-    <input id="nav-search" class="form-control mr-md-2" type="search" placeholder="&#xF002; Search all products"
-      aria-label="Search">
+    <app-typeahead></app-typeahead>
   </div>
   <a class="nav-link active ml-auto" href="#">Refer a Friend</a>
   <a class="nav-link active" href="#">My Account</a>
@@ -39,7 +38,7 @@
                 <a class="dropdown-item disabled" href="#">Cleaning Supplies</a>
                 <a class="dropdown-item disabled" href="#">Laundry Supplies</a>
                 <br>
-                <a class="dropdown-item disabled" href="/browse"><strong>Browse All Products</strong></a>
+                <a class="dropdown-item disabled" routerLink="/browse"><strong>Browse All Products</strong></a>
               </div>
             </div>
           </div>

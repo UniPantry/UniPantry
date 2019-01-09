@@ -1,185 +1,61 @@
 <div class="container-fluid">
   <div id="carousel-2" class="carousel slide" data-ride="carousel" data-interval="false">
-    <div class="carousel-inner row mx-auto inner-1" style="overflow: visible; width: 82.5%;">
-      <div class="carousel-item col-sm-3 active" id="c2">
+    <div class="carousel-inner row mx-auto inner-2" style="overflow: visible; width: 82.5%;">
+      <div *ngFor="let product of newYearNewYou.slice(0,1)" (click)="onSelect(product)" class="carousel-item col-sm-3 active"
+        id="c2">
         <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+          <a data-toggle="modal" data-target="#detailModal" style="text-decoration: none; color: black;">
+            <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
+          </a>
           <div class="card-body">
-            <p class="card-title">1 lb.</p>
-            <p class="card-text" id="item">Fuji Apples</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <div class="row justify-content-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-                Add to Cart</button>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Save
-                </button>
-                <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Friendsgiving</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Monthly Order</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[1]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">1 Ct.</p>
-            <p class="card-text" id="item">Brita Water Filter</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+            <p class="card-title">{{product.weight | titlecase}}</p>
+            <p class="card-text" id="item">{{product.name | titlecase}}</p>
+            <p class="card-text" id="price">{{product.price | titlecase}}<del class="old-price">{{product.oldPrice
+                |
+                titlecase}}</del></p>
             <div class="row justify-content-center">
               <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
                 Add to Cart</button>
               <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Save </button>
                 <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Friendsgiving</a>
+                  <a class="dropdown-item">Friendsgiving</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Monthly Order</a>
+                  <a class="dropdown-item">Monthly Order</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Kathleen's Birthday</a>
+                  <a class="dropdown-item">Kathleen's Birthday</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
+                  <a class="dropdown-item" style="color: #F89833">+ New List</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="carousel-item col-sm-3" id="c2">
+      <div *ngFor="let product of newYearNewYou.slice(1)" (click)="onSelect(product)" class="carousel-item col-sm-3" id="c2">
         <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[2]" alt="Card image cap">
+          <a data-toggle="modal" data-target="#detailModal" style="text-decoration: none; color: black;">
+            <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
+          </a>
           <div class="card-body">
-            <p class="card-title">15.1 Oz.</p>
-            <p class="card-text" id="item">Quaker Instant Oatmeal</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
+            <p class="card-title">{{product.weight | titlecase}}</p>
+            <p class="card-text" id="item">{{product.name | titlecase}}</p>
+            <p class="card-text" id="price">{{product.price | titlecase}}<del class="old-price">{{product.oldPrice
+                |
+                titlecase}}</del></p>
             <div class="row justify-content-center">
               <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
                 Add to Cart</button>
               <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Save </button>
                 <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Friendsgiving</a>
+                  <a class="dropdown-item">Friendsgiving</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Monthly Order</a>
+                  <a class="dropdown-item">Monthly Order</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Kathleen's Birthday</a>
+                  <a class="dropdown-item">Kathleen's Birthday</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[3]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">8 Pack - 12 Oz. Bottles</p>
-            <p class="card-text" id="item">Dasani Water</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <div class="row justify-content-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-                Add to Cart</button>
-              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Save </button>
-                <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Friendsgiving</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Monthly Order</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[4]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">21.2 Oz. - 4-Pack</p>
-            <p class="card-text" id="item">Activia Greek Vanilla Yogurt</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <div class="row justify-content-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-                Add to Cart</button>
-              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Save </button>
-                <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Friendsgiving</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Monthly Order</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[5]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">24 Oz.</p>
-            <p class="card-text" id="item">Arnold Whole Grain Classic</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <div class="row justify-content-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-                Add to Cart</button>
-              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Save </button>
-                <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Friendsgiving</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Monthly Order</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[6]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">6 Oz</p>
-            <p class="card-text" id="item">Smartfood Popcorn</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <div class="row justify-content-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-                Add to Cart</button>
-              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Save </button>
-                <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Friendsgiving</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Monthly Order</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
+                  <a class="dropdown-item" style="color: #F89833">+ New List</a>
                 </div>
               </div>
             </div>
@@ -197,3 +73,4 @@
     </div>
   </div>
 </div>
+<app-product-detail [product]="selectedProduct"></app-product-detail>

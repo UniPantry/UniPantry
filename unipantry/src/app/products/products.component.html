@@ -1,0 +1,8 @@
+<h2>Products</h2>
+<ul>
+  <li *ngFor="let product of products" (click)="onSelect(product)" [class.selected]="product === selectedProduct">
+    <h2>{{product.name | titlecase}}</h2>
+  </li>
+</ul>
+
+<app-product-detail [product]="selectedProduct"></app-product-detail>

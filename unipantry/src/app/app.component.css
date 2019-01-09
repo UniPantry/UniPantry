@@ -5,3 +5,8 @@ div {
 button {
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
 }
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}

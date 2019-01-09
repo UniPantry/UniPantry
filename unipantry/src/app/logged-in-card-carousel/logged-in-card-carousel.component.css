@@ -132,3 +132,8 @@
   padding: 0px;
   text-align: center;
 }
+
+.old-price {
+  color:gray; 
+  margin-left: 10px;
+}

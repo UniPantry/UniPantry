@@ -1,0 +1,20 @@
+#paywall-btn-1 {
+	background-color: #F89833;
+	border-color: #F89833;
+	display: block;
+	font-size: 22px;
+	margin-bottom: 20px;
+	margin-top: 50px;
+	padding: 11px 22px;
+	width: 100%;
+}
+
+#paywall-btn-2 {
+	border-color: #F89833;
+	color: #F89833;
+	display: block;
+	font-size: 22px;
+	margin-bottom: 20px;
+	padding: 11px 22px;
+	width: 100%;
+}

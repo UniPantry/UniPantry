@@ -8,3 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'UniPantry';
 }
+
+$(document).ready(function() {
+  $(this).scrollTop(0);
+});

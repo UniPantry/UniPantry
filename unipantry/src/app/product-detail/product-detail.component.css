@@ -1,0 +1,142 @@
+#add-cart-btn {
+  background-color: #F89833;
+  border-color: #F89833;
+  border-radius: 5px;
+  margin-left: 40px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.save {
+  background: white;
+  border-color: #F89833;
+  border-radius: 5px;
+  color: #F89833;
+}
+
+.save::after {
+  color: #F89833;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  pointer-events: none;
+}
+
+.dropdown-divider {
+  color: #F89833;
+  border-color: #F89833;
+}
+
+.save-menu {
+  border-color: #F89833;
+  margin-top: -1px;
+}
+
+.dropdown-item {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0px;
+  text-align: center;
+}
+
+.weight {
+  margin-bottom: 0px;
+  margin-left: 40px;
+  margin-top: 55px;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.price {
+  color: #0CB7CC;
+  font-size: 30px;
+  margin-left: 40px;
+  margin-top: 35px;
+}
+
+.old-price {
+  color: gray;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 35px;
+}
+
+.image {
+  height: 450px;
+  padding-top: 40px;
+  padding-left: 40px;
+  width: 300px;
+}
+
+.allergens-title {
+  display: block;
+  font-size: 18px;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.ingredients-title {
+  font-size: 18px;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.allergens {
+  font-size: 14px;
+  padding-left: 40px;
+}
+
+.ingredients {
+  font-size: 14px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.increase {
+  background: #0BCDB2;
+  border: #0BCDB2;
+  border-radius: 5px;
+  color: white;
+  font-size: 28px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 40px;
+}
+
+.quantity {
+  background: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #0BCDB2;
+  color: black;
+  font-size: 20px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 60px;
+}
+
+.decrease {
+  background: #0BCDB2;
+  border: #0BCDB2;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 28px;
+  margin-bottom: 35px;
+  margin-left: 40px!important;
+  margin-top: 35px;
+  width: 40px;
+}

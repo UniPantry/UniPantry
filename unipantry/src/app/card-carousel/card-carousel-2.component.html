@@ -1,99 +1,40 @@
 <div class="container-fluid">
   <div id="carousel-2" class="carousel slide" data-ride="carousel" data-interval="false">
     <div class="carousel-inner row mx-auto inner-2" style="width: 82.5%;">
-      <div class="carousel-item col-sm-3 active" id="c2">
+      <div *ngFor="let product of newYearNewYou.slice(0,1)" (click)="onSelect(product)" class="carousel-item col-sm-3 active"
+        id="c2">
         <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
+          <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
           <div class="card-body">
-            <p class="card-title">1 lb.</p>
-            <p class="card-text" id="item">Fuji Apples</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal" type="button">
+            <p class="card-title">{{product.weight | titlecase}}</p>
+            <p class="card-text" id="item">{{product.name | titlecase}}</p>
+            <p class="card-text" id="price">{{product.price}}<del style="color:gray; margin-left: 10px;">{{product.oldPrice}}</del></p>
+            <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal"
+              type="button">
               Sign Up to Order Now</button>
           </div>
         </div>
       </div>
-      <div class="carousel-item col-sm-3" id="c2">
+      <div *ngFor="let product of newYearNewYou.slice(1)" (click)="onSelect(product)" class="carousel-item col-sm-3" id="c2">
         <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[1]" alt="Card image cap">
+          <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
           <div class="card-body">
-            <p class="card-title">1 Ct.</p>
-            <p class="card-text" id="item">Brita Water Filter</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal" type="button">
-              Sign Up to Order Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[2]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">15.1 Oz.</p>
-            <p class="card-text" id="item">Quaker Instant Oatmeal</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal" type="button">
-              Sign Up to Order Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[3]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">8 Pack - 12 Oz. Bottles</p>
-            <p class="card-text" id="item">Dasani Water</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal" type="button">
-              Sign Up to Order Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[4]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">21.2 Oz. - 4-Pack</p>
-            <p class="card-text" id="item">Activia Greek Vanilla Yogurt</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal" type="button">
-              Sign Up to Order Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[5]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">24 Oz.</p>
-            <p class="card-text" id="item">Arnold Whole Grain Classic</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal" type="button">
-              Sign Up to Order Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item col-sm-3" id="c2">
-        <div class="card material-elevation mdc-elevation--z7">
-          <img class="card-img-top img-fluid" [src]="images[6]" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-title">6 Oz</p>
-            <p class="card-text" id="item">Smartfood Popcorn</p>
-            <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-            <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal" type="button">
+            <p class="card-title">{{product.weight | titlecase}}</p>
+            <p class="card-text" id="item">{{product.name | titlecase}}</p>
+            <p class="card-text" id="price">{{product.price}}<del style="color:gray; margin-left: 10px;">{{product.oldPrice}}</del></p>
+            <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal"
+              type="button">
               Sign Up to Order Now</button>
           </div>
         </div>
       </div>
     </div>
     <div class="carousel-control-prev" style="height: 100px; top: 40%;">
-      <a class="material-icons" id="left-chevron" href="#carousel-2"
-        role="button" data-slide="prev" aria-hidden="true">chevron_left</a>
+      <a class="material-icons" id="left-chevron" href="#carousel-2" role="button" data-slide="prev" aria-hidden="true">chevron_left</a>
       <span class="sr-only">Previous</span>
     </div>
     <div class="carousel-control-next" style="height: 100px; top: 40%;">
-      <a class="material-icons" id="right-chevron" href="#carousel-2"
-        role="button" data-slide="next" aria-hidden="true">chevron_right</a>
+      <a class="material-icons" id="right-chevron" href="#carousel-2" role="button" data-slide="next" aria-hidden="true">chevron_right</a>
       <span class="sr-only">Next</span>
     </div>
   </div>

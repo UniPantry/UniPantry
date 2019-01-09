@@ -13,7 +13,7 @@
       <img class="nav-logo" src="assets/images/Logos/UniPantry Logo.png" alt="Logo">
       <a class="nav-link active ml-auto" href="#">
         <i class="material-icons" id="redeem">redeem</i> Buy a Gift Card</a>
-      <a class="nav-link active" href="/logged-in">Log In</a>
+      <a class="nav-link active" routerLink="/logged-in">Log In</a>
       <button class="btn btn-primary material-elevation mdc-elevation--z5" href="#" id="signup" data-toggle="modal" data-target="#paywallModal">Sign Up For
         Free</button>
     </nav>
@@ -22,28 +22,7 @@
       <p> <a id="joinlink" href='#'>Join today</a> and get your first month free!</p>
     </div>
   </div>
-  <div class="modal fade" id="paywallModal" tabindex="-1" role="dialog" aria-labelledby="paywallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content material-elevation mdc-elevation--z5">
-        <div class="modal-body">
-          <div class="row justify-content-center" style="margin-right: 0px; margin-left: 0px;">
-            <h4 style="margin-top: 25px;">Ready to get UP?</h4>
-            <h4 style="margin-top: 35px; text-align: center">Begin your 14-day free trial and enjoy FREE, unlimited<br>
-              2-day shipping on fresh groceries!</h4>
-            <div class="column justify-content-center">
-              <button class="btn btn-dark btn-large material-elevation mdc-elevation--z5" id="paywall-btn-1" href="#"
-                type="button">
-                Start Your Free Trial Today</button>
-              <button class="btn btn-light btn-large material-elevation mdc-elevation--z5" id="paywall-btn-2" href="#"
-                type="button">
-                Learn More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <app-paywall-modal></app-paywall-modal>
   <div class="carousels">
     <div class="row justify-content-between" style="margin-bottom: 25px; margin-left: 0px; margin-right: 0px;">
       <h3 style="margin-left: 165px;">Dorm Room Essentials</h3>
