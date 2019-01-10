@@ -1,30 +1,61 @@
 .container-fluid {
-	padding: 0px;
+  padding: 0%;
+  width: 100%;
 }
 
 .nav-link {
 	color: white;
-	font-size: 22px;
-	margin-bottom: 5px;
-	margin-right: 50px;
-	margin-top: 5px;
+	font-size: 1.5vw;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap; 
+}
+
+.nav-logo {
+  margin-left: 2%;
 }
 
 .navbar {
-	background-color: #0CB7CC;
+  background-color: #0CB7CC;
 }
 
-.navbar-brand {
-	font-size: 22px;
+#landing-carousel-card {
+	background: white;
+	border-radius: 45%;
+  height: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+	width: 25%;
+}
+
+.carousel-caption {
+  bottom: .1%;
+  height: 100%;
+	text-shadow: 1px 1px #000000;
+}
+
+.card-caption {
+	color: rgb(56, 56, 56);
+	font-size: 1vw;
+	font-weight: 500;
+	margin-top: 64%;
+	text-align: center;
+	text-shadow: none;
 }
 
 .join {
 	background-color: #0BCDB2;
 	color: white;
-	font-size: 24px;
-	height: 85px;
-	padding-top: 24px;
-	text-align: center;
+	font-size: 1.5vw;
+  height: 330%;
+  padding-top: 1.3%;
+  padding-bottom: .7%;
+  text-align: center;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 #joinlink {
@@ -33,33 +64,26 @@
 }
 
 #redeem {
-	color: white;
-	height: 28px;
-	vertical-align: middle;
-	width: 28px;
+  color: white;
+  font-size: 1.6vw;
+  margin-right: 2%;
+  vertical-align: middle;
 }
 
 #signup {
 	background-color: #F89833;
 	border-color: #F89833;
 	border-radius: 5px;
-	font-size: 22px;
-	margin-bottom: 5px;
-	margin-right: 50px;
-	margin-top: 5px;
-	width: 200px;
+	font-size: 1.5vw;
+  margin-right: 3%;
 }
 
-.Browse {
+.browse {
 	float: center;
 	text-align: justify;
 	padding: 1.2em 1em 0;
-	margin: 1em;
+	/* margin: 1em; */
 	border-radius: 0.25em;
-}
-
-.Browse button {
-	margin: 50px;
 }
 
 footer {
@@ -88,53 +112,59 @@ footer div {
 	float: none;
 	margin: 0 auto;
 	display: block;
-	text-align: center;
+  text-align: center;
+  width: 100%;
 }
 
 .footer-link {
 	display: inline-block;
 	float: none;
-	margin-top: 40px;
+  margin-top: 5%;
+  width: 13%;
+}
+
+#contact {
+  width: 13%;
+}
+
+#footer-button {
+  width: 100%;
 }
 
 .carousels {
-	margin-top: 100px;
-}
-
-.carousel-caption {
-	bottom: 150px;
-	text-shadow: 1px 1px #000000;
+  margin-top: 3%;
+  margin-bottom: 7%
 }
 
 #carousel-btn-1 {
 	border-radius: 5px;
 	color: #F89833;
 	display: block;
-	font-size: 22px;
+	font-size: 1.5vw;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 11px 22px;
+	padding: 1% 2%;
 }
 
 #carousel-btn-2 {
 	background-color: #F89833;
 	border-color: #F89833;
 	border-radius: 5px;
-	font-size: 22px;
-	padding: 11px 22px;
+	font-size: 1.5vw;
+	padding: 2% 4%;
 }
 
 #carousel-btn-3 {
 	color: #F89833;
-	font-size: 22px;
-	margin-left: 50px;
-	padding: 11px 22px;
+	font-size: 1.5vw;
+	margin-left: 5%;
+	padding: 2% 4%;
 }
 
 #carousel-icon {
 	border-radius: 5px;
-	font-size: 80px;
-	margin-right: 20px;
+	font-size: 4vw;
+	margin-right: 5%;
 	vertical-align: middle;
 }
 
@@ -142,31 +172,31 @@ footer div {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	text-align: start
+	text-align: start;
 }
 
 #view-all {
-	margin-right: 175px;
+	margin-right: 10.5%;
 	background-color: #0BCDB2;
   border-color: #0BCDB2;
-  font-size: 18px;
-  width: 125px;
+  font-size: 1.4vw;
+  width: 8%;
 }
 
 #too-busy {
 	background-color: #0BCDB2;
 	border-color: #0BCDB2;
-	font-size: 22px;
+	font-size: 1.5vw;
 }
 
 #paywall-btn-1 {
 	background-color: #F89833;
 	border-color: #F89833;
 	display: block;
-	font-size: 22px;
-	margin-bottom: 20px;
-	margin-top: 50px;
-	padding: 11px 22px;
+	font-size: 150%;
+	margin-bottom: 2%;
+	margin-top: 5%;
+	padding: 1% 150%;
 	width: 100%;
 }
 
@@ -174,50 +204,34 @@ footer div {
 	border-color: #F89833;
 	color: #F89833;
 	display: block;
-	font-size: 22px;
-	margin-bottom: 20px;
-	padding: 11px 22px;
+	font-size: 150%;
+	margin-bottom: 10%;
+	padding: 1% 150%;
 	width: 100%;
 }
 
 .browse-all-card {
-	width: 225px;
+  display: inline-block;
+  margin-left: 2%;
+  margin-bottom: 2%;
+	width: 15%;
 }
 
 #carousel-img {
 	filter: contrast(50%);
-	height: 675px;
+	height: 42vw;
 }
 
 #carousel-img-3 {
-	height: 675px;
-}
-
-#landing-carousel-card {
-	background: white;
-	border-radius: 48%;
-	height: 300px;
-	margin-bottom: 50px;
-	width: 250px;
-}
-
-.card-caption {
-	color: rgb(56, 56, 56);
-	font-size: 15px;
-	font-weight: 500;
-	margin-top: 165px;
-	text-align: center;
-	text-shadow: none;
-}
-
-.nav-logo {
-	margin-left: 25px;
-	margin-right: 15px;
-	width: 160px;
+	height: 42vw;
 }
 
 #footer-logo {
-	margin-bottom: 100px;
-	margin-top: 100px;
-  width: 215px;
+	margin-bottom: 8%;
+	margin-top: 8%;
+  width: 20%;
+}
+
+h3 {
+  font-size: 1.8vw;
 }

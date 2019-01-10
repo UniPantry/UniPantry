@@ -4,7 +4,7 @@
 
 .nav-link {
 	color: white;
-	font-size: 22px;
+	font-size: 1.5em;
 	margin-bottom: 5px;
 	margin-right: 50px;
 	margin-top: 5px;
@@ -15,7 +15,7 @@
 }
 
 .navbar-brand {
-	font-size: 22px;
+	font-size: 1.5em;
 }
 
 .Browse {
@@ -77,24 +77,24 @@ footer div {
 #carousel-btn-1 {
 	color: #F89833;
 	display: block;
-	font-size: 22px;
+	font-size: 1.5em;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 11px 22px;
+	padding: 11px 1.5em;
 }
 
 #carousel-btn-2 {
 	background-color: #F89833;
 	border-color: #F89833;
-	font-size: 22px;
-	padding: 11px 22px;
+	font-size: 1.5em;
+	padding: 11px 1.5em;
 }
 
 #carousel-btn-3 {
 	color: #F89833;
-	font-size: 22px;
+	font-size: 1.5em;
 	margin-left: 50px;
-	padding: 11px 22px;
+	padding: 11px 1.5em;
 }
 
 #carousel-icon {
@@ -121,7 +121,7 @@ footer div {
 #too-busy {
 	background-color: #0BCDB2;
 	border-color: #0BCDB2;
-	font-size: 22px;
+	font-size: 1.5em;
 }
 
 #nav-search {
