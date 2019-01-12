@@ -12,10 +12,11 @@ export class LoggedInLandingNavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.cartQuantity);
   }
 
   public addToCart() {
-    this.cartQuantity += 1;
+    console.log(parseInt((document.getElementById('cart-quantity') as any).textContent, 10));
+    const newQuantity = parseInt((document.getElementById('cart-quantity') as any).textContent, 10) + 1;
+    (document.getElementById('cart-quantity') as any).textContent = newQuantity;
   }
 }
