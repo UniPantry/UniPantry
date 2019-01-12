@@ -1,8 +1,15 @@
 #nav-search {
 	background: lightblue;
 	color: black;
-	font-family: FontAwesome, Arial;
-	font-style: normal;
-	font-weight: 500;
-	vertical-align: center;
+  font-family: FontAwesome, Arial;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 500;
+  height: 3vw;
+  vertical-align: middle;
+  width: 25vw;
+}
+
+#nav-search::placeholder {
+	color: #0CB7CC;
 }

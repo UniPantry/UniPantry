@@ -2,7 +2,7 @@ import { Product } from './product';
 
 export const PRODUCTS: Product[] = [
   {
-    name: 'quaker instant oatmeal',
+    name: 'quaker instant oatmeal variety pack',
     weight: '15.1 oz',
     price: '$3.29',
     oldPrice: '$3.99',

@@ -1,17 +1,26 @@
 #add-cart-btn {
   background-color: #F89833;
   border-color: #F89833;
-  border-radius: 5px;
-  margin-left: 40px;
-  margin-right: 10px;
+  border-radius: .75vw;
+  font-size: 1.25vw;
+  height: 3vw;
+  margin-left: 2.5vw;
+  margin-right: 1vw;
   position: relative;
+  padding: 0px;
+  width: 11vw;
 }
 
 .save {
   background: white;
   border-color: #F89833;
-  border-radius: 5px;
+  border-width: .15vw;
+  border-radius: .75vw;
   color: #F89833;
+  font-size: 1.25vw;
+  height: 3vw;
+  padding: 0px;
+  width: 11vw;
 }
 
 .save::after {
@@ -23,7 +32,7 @@
 }
 
 .dropdown>.dropdown-toggle:active {
-  pointer-events: none;
+	pointer-events: none;
 }
 
 .dropdown-divider {
@@ -32,72 +41,85 @@
 }
 
 .save-menu {
+  background: white;
+  border-width: .15vw;
   border-color: #F89833;
-  margin-top: -1px;
+  margin-top: -.1vw;
+  width: 12.5vw;
 }
 
 .dropdown-item {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0px;
-  text-align: center;
+  display: block;
+  font-weight: 500; 
+  font-size: 1vw;
+  overflow: hidden;
+  max-height: 2vw;
+  line-height: 2vw;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: pre;
+  word-wrap: break-word;
 }
 
 .weight {
-  margin-bottom: 0px;
-  margin-left: 40px;
-  margin-top: 55px;
+  font-size: 1vw;
+  margin-bottom: 0vw;
+  margin-left: 2.5vw;
 }
 
 .name {
-  font-size: 26px;
+  font-size: 1.6vw;
   font-weight: 500;
-  margin-left: 40px;
+  margin-left: 2.5vw;
+  max-height: 9vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 .price {
   color: #0CB7CC;
-  font-size: 30px;
-  margin-left: 40px;
-  margin-top: 35px;
+  font-size: 2.25vw;
+  font-weight: 600;
+  margin-left: 2.5vw;
+  margin-top: 3vw;
 }
 
 .old-price {
   color: gray;
-  font-size: 30px;
-  margin-left: 10px;
-  margin-top: 35px;
 }
 
 .image {
-  height: 450px;
-  padding-top: 40px;
-  padding-left: 40px;
-  width: 300px;
+  height: 30vw;
+  padding-top: 2.5vw;
+  padding-left: 2.5vw;
+  width: 35%;
 }
 
 .allergens-title {
   display: block;
-  font-size: 18px;
-  padding-left: 40px;
-  padding-top: 20px;
+  font-size: 1.2vw;
+  font-weight: 500;
+  padding-left: 2.5vw;
+  padding-top: 3vw;
 }
 
 .ingredients-title {
-  font-size: 18px;
-  padding-left: 40px;
-  padding-top: 20px;
+  font-size: 1.2vw;
+  font-weight: 500;
+  padding-left: 2.5vw;
+  padding-top: 2.5vw;
 }
 
 .allergens {
-  font-size: 14px;
-  padding-left: 40px;
+  font-size: .95vw;
+  padding-left: 2.5vw;
 }
 
 .ingredients {
-  font-size: 14px;
-  padding-left: 40px;
-  padding-bottom: 20px;
+  font-size: .95vw;
+  padding-left: 2.5vw;
+  padding-bottom: 2.5vw;
 }
 
 .row {
@@ -108,12 +130,14 @@
 .increase {
   background: #0BCDB2;
   border: #0BCDB2;
-  border-radius: 5px;
+  border-radius: .75vw;
   color: white;
-  font-size: 28px;
-  margin-top: 35px;
-  margin-bottom: 35px;
-  width: 40px;
+  font-size: 2vw;
+  font-weight: 800;
+  margin-top: 2vw;
+  margin-bottom: 4vw;
+  text-align: center;
+  width: 3vw;
 }
 
 .quantity {
@@ -122,21 +146,50 @@
   border-style: solid;
   border-color: #0BCDB2;
   color: black;
-  font-size: 20px;
-  margin-top: 35px;
-  margin-bottom: 35px;
-  width: 60px;
+  font-size: 1.5vw;
+  margin-top: 2vw;
+  margin-bottom: 4vw;
+  text-align: center;
+  width: 5vw;
 }
 
 .decrease {
   background: #0BCDB2;
   border: #0BCDB2;
-  border-radius: 5px;
+  border-radius: .75vw;
   color: white;
   display: block;
-  font-size: 28px;
-  margin-bottom: 35px;
-  margin-left: 40px!important;
-  margin-top: 35px;
-  width: 40px;
+  font-size: 2vw;
+  font-weight: 800;
+  margin-bottom: 4vw;
+  margin-left: 2.5vw!important;
+  margin-top: 2vw;
+  text-align: center;
+  width: 3vw;
+}
+
+a {
+  color: black!important;
+  font-size: 1.25vw;
+  padding-bottom: 0px;
+  padding-left: .5vw;
+  padding-right: 0px;
+  padding-top: 0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.exit {
+  color: gray!important;
+  font-size: 2.5vw;
+  font-weight: 300;
+  margin-left: 90%;
+  margin-top: 4.5vw;
+  text-align: right;
+  text-decoration: none;
 }

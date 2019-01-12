@@ -3,7 +3,7 @@
     <div class="carousel-inner row mx-auto inner-3" style="width: 82.5%;">
       <div *ngFor="let product of timeToRestock.slice(0,1)" (click)="onSelect(product)" class="carousel-item col-sm-3 active"
         id="c3">
-        <div class="card material-elevation mdc-elevation--z7">
+        <div class="card material-elevation mdc-elevation--z3">
           <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
           <div class="card-body">
             <p class="card-title">{{product.weight | titlecase}}</p>
@@ -17,7 +17,7 @@
       </div>
       <div *ngFor="let product of timeToRestock.slice(1)" (click)="onSelect(product)" class="carousel-item col-sm-3"
         id="c3">
-        <div class="card material-elevation mdc-elevation--z7">
+        <div class="card material-elevation mdc-elevation--z3">
           <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
           <div class="card-body">
             <p class="card-title">{{product.weight | titlecase}}</p>
@@ -30,11 +30,11 @@
         </div>
       </div>
     </div>
-    <div class="carousel-control-prev" style="height: 100px; top: 40%;">
+    <div class="carousel-control-prev" id="left-control">
       <a class="material-icons" id="left-chevron" href="#carousel-3" role="button" data-slide="prev" aria-hidden="true">chevron_left</a>
       <span class="sr-only">Previous</span>
     </div>
-    <div class="carousel-control-next" style="height: 100px; top: 40%;">
+    <div class="carousel-control-next" id="right-control">
       <a class="material-icons" id="right-chevron" href="#carousel-3" role="button" data-slide="next" aria-hidden="true">chevron_right</a>
       <span class="sr-only">Next</span>
     </div>

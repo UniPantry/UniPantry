@@ -14,6 +14,7 @@ export class ProductDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.clearQuantity(this.quantity);
   }
 
   increaseQuantity() {
@@ -24,5 +25,16 @@ export class ProductDetailComponent implements OnInit {
     if (this.quantity > 1) {
       this.quantity -= 1;
     }
+  }
+
+  clearQuantity(quantity: number) {
+    $(document).ready(function () {
+      console.log(1);
+      $('#detailModal').on('hide.bs.modal', function (e) {
+        console.log(quantity);
+        quantity = 1;
+        console.log(quantity);
+      });
+    });
   }
 }

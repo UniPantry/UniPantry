@@ -1,20 +1,77 @@
 #paywall-btn-1 {
-	background-color: #F89833;
-	border-color: #F89833;
-	display: block;
-	font-size: 22px;
-	margin-bottom: 20px;
-	margin-top: 50px;
-	padding: 11px 22px;
-	width: 100%;
+  background-color: #F89833;
+  border-color: #F89833;
+  display: block;
+  font-size: 1.75vw;
+  margin-bottom: 2vw;
+  margin-left: 7.5vw;
+  margin-top: 5vw;
+  padding: .5vw 1vw;
+  width: 22.5vw;
 }
 
 #paywall-btn-2 {
-	border-color: #F89833;
-	color: #F89833;
-	display: block;
-	font-size: 22px;
-	margin-bottom: 20px;
-	padding: 11px 22px;
-	width: 100%;
+  border-color: #F89833;
+  border-width: 2px;
+  color: #F89833;
+  display: block;
+  font-size: 1.75vw;
+  margin-bottom: 3vw;
+  margin-left: 7.5vw;
+  padding: .5vw 1vw;
+  width: 22.5vw;
+}
+
+h4 {
+  display: block;
+  font-size: 1.5vw;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  color: gray;
+  display: block;
+  font-size: 1vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  text-decoration: underline;
+}
+
+p {
+  display: block;
+  font-size: 1vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  width: 100%;
+}
+
+li {
+  font-size: 1.5vw;
+  margin-top: 1.9vw;
+}
+
+ul {
+  margin-top: 2vw;
+  list-style: none;
+}
+
+.material-icons {
+  background: #0BCDB2;
+  border-radius: 25%;
+  color: white;
+  font-size: 1.6vw;
+  margin-right: 1vw;
+  vertical-align: middle;
+}
+
+img {
+  margin-top: 2vw;
+  margin-left: 6vw;
+  width: 24vw;
+}
+
+.line-2 {
+  margin-left: 2.6vw;
 }

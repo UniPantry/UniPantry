@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div id="carouselIndicators" class="carousel slide carousel-fade" data-interval="false" data-ride="carousel" style="width: 100%;">
     <ol class="carousel-indicators">
-      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselIndicators" data-slide-to="0" class="active" id="carousel-button"></li>
+      <li data-target="#carouselIndicators" data-slide-to="1" id="carousel-button"></li>
+      <li data-target="#carouselIndicators" data-slide-to="2" id="carousel-button"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -20,14 +20,17 @@
         <img class="d-block w-100" src="assets/images/Landing Page Slideshow/aisle.jpg" alt="Second slide" id="carousel-img">
         <div class="carousel-caption" style="padding-top: 12%;">
           <div class="row justify-content-center" style="height: 70%; margin-bottom: 1%;">
-            <div class="card" id="landing-carousel-card">
+            <div class="card col justify-content-center" id="landing-carousel-card">
+              <img src="assets/images/Landing Page Slideshow/phone.png" class="slide-2-img">
               <p class="card-caption">1. Place your order on the<br>UniPantry app or website.</p>
             </div>
-            <div class="card" id="landing-carousel-card">
+            <div class="card col justify-content-center" id="landing-carousel-card">
+              <img src="assets/images/Landing Page Slideshow/timepen.png" class="slide-2-pen">
               <p class="card-caption">2. Set a delivery time and<br>send any special instructions<br>to your
                 personal shopper.</p>
             </div>
-            <div class="card" id="landing-carousel-card">
+            <div class="card col justify-content-center" id="landing-carousel-card">
+              <img src="assets/images/Landing Page Slideshow/grocerybag.png" class="slide-2-img">
               <p class="card-caption">3. Have your groceries<br>delivered to your door<br>in 2 days!</p>
             </div>
           </div>
@@ -71,7 +74,7 @@
                   </div>
                 </div>
               </li>
-              <h4 style="margin-top: 20px; margin-bottom: 20px;">So you can have more freedom to focus on
+              <h4 style="margin-top: 2vw; margin-bottom: 2vw;">So you can have more freedom to focus on
                 what<br>matters to you as a student.</h4>
               <button class="btn btn-dark btn-large material-elevation mdc-elevation--z5" id="carousel-btn-2" href="#"
                 type="button">

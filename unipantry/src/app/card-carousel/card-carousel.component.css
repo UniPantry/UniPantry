@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 0px) {
   /* show 4 items */
   .carousel-inner .active, .carousel-inner .active+.carousel-item, .carousel-inner .active+.carousel-item+.carousel-item, .carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
     display: block;
@@ -57,20 +57,23 @@
     backface-visibility: hidden;
     -webkit-perspective: 1000px;
     perspective: 1000px;
+    padding-left: .75vw;
+    padding-right: .75vw;
+    width: 25%;
   }
 }
 
 #left-chevron {
   color: #0BCDB2;
-  font-size: 800%;
-  margin-right: 30%;
+  font-size: 9vw;
+  margin-right: 35%;
   text-decoration: none;
 }
 
 #right-chevron {
   color: #0BCDB2;
-  font-size: 800%;
-  margin-left: 30%;
+  font-size: 9vw;
+  margin-left: 35%;
   text-decoration: none;
 }
 
@@ -79,30 +82,35 @@
   border: none;
   display: block;
   font-size: 1vw;
+  height: 2.5vw;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  padding: 0px;
   text-align: center;
   text-overflow: ellipsis;
-  width: 90%;
+  width: 12.5vw;
   word-wrap: break-word;
 }
 
 #price {
   color: #0CB7CC;
   font-size: 1.5vw;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
 }
 
 #item {
   display: block;
-  font-weight: 500; 
   font-size: 1vw;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
-  max-height: 1.8em;
+  font-weight: 500;
   line-height: 1.8em;
+  margin-bottom: 1vw;
+  max-height: 3.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .card-title {
@@ -114,13 +122,33 @@
   padding-left: 7.5%;
   padding-right: 7.5%;
   padding-top: 7.5%;
-  width: 100%;
+  width: 19vw;
+}
+
+.card-body {
+  padding: 7.5%;
 }
 
 .card {
   border-radius: 5%;
+  width: 100%;
 }
 
 .carousel-inner {
+  background: white;
   padding-bottom: 2%;
+}
+
+#left-control {
+  height: 5vw;
+  margin-left: 3vw;
+  top: 40%;
+  width: 4vw;
+}
+
+#right-control {
+  height: 5vw;
+  margin-right: 3vw;
+  top: 40%;
+  width: 4vw;
 }
