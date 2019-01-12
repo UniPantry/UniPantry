@@ -1,40 +1,45 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
 import { Product } from '../product';
+import { LoggedInLandingNavComponent } from '../logged-in-landing-nav/logged-in-landing-nav.component';
 
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
-export class ProductDetailComponent implements OnInit {
+export class ProductDetailComponent implements OnChanges {
   @Input() product: Product;
 
-  quantity = 1;
+  constructor(private nav: LoggedInLandingNavComponent) { }
 
-  constructor() { }
-
-  ngOnInit() {
-    this.clearQuantity(this.quantity);
+  ngOnChanges() {
+    this.resetQuantity();
   }
 
-  increaseQuantity() {
-    this.quantity += 1;
-  }
-
-  decreaseQuantity() {
-    if (this.quantity > 1) {
-      this.quantity -= 1;
+  addToCart() {
+    let i: number;
+    const quantity = parseInt((document.getElementById('quantity') as any).value, 10);
+    for (i = 0; i < quantity; i++) {
+      this.nav.addToCart();
     }
   }
 
-  clearQuantity(quantity: number) {
-    $(document).ready(function () {
-      console.log(1);
-      $('#detailModal').on('hide.bs.modal', function (e) {
-        console.log(quantity);
-        quantity = 1;
-        console.log(quantity);
-      });
+  increaseQuantity() {
+    const newQuantity = parseInt((document.getElementById('quantity') as any).value, 10) + 1;
+    (document.getElementById('quantity') as any).value = newQuantity;
+  }
+
+  decreaseQuantity() {
+    const newQuantity = parseInt((document.getElementById('quantity') as any).value, 10) - 1;
+    if (newQuantity > 0) {
+      (document.getElementById('quantity') as any).value = newQuantity;
+    }
+  }
+
+  resetQuantity() {
+    $(document).on('hidden.bs.modal', '#detailModal', function () {
+      const newQuantity = <number>1;
+      (document.getElementById('quantity') as any).value = newQuantity;
     });
   }
 }

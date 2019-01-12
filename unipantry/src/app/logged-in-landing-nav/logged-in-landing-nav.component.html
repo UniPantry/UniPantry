@@ -1,14 +1,16 @@
 <div class="container-fluid">
   <nav class="navbar navbar-dark material-elevation mdc-elevation--z15 row align-items-center top-nav" style="margin-bottom: .1%;">
-    <img class="nav-logo col-2" src="assets/images/Logos/UniPantry Logo.png" alt="Logo">
+    <a routerLink="/logged-in" class="col-2">
+      <img class="nav-logo" src="assets/images/Logos/UniPantry Logo.png" alt="Logo">
+    </a>
     <div class="col-3">
       <app-typeahead></app-typeahead>
     </div>
     <a class="nav-link active col-2 ml-auto" href="#">Refer a Friend</a>
-    <a class="nav-link active col-2" routerLink="/account">My Account</a>
+    <a class="nav-link active col-2" routerLink="/profile">My Account</a>
   </nav>
   <nav class="navbar navbar-light justify-content-end material-elevation mdc-elevation--z7 navbar-2" style="background: white; margin-bottom: .1%;">
-    <div class="nav-item dropdown has-megamenu col-2 nav-item-2">
+    <div class="nav-item dropdown has-megamenu col-2 nav-item-3">
       <a class="btn btn-secondary btn-lg dropdown-toggle category" href="#" id="navbarDropdownMenuLink" role="button"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Shop By Category
@@ -49,17 +51,19 @@
         Shop Lists
       </a>
       <div class="dropdown-menu lists-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item disabled" href="#"><strong>My Lists</strong></a>
+        <a class="dropdown-item disabled" routerLink="/lists"><strong>My Lists</strong></a>
         <a class="dropdown-item disabled" href="#"><strong>Premade Lists</strong></a>
       </div>
 
     </div>
     <div class="nav-item col-2">
       <a class="btn btn-secondary btn-lg shop-lists col-2" href="#" role="button">
-        Gift Cards<i class="material-icons" id="redeem">redeem</i>
+        Gift Cards<img src="assets/images/Navbar Icons/greengift.png" id="gift">
       </a>
     </div>
-    <a class="nav-link active ml-auto" id="cart-btn" href="#"><i class="material-icons" id="cart">shopping_cart</i>Your
+    <a class="nav-link active ml-auto" id="cart-btn" href="#">
+      <img src="assets/images/Navbar Icons/emptycart.png" id="cart">{{cartQuantity}}
+      Your
       Cart</a>
   </nav>
 </div>

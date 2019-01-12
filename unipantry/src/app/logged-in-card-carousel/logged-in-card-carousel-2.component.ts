@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
+import { LoggedInLandingNavComponent } from '../logged-in-landing-nav/logged-in-landing-nav.component';
 
 @Component({
   selector: 'app-logged-in-card-carousel-2',
@@ -15,10 +16,14 @@ export class LoggedInCardCarousel2Component {
 
   newYearNewYou = <Product[]>[];
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private nav: LoggedInLandingNavComponent) { }
 
   ngOnInit() {
     this.getProducts();
+  }
+
+  addToCart() {
+    this.nav.addToCart();
   }
 
   onSelect(product: Product): void {

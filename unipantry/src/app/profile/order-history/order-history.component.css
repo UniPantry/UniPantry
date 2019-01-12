@@ -1,0 +1,39 @@
+.details {
+  background-color: white;
+  width: 90%;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-left: 0px;
+  border-radius: 5px;
+  border-color: #909090;
+  position: relative;
+  padding: 40px 40px;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+span {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.info {
+  font-weight: 300;
+}
+
+button {
+  margin: 20px 0px 0px;
+  padding: 5px 45px;
+  background-color: white;
+  color: #0BCDB2;
+  border-radius: 10px;
+  border-color: #0BCDB2;
+  font-size: .8em;
+}
+
+button:hover {
+  background-color: #0BCDB2;
+  border-color: #0BCDB2;
+}

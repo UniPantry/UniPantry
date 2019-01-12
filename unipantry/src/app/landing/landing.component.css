@@ -73,11 +73,11 @@
   text-decoration: underline;
 }
 
-#redeem {
+#gift {
   color: white;
-  font-size: 1.6vw;
+  width: 1.8vw;
   margin-right: 2%;
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 
 #signup {

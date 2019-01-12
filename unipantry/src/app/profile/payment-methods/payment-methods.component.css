@@ -1,0 +1,37 @@
+.details {
+  background-color: white;
+  width: 60%;
+  border: 1px solid black;
+  margin-top: 0px;
+  margin-left: 0px;
+  border-radius: 5px;
+  border-color: #909090;
+  position: relative;
+  padding: 40px 70px;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+span {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.info {
+  font-weight: 400;
+  font-size: .9em;
+}
+
+.add {
+  font-size: 1.5em;
+}
+
+#add {
+  color: #0BCDB2;
+  font-size: 2em;
+  border-radius: 50%;
+  padding: 0px;
+  margin: 0px;
+}

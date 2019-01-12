@@ -1,0 +1,110 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+.profile-body {
+  margin-left: 20%;
+  background-color: #F5F5F5;
+}
+
+.page {
+  padding-left: 10%;
+  padding-top: 100px;
+  padding-bottom: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+.nav-link {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 5px;
+  margin-right: 50px;
+  margin-top: 5px;
+}
+
+.nav-link2 {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.navbar {
+  background-color: rgba(0, 173, 255, 0.54);
+}
+
+.navbar-brand {
+  font-size: 22px;
+}
+
+#secGiftCard {
+  margin-right: 20px;
+  margin-left: 50px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#dropdownMenuButton {
+  margin-left: 50px;
+}
+
+#dropdownMenuButton2 {
+  margin-left: 50px;
+}
+
+#dropdownMenuButton3 {
+  margin-top: 20px;
+  margin-left: -350px;
+}
+
+#redeem {
+  color: rgba(0, 173, 255, 0.54);
+  height: 28px;
+  vertical-align: middle;
+  width: 28px;
+  margin-left: -650px;
+}
+
+#signup {
+  font-size: 22px;
+  margin-bottom: 5px;
+  margin-right: 50px;
+  margin-top: 5px;
+}
+
+.sidenav {
+  border-right: 2px solid black;
+  height: 100%;
+  width: 20%;
+  /* 0 width - change this with JavaScript */
+  /* Stay in place */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: white;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  /* Place content 60px from the top */
+}
+
+.sidenav a {
+  padding: 0px 0px 8px 32px;
+  text-decoration: none;
+  font-size: 1.25em;
+  color: #686868;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #0BCDB2;
+}

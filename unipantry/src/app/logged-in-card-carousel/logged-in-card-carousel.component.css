@@ -98,7 +98,7 @@
   height: 3vw!important;
   height: 100%;
   padding: 0px;
-  vertical-align: middle;
+  vertical-align: text-bottom;
   width: 4vw;
 }
 
@@ -108,31 +108,50 @@
 
 .dropdown:hover>.dropdown-menu {
   display: block;
+  min-width: 0px;
+  padding-top: .5vw;
+  padding-bottom: .5vw;
 }
 
 .dropdown>.dropdown-toggle:active {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .dropdown-divider {
   color: #F89833;
   border-color: #F89833;
+  height: .15vw;
+  margin-top: .5vw;
+  margin-bottom: .5vw;
 }
 
 .save-menu {
+  background: white;
+  border-width: .15vw;
   border-color: #F89833;
-  margin-top: -1px;
+  margin-top: -.3vw;
+  width: 12.5vw;
 }
 
 .dropdown-item {
-  font-size: 14px;
+  display: block;
   font-weight: 500;
-  padding: 0px;
-  text-align: center;
+  font-size: 1vw;
+  overflow: hidden;
+  max-height: 2vw;
+  line-height: 2vw;
+  padding-bottom: 0px;
+  padding-left: .5vw;
+  padding-right: 0px;
+  padding-top: 0px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: pre;
+  word-wrap: break-word;
 }
 
 .old-price {
-  color:gray;
+  color: gray;
 }
 
 #price {
@@ -144,7 +163,7 @@
 #item {
   display: block;
   font-size: 1vw;
-  font-weight: 500; 
+  font-weight: 500;
   line-height: 1.8em;
   margin-bottom: 1vw;
   max-height: 3.6em;
@@ -174,7 +193,9 @@
 
 .carousel-inner {
   background: white;
-  padding-bottom: 2%;
+  padding-bottom: 12%;
+  padding-left: 8.75%;
+  padding-right: 8.75%;
 }
 
 h3 {
@@ -197,4 +218,20 @@ h3 {
   margin-right: 3vw;
   top: 40%;
   width: 4vw;
+}
+
+.carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
+  z-index: 1;
+}
+
+.carousel-inner .active+.carousel-item+.carousel-item {
+  z-index: 2;
+}
+
+.carousel-inner .active+.carousel-item {
+  z-index: 3;
+}
+
+.carousel-inner .active {
+  z-index: 4;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-logged-in-landing-nav',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoggedInLandingNavComponent implements OnInit {
 
+  cartQuantity = 0;
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.cartQuantity);
   }
 
+  public addToCart() {
+    this.cartQuantity += 1;
+  }
 }

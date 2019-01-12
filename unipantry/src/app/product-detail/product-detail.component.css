@@ -20,6 +20,7 @@
   font-size: 1.25vw;
   height: 3vw;
   padding: 0px;
+  vertical-align: text-bottom;
   width: 11vw;
 }
 
@@ -29,28 +30,33 @@
 
 .dropdown:hover>.dropdown-menu {
   display: block;
+  padding-top: .5vw;
+  padding-bottom: .5vw;
 }
 
 .dropdown>.dropdown-toggle:active {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .dropdown-divider {
   color: #F89833;
   border-color: #F89833;
+  height: .15vw;
+  margin-top: .5vw;
+  margin-bottom: .5vw;
 }
 
 .save-menu {
   background: white;
   border-width: .15vw;
   border-color: #F89833;
-  margin-top: -.1vw;
+  margin-top: -.3vw;
   width: 12.5vw;
 }
 
 .dropdown-item {
   display: block;
-  font-weight: 500; 
+  font-weight: 500;
   font-size: 1vw;
   overflow: hidden;
   max-height: 2vw;
@@ -101,14 +107,14 @@
   font-size: 1.2vw;
   font-weight: 500;
   padding-left: 2.5vw;
-  padding-top: 3vw;
+  padding-top: 2.5vw;
 }
 
 .ingredients-title {
   font-size: 1.2vw;
   font-weight: 500;
   padding-left: 2.5vw;
-  padding-top: 2.5vw;
+  padding-top: 2vw;
 }
 
 .allergens {
@@ -140,9 +146,12 @@
   width: 3vw;
 }
 
-.quantity {
+#quantity {
   background: white;
-  border-width: 2px;
+  border-bottom-width: .3vw;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: .3vw;
   border-style: solid;
   border-color: #0BCDB2;
   color: black;
@@ -177,11 +186,11 @@ a {
   padding-top: 0px;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .exit {

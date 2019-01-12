@@ -25,6 +25,15 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { AboutComponent } from './about/about.component';
 import { TypeaheadComponent } from './typeahead/typeahead.component';
 import { FormsModule } from '@angular/forms';
+import { OnlyNumberDirective } from './onlynumber';
+import { ProfileComponent } from './profile/profile.component';
+import { AccountDetailsComponent } from './profile/account-details/account-details.component';
+import { OrderHistoryComponent } from './profile/order-history/order-history.component';
+import { PaymentMethodsComponent } from './profile/payment-methods/payment-methods.component';
+import { ShippingAddressesComponent } from './profile/shipping-addresses/shipping-addresses.component';
+import { NavComponent } from './nav/nav.component';
+import { ListsComponent } from './lists/lists.component';
+import { ListsCarouselComponent } from './lists-carousel/lists-carousel.component';
 
 
 
@@ -49,7 +58,16 @@ import { FormsModule } from '@angular/forms';
     ProductsComponent,
     ProductDetailComponent,
     AboutComponent,
-    TypeaheadComponent
+    TypeaheadComponent,
+    OnlyNumberDirective,
+    ProfileComponent,
+    AccountDetailsComponent,
+    OrderHistoryComponent,
+    PaymentMethodsComponent,
+    ShippingAddressesComponent,
+    NavComponent,
+    ListsComponent,
+    ListsCarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +75,7 @@ import { FormsModule } from '@angular/forms';
     NgbModule.forRoot(),
     FormsModule
   ],
-  providers: [],
+  providers: [LoggedInLandingNavComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

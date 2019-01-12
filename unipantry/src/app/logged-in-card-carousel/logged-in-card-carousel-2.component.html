@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div id="carousel-2" class="carousel slide" data-ride="carousel" data-interval="false">
-    <div class="carousel-inner row mx-auto inner-2" style="width: 82.5%;">
+    <div class="carousel-inner row mx-auto inner-2">
       <div *ngFor="let product of newYearNewYou.slice(0,1)" (click)="onSelect(product)" class="carousel-item col-sm-3 active"
         id="c2">
         <div class="card material-elevation mdc-elevation--z3">
@@ -14,7 +14,7 @@
                 |
                 titlecase}}</del></p>
             <div class="row justify-content-center align-items-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
+              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart()" type="button">
                 Add to Cart</button>
               <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button" id="dropdownMenuButton"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save</button>
@@ -23,7 +23,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item disabled">Monthly Order</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled">Kathleen's Birthday</a>
+                  <a class="dropdown-item disabled">Kathleen's Birthday Party</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item disabled" style="color: #F89833">+ New List</a>
                 </div>
@@ -44,7 +44,7 @@
                 |
                 titlecase}}</del></p>
             <div class="row justify-content-center align-items-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
+              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart()" type="button">
                 Add to Cart</button>
               <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button" id="dropdownMenuButton"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save</button>
@@ -53,7 +53,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item disabled">Monthly Order</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled">Kathleen's Birthday</a>
+                  <a class="dropdown-item disabled">Kathleen's Birthday Party</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item disabled" style="color: #F89833">+ New List</a>
                 </div>
