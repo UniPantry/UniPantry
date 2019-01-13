@@ -28,6 +28,7 @@ export class LoggedInCardCarousel1Component {
 
   onSelect(product: Product): void {
     this.selectedProduct = product;
+    this.productService.setSelectedProduct(product);
   }
 
   getProducts(): void {
