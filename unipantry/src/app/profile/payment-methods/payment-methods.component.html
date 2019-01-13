@@ -1,0 +1,36 @@
+<div style="overflow: auto;">
+  <div style=" width:75%; margin-top:40px;">
+    <p>Payment Methods</p>
+  </div>
+
+  <div class="row details">
+
+    <div style="position:relative;padding:10px 20px; border: 1px solid #909090; border-radius:5px; width:100%;">
+
+      <span>Visa Card ending in {{bill.cardNum%10000}}</span>
+
+      <div style="margin-top: 10px; width:40%; ">
+        <span>Name on Card</span>
+        <div class="info">{{bill.name}}</div>
+      </div>
+
+      <div style="margin-top: 10px;width:40%; ">
+        <span>Expiration Date</span>
+        <div class="info">{{bill.exp}}</div>
+      </div>
+
+      <div style="margin-top: 10px;width:100%; ">
+        <span>Billing Address</span>
+        <div class="info">{{bill.address.line1}}</div>
+        <div class="info">{{bill.address.line2}}</div>
+      </div>
+
+
+    </div>
+
+    <div style="margin-top:20px; padding:20px; border: 1px solid #909090; border-radius:5px; text-align: center; width:100%;">
+      <a class="add" href="#"><i class="material-icons" id="add">add_circle</i> Add New Payment Methods </a>
+    </div>
+
+  </div>
+</div>

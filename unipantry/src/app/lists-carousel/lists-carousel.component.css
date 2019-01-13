@@ -1,0 +1,134 @@
+@media (min-width: 768px) {
+  /* show 4 items */
+  .carousel-inner .active, .carousel-inner .active+.carousel-item, .carousel-inner .active+.carousel-item+.carousel-item, .carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
+    display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left), .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item, .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item, .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
+    transition: none;
+  }
+  .carousel-inner .carousel-item-next, .carousel-inner .carousel-item-prev {
+    position: relative;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+  /* left or forward direction */
+  .active.carousel-item-left+.carousel-item-next.carousel-item-left, .carousel-item-next.carousel-item-left+.carousel-item, .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item, .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item, .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+    position: relative;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  /* farthest right hidden item must be absolue position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+  /* right or prev direction */
+  .active.carousel-item-right+.carousel-item-prev.carousel-item-right, .carousel-item-prev.carousel-item-right+.carousel-item, .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item, .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item, .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+    position: relative;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+  .carousel-item {
+    position: relative;
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    transition: -webkit-transform 0.6s ease;
+    transition: transform 0.6s ease;
+    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+  }
+}
+
+#left-chevron {
+  color: #0BCDB2;
+  font-size: 100px;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+#right-chevron {
+  color: #0BCDB2;
+  font-size: 100px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+#add-cart-btn {
+  background-color: #F89833;
+  border-color: #F89833;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.save {
+  background: white;
+  border-color: #F89833;
+  border-radius: 5px;
+  color: #F89833;
+}
+
+.save::after {
+  color: #F89833;
+}
+
+#price {
+  color: #0BCDB2;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+#item {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.card-title {
+  margin-bottom: 0px;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  pointer-events: none;
+}
+
+.dropdown-divider {
+  color: #F89833;
+  border-color: #F89833;
+}
+
+.save-menu {
+  border-color: #F89833;
+  margin-top: -1px;
+}
+
+.dropdown-item {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0px;
+  text-align: center;
+}

@@ -1,0 +1,292 @@
+.container-fluid {
+  padding: 0%;
+  width: 100%;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1.5vw;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.navbar {
+  background-color: #0CB7CC;
+}
+
+.top-nav {
+  height: 6vw;
+}
+
+.browse {
+  float: center;
+  text-align: justify;
+  padding: 1.2em 1em 0;
+  border-radius: 0.25em;
+}
+
+footer {
+  background-color: black;
+}
+
+footer button {
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+}
+
+footer div {
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+  color: White;
+}
+
+#chevron {
+  color: #0BCDB2;
+  vertical-align: middle;
+}
+
+#carousel-btn-1 {
+  border-radius: .75vw;
+  color: #F89833;
+  display: block;
+  font-size: 1.5vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1% 2%;
+}
+
+#carousel-btn-2 {
+  background-color: #F89833;
+  border-color: #F89833;
+  border-radius: .75vw;
+  font-size: 1.5vw;
+  padding: 2% 4%;
+}
+
+#carousel-btn-3 {
+  color: #F89833;
+  font-size: 1.5vw;
+  margin-left: 5%;
+  padding: 2% 4%;
+}
+
+#carousel-icon {
+  border-radius: .75vw;
+  font-size: 4vw;
+  margin-right: 5%;
+  vertical-align: middle;
+}
+
+.carousel-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+
+#view-all {
+  margin-right: 10.5%;
+  background-color: #0BCDB2;
+  border-color: #0BCDB2;
+  font-size: 1.4vw;
+  height: 3vw;
+  padding: 0px;
+  width: 10%;
+}
+
+#too-busy {
+  background-color: #0BCDB2;
+  border-color: #0BCDB2;
+  font-size: 1.5vw;
+  padding: 1% 2%;
+}
+
+#nav-search {
+  background: lightblue;
+  color: white;
+  font-family: FontAwesome, Arial;
+  font-style: normal;
+  font-weight: 500;
+  vertical-align: center;
+}
+
+::placeholder {
+  color: #0CB7CC;
+  font-weight: 500;
+}
+
+.shop-lists::after {
+  color: #0BCDB2;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+  min-width: 0px;
+}
+
+.dropdown>.dropdown-toggle:active {
+  pointer-events: none;
+}
+
+.category {
+  background: #0BCDB2;
+  border: #0BCDB2;
+  color: white;
+  font-size: 1.4vw;
+  height: 2.4vw;
+  padding: 1% 4%;
+  width: 15vw;
+  vertical-align: middle;
+}
+
+.dropdown.has-megamenu {
+  margin-right: 2vw;
+  position: static;
+}
+
+.category-menu {
+  background: white;
+  border-color: #0BCDB2;
+  border-style: solid;
+  border-width: .25vw;
+  font-size: 1.25vw;
+  margin-top: -1.5vw;
+  margin-left: 3.9%;
+  margin-right: 2vw;
+  padding-bottom: 1.25vw;
+  padding-left: .75vw;
+  padding-right: 10vw;
+}
+
+.disabled {
+  color: black;
+}
+
+.shop-lists {
+  background: white;
+  border: white;
+  color: black;
+  font-size: 1.4vw;
+  height: 2.4vw;
+  padding: 0px;
+  vertical-align: middle;
+}
+
+.lists-menu {
+  background: white;
+  border-color: #0BCDB2;
+  border-style: solid;
+  border-width: .25vw;
+  font-size: 1.25vw;
+  margin-top: -.2vw;
+  padding-bottom: 1vw;
+}
+
+#gift-cards {
+  color: black;
+  font-size: 1.4vw;
+  padding: 0px;
+  vertical-align: middle;
+}
+
+#gift {
+  color: #0BCDB2;
+  width: 1.6vw;
+  margin-left: 1vw;
+  vertical-align: text-top;
+}
+
+#cart-btn {
+  background: white;
+  border-color: #0BCDB2;
+  border-radius: .75vw;
+  border-style: solid;
+  border-width: .1vw;
+  color: black;
+  font-size: 1.4vw;
+  height: 2.5vw;
+  padding: 0px;
+  margin-right: 4vw;
+  width: 12vw;
+}
+
+.alert {
+  background: #0BCDB2;
+  color: white;
+  font-size: 1.5vw;
+  height: 4vw;
+  padding-bottom: 0px;
+  padding-top: .75vw;
+  text-align: center;
+}
+
+#refer-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.browse-all-card {
+  display: inline-block;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  width: 15%;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+h3 {
+  font-size: 1.8vw;
+  margin-bottom: .2vw;
+}
+
+.close {
+  color: white;
+  font-size: 2.5vw;
+  font-weight: 300;
+  margin-right: 5vw;
+  padding: 0px;
+  vertical-align: middle;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.navbar-2 {
+  height: 5vw;
+  padding: 1% 2%;
+}
+
+.nav-item-2 {
+  margin-right: 2.5vw;
+}
+
+.nav-item-3 {
+  margin-right: 2.5vw;
+  padding-left: 2%;
+}
+
+.nav-logo {
+  width: 100%;
+}
+
+#cart {
+  color: #0BCDB2;
+  font-size: 1.5vw;
+  width: 2vw;
+  margin-right: .3vw;
+  vertical-align: middle;
+}
+
+#cart-quantity {
+  font-size: 1vw;
+  font-weight: 500;
+  margin-left: -1.8vw;
+  position: absolute;
+}

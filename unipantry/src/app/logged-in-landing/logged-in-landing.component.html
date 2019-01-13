@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <app-nav></app-nav>
+  <div class="alert alert-dismissible fade show" role="alert">
+    Want to earn some extra $? <a href="#" id="refer-link">Refer your friends to UniPantry!</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+<app-product-detail [product]="selectedProduct"></app-product-detail>
+
+<div class="container-fluid">
+  <div class="carousels">
+    <div class="row justify-content-between" style="margin-bottom: 1%; margin-top: 1%;">
+      <h3 style="margin-left: 11%;">Dorm Room Essentials</h3>
+      <button class="btn btn-primary" type="button" id="view-all">View All</button>
+    </div>
+    <app-logged-in-card-carousel-1></app-logged-in-card-carousel-1>
+  </div>
+  <div class="carousels">
+    <div class="row justify-content-between" style="margin-bottom: 1%;">
+      <h3 style="margin-left: 11%;">New Year, New You</h3>
+      <button class="btn btn-primary" type="button" id="view-all">View All</button>
+    </div>
+    <app-logged-in-card-carousel-2></app-logged-in-card-carousel-2>
+  </div>
+  <div class="carousels">
+    <div class="row justify-content-between" style="margin-bottom: 1%;">
+      <h3 style="margin-left: 11%;">Time to Restock</h3>
+      <button class="btn btn-primary" type="button" id="view-all">View All</button>
+    </div>
+    <app-logged-in-card-carousel-3></app-logged-in-card-carousel-3>
+  </div>
+  <app-logged-in-browse-all></app-logged-in-browse-all>
+  <app-footer></app-footer>
+</div>

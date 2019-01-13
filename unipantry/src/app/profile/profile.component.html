@@ -1,0 +1,44 @@
+<app-nav></app-nav>
+<div class="wrapper" style="z-index: 1">
+  <div class="container-fluid row">
+    <div class="sidenav material-elevation mdc-elevation--z5">
+      <div style="width:100%; border-bottom: 1px solid gray; padding-bottom: 20px; padding-left: 20px; padding-top:20px;">
+        <a class="nav-link2 active ml-auto" (click)="getAccount()" href="#">My Account</a>
+        <a class="nav-link2 active" (click)="getOrder()" href="#">My Orders</a>
+        <a class="nav-link2 active" href="#">Gift Credit</a>
+      </div>
+      <div style="width:100%; border-bottom: 1px solid gray; padding-bottom: 20px; padding-left: 20px; padding-top:20px;">
+        <a class="nav-link2 active ml-auto" href="#">Refer A Friend</a>
+        <a class="nav-link2 active" href="#">Buy A Gift Card</a>
+      </div>
+      <div style="width:100%; border-bottom: 1px solid gray; padding-bottom: 20px; padding-left: 20px; padding-top:20px;">
+        <a class="nav-link2 active ml-auto" href="#">Contact Us</a>
+      </div>
+      <div style="width:100%; padding-left: 20px; padding-top:20px;">
+        <a class="nav-link2 active ml-auto" href="#">Log Out</a>
+      </div>
+    </div>
+
+    <div class="profile-body">
+
+      <div *ngIf="!accCollapse">
+        <!-- show my account section if accCollapse = false and hide otherwise-->
+        <div class="page account">
+          <h2 style="font-weight: 250;">My Account</h2>
+          <app-account-details></app-account-details>
+          <app-shipping-addresses></app-shipping-addresses>
+          <app-payment-methods></app-payment-methods>
+        </div>
+      </div>
+
+      <div *ngIf="!ordCollapse">
+        <!-- show my account section if accCollapse = false and hide otherwise-->
+        <div class="page order">
+          <h2 style="font-weight: 250;">My Orders</h2>
+          <app-order-history></app-order-history>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

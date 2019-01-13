@@ -1,0 +1,204 @@
+#add-cart-btn {
+  background-color: #F89833;
+  border-color: #F89833;
+  border-radius: .75vw;
+  font-size: 1.25vw;
+  height: 3vw;
+  margin-left: 2.5vw;
+  margin-right: 1vw;
+  position: relative;
+  padding: 0px;
+  width: 11vw;
+}
+
+.save {
+  background: white;
+  border-color: #F89833;
+  border-width: .15vw;
+  border-radius: .75vw;
+  color: #F89833;
+  font-size: 1.25vw;
+  height: 3vw;
+  padding: 0px;
+  vertical-align: text-bottom;
+  width: 11vw;
+}
+
+.save::after {
+  color: #F89833;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+  padding-top: .5vw;
+  padding-bottom: .5vw;
+}
+
+.dropdown>.dropdown-toggle:active {
+  pointer-events: none;
+}
+
+.dropdown-divider {
+  color: #F89833;
+  border-color: #F89833;
+  height: .15vw;
+  margin-top: .5vw;
+  margin-bottom: .5vw;
+}
+
+.save-menu {
+  background: white;
+  border-width: .15vw;
+  border-color: #F89833;
+  margin-top: -.3vw;
+  width: 12.5vw;
+}
+
+.dropdown-item {
+  display: block;
+  font-weight: 500;
+  font-size: 1vw;
+  overflow: hidden;
+  max-height: 2vw;
+  line-height: 2vw;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: pre;
+  word-wrap: break-word;
+}
+
+.weight {
+  font-size: 1vw;
+  margin-bottom: 0vw;
+  margin-left: 2.5vw;
+}
+
+.name {
+  font-size: 1.6vw;
+  font-weight: 500;
+  margin-left: 2.5vw;
+  max-height: 9vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.price {
+  color: #0CB7CC;
+  font-size: 2.25vw;
+  font-weight: 600;
+  margin-left: 2.5vw;
+  margin-top: 3vw;
+}
+
+.old-price {
+  color: gray;
+}
+
+.image {
+  height: 30vw;
+  padding-top: 2.5vw;
+  padding-left: 2.5vw;
+  width: 35%;
+}
+
+.allergens-title {
+  display: block;
+  font-size: 1.2vw;
+  font-weight: 500;
+  padding-left: 2.5vw;
+  padding-top: 2.5vw;
+}
+
+.ingredients-title {
+  font-size: 1.2vw;
+  font-weight: 500;
+  padding-left: 2.5vw;
+  padding-top: 2vw;
+}
+
+.allergens {
+  font-size: .95vw;
+  padding-left: 2.5vw;
+}
+
+.ingredients {
+  font-size: .95vw;
+  padding-left: 2.5vw;
+  padding-bottom: 2.5vw;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.increase {
+  background: #0BCDB2;
+  border: #0BCDB2;
+  border-radius: .75vw;
+  color: white;
+  font-size: 2vw;
+  font-weight: 800;
+  margin-top: 2vw;
+  margin-bottom: 4vw;
+  text-align: center;
+  width: 3vw;
+}
+
+#quantity {
+  background: white;
+  border-bottom-width: .3vw;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: .3vw;
+  border-style: solid;
+  border-color: #0BCDB2;
+  color: black;
+  font-size: 1.5vw;
+  margin-top: 2vw;
+  margin-bottom: 4vw;
+  text-align: center;
+  width: 5vw;
+}
+
+.decrease {
+  background: #0BCDB2;
+  border: #0BCDB2;
+  border-radius: .75vw;
+  color: white;
+  display: block;
+  font-size: 2vw;
+  font-weight: 800;
+  margin-bottom: 4vw;
+  margin-left: 2.5vw!important;
+  margin-top: 2vw;
+  text-align: center;
+  width: 3vw;
+}
+
+a {
+  color: black!important;
+  font-size: 1.25vw;
+  padding-bottom: 0px;
+  padding-left: .5vw;
+  padding-right: 0px;
+  padding-top: 0px;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.exit {
+  color: gray!important;
+  font-size: 2.5vw;
+  font-weight: 300;
+  margin-left: 90%;
+  margin-top: 4.5vw;
+  text-align: right;
+  text-decoration: none;
+}

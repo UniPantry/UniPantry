@@ -1,0 +1,66 @@
+<div class="main">
+  <div class="container-fluid">
+    <app-nav></app-nav>
+  </div>
+  <div class="card" id="sidenav">
+    <div class="card-body">
+      <h5>All Lists</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          My Lists
+        </label>
+      </div>
+      <div class="subChecklist" id="subMyLists">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Friendsgiving
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Monthly Order
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Kathleen's Birthday Party
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-between" style="margin-bottom: 25px; margin-left: 0px; margin-right: 0px;">
+    <h1 id="mylists">My Lists</h1>
+    <a class="nav-link active ml-auto" href="#" id="New-List"><i class="material-icons">
+        add_circle_outline
+      </i>Create New List</a>
+  </div>
+  <div class="carousels">
+    <div class="row justify-content-between" style="margin-bottom: 25px; margin-left: 0px; margin-right: 0px;">
+      <h3 style="margin-left: 50px;">New Year, New You</h3>
+      <button class="btn btn-primary" type="button" id="view-all" data-toggle="modal" style="margin-right: 270px;"
+        data-target="#paywallModal"> View
+        List </button>
+      <app-lists-carousel style="margin-top: 20px;"></app-lists-carousel>
+    </div>
+    <div class="row justify-content-between" style="margin-bottom: 25px; margin-left: 0px; margin-right: 0px;">
+      <h3 style="margin-left: 50px;">New Year, New You</h3>
+      <button class="btn btn-primary" type="button" id="view-all" data-toggle="modal" style="margin-right: 270px;"
+        data-target="#paywallModal"> View
+        List </button>
+      <app-lists-carousel style="margin-top: 20px;"></app-lists-carousel>
+    </div>
+    <div class="row justify-content-between" style="margin-bottom: 25px; margin-left: 0px; margin-right: 0px;">
+      <h3 style="margin-left: 50px;">New Year, New You</h3>
+      <button class="btn btn-primary" type="button" id="view-all" data-toggle="modal" style="margin-right: 270px;"
+        data-target="#paywallModal"> View
+        List </button>
+      <app-lists-carousel style="margin-top: 20px;"></app-lists-carousel>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
