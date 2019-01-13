@@ -34,6 +34,7 @@ import { ShippingAddressesComponent } from './profile/shipping-addresses/shippin
 import { NavComponent } from './nav/nav.component';
 import { ListsComponent } from './lists/lists.component';
 import { ListsCarouselComponent } from './lists-carousel/lists-carousel.component';
+import { ListSelectedComponent } from './list-selected/list-selected.component';
 
 
 
@@ -67,7 +68,8 @@ import { ListsCarouselComponent } from './lists-carousel/lists-carousel.componen
     ShippingAddressesComponent,
     NavComponent,
     ListsComponent,
-    ListsCarouselComponent
+    ListsCarouselComponent,
+    ListSelectedComponent
   ],
   imports: [
     BrowserModule,
