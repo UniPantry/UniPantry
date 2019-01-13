@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-logged-in-landing-nav',
@@ -7,16 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LoggedInLandingNavComponent implements OnInit {
 
-  cartQuantity = 0;
-
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
+    (document.getElementById('cart-quantity') as any).textContent = this.cartService.getCartQuantity();
   }
 
   public addToCart() {
-    console.log(parseInt((document.getElementById('cart-quantity') as any).textContent, 10));
-    const newQuantity = parseInt((document.getElementById('cart-quantity') as any).textContent, 10) + 1;
-    (document.getElementById('cart-quantity') as any).textContent = newQuantity;
+    this.cartService.addToCart();
+    (document.getElementById('cart-quantity') as any).textContent = this.cartService.getCartQuantity();
   }
 }

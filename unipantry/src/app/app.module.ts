@@ -35,7 +35,8 @@ import { NavComponent } from './nav/nav.component';
 import { ListsComponent } from './lists/lists.component';
 import { ListsCarouselComponent } from './lists-carousel/lists-carousel.component';
 import { ListSelectedComponent } from './list-selected/list-selected.component';
-
+import { ProductService } from './product.service';
+import { CartService } from './cart.service';
 
 
 @NgModule({
@@ -77,7 +78,12 @@ import { ListSelectedComponent } from './list-selected/list-selected.component';
     NgbModule.forRoot(),
     FormsModule
   ],
-  providers: [LoggedInLandingNavComponent],
+  providers: [
+    LoggedInLandingNavComponent,
+    AppComponent,
+    ProductService,
+    CartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

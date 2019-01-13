@@ -26,7 +26,9 @@ export class ProductDetailComponent implements OnChanges {
 
   increaseQuantity() {
     const newQuantity = parseInt((document.getElementById('quantity') as any).value, 10) + 1;
-    (document.getElementById('quantity') as any).value = newQuantity;
+    if (newQuantity <= 20) {
+      (document.getElementById('quantity') as any).value = newQuantity;
+    }
   }
 
   decreaseQuantity() {

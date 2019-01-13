@@ -286,6 +286,7 @@ strong {
 
 #cart-quantity {
   font-size: 1vw;
-  margin-left: -1.5vw;
+  font-weight: 500;
+  margin-left: -1.8vw;
   position: absolute;
 }
