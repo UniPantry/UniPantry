@@ -191,13 +191,28 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   width: 48%;
 }
 
+#not-enough {
+  border-color: #0CB7CC;
+  border-radius: .75vw;
+  font-size: 1.5vw;
+  font-weight: 500;
+  height: 10vw;
+  margin-bottom: 5vw;
+  margin-left: 8%;
+  margin-right: 9%;
+  margin-top: 1.5vw;
+  padding: 2.5vw;
+  text-align: center;
+  width: 35%;
+}
+
 #subtotal-card-1 {
   border-radius: .75vw;
   color: black;
   font-size: 1.5vw;
   height: 15vw;
   margin-bottom: 1vw;
-  margin-top: 1vw;
+  margin-top: .5vw;
   padding: 1.5vw;
   width: 48%;
 }
@@ -208,7 +223,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   font-size: 1.5vw;
   height: 7.5vw;
   margin-bottom: 1vw;
-  margin-top: 1vw;
+  margin-top: .5vw;
   padding: 1.5vw;
   width: 100%;
 }
@@ -245,6 +260,30 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 #checkout {
   background: #F89833;
   border-color: #F89833;
+  border-radius: .75vw;
+  color: white;
+  font-size: 1.5vw;
+  height: 4vw;
+  margin-bottom: 1vw;
+  margin-top: 2.5vw;
+  width: 100%;
+}
+
+#checkout-2 {
+  background: #F89833;
+  border-color: #F89833;
+  border-radius: .75vw;
+  color: white;
+  font-size: 1.5vw;
+  height: 4vw;
+  margin-bottom: 16vw;
+  margin-top: 1vw;
+  width: 48%;
+}
+
+#checkout-3 {
+  background: gray;
+  border-color: gray;
   border-radius: .75vw;
   color: white;
   font-size: 1.5vw;

@@ -26,9 +26,11 @@ export class TypeaheadComponent {
     this.router = router;
   }
 
-  route() {
-    const query = (document.getElementById('nav-search') as any).value;
-    this.router.navigateByUrl('/browse');
+  route(event: KeyboardEvent) {
+    if (event.charCode === 13) {
+      const query = (document.getElementById('nav-search') as any).value;
+      this.router.navigateByUrl('/browse');
+    }
   }
 
   search = (text$: Observable<string>) =>
