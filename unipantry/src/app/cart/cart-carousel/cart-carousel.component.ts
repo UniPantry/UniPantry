@@ -1,29 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product';
-import { ProductService } from '../product.service';
-import { LoggedInLandingNavComponent } from '../logged-in-landing-nav/logged-in-landing-nav.component';
+import { Product } from '../../product';
+import { ProductService } from '../../product.service';
+import { CartComponent } from '../cart.component';
 
 @Component({
-  selector: 'app-logged-in-card-carousel-2',
-  templateUrl: './logged-in-card-carousel-2.component.html',
-  styleUrls: ['./logged-in-card-carousel.component.css']
+  selector: 'app-cart-carousel',
+  templateUrl: './cart-carousel.component.html',
+  styleUrls: ['./cart-carousel.component.css']
 })
-export class LoggedInCardCarousel2Component implements OnInit {
+export class CartCarouselComponent implements OnInit {
 
   products: Product[];
 
   selectedProduct: Product;
 
-  newYearNewYou = <Product[]>[];
+  dormRoomEssentials = <Product[]>[];
 
-  constructor(private productService: ProductService, private nav: LoggedInLandingNavComponent) { }
+  constructor(private productService: ProductService, private cart: CartComponent) { }
 
   ngOnInit() {
     this.getProducts();
   }
 
   addToCart(product: Product) {
-    this.nav.addToCart(product, 1);
+    this.cart.addToCart(product, 1);
   }
 
   onSelect(product: Product): void {
@@ -34,21 +34,21 @@ export class LoggedInCardCarousel2Component implements OnInit {
   getProducts(): void {
     this.productService.getProducts()
       .subscribe(products => this.products = products);
-    this.getNewYearNewYou(this.newYearNewYou);
-    this.carousel(this.newYearNewYou);
+    this.getDormEssentials(this.dormRoomEssentials);
+    this.carousel(this.dormRoomEssentials);
   }
 
-  getNewYearNewYou(newYearNewYou: Product[]): void {
+  getDormEssentials(dormRoomEssentials: Product[]): void {
     this.products.forEach(function (product) {
-      if (product.promotion === 'new year, new you') {
-        newYearNewYou.push(product);
+      if (product.promotion === 'dorm room essentials') {
+        dormRoomEssentials.push(product);
       }
     });
   }
 
   carousel(products: Product[]) {
     $(document).ready(function () {
-      $('#carousel-2').on('slide.bs.carousel', function (e) {
+      $('#carousel-1').on('slide.bs.carousel', function (e) {
         const $e = $((e as any).relatedTarget);
         const idx = $e.index();
         const itemsPerSlide = 4;
@@ -58,13 +58,13 @@ export class LoggedInCardCarousel2Component implements OnInit {
           for (let i = 0; i < it; i++) {
             // append slides to end
             if ((e as any).direction === 'left') {
-              $('#c2')
+              $('#c1')
                 .eq(i)
-                .appendTo('.inner-2');
+                .appendTo('.inner-1');
             } else {
-              $('#c2')
+              $('#c1')
                 .eq(0)
-                .appendTo($(this).find('.inner-2'));
+                .appendTo($(this).find('.inner-1'));
             }
           }
         }

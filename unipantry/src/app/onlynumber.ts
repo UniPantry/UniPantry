@@ -5,18 +5,18 @@ import {Directive, ElementRef, HostListener} from '@angular/core';
 })
 export class OnlyNumberDirective {
 
-  private regex: RegExp = new RegExp(/^[1-9]$|^0[1-9]$|^1[0-9]$|^20$/);
+  private regex: RegExp = new RegExp(/^[0-9]$|^0[1-9]$|^1[0-9]$|^20$/);
 
   // Allow key codes for special events. Reflect :
   // Backspace, tab, end, home
-  private specialKeys: Array<string> = ['Backspace', 'Tab', 'End', 'Home'];
+  private specialKeys: Array<string> = ['Backspace', 'Tab', 'End', 'Home', 'ArrowLeft', 'ArrowRight'];
 
   constructor(private el: ElementRef) {
   }
 
   @HostListener('keydown', ['$event'])
   onKeyDown(event: KeyboardEvent) {
-    // Allow Backspace, tab, end, and home keys
+    // Allow Backspace, tab, end, arrow, and home keys
     if (this.specialKeys.indexOf(event.key) !== -1) {
       return;
     }

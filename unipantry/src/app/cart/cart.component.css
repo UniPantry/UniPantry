@@ -1,0 +1,303 @@
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+h3 {
+  font-size: 1.8vw;
+  margin-bottom: .2vw;
+}
+
+p {
+  margin-bottom: .5vw;
+}
+
+.alert {
+  background: #0BCDB2;
+  color: white;
+  font-size: 1.5vw;
+  height: 4vw;
+  padding-bottom: 0px;
+  padding-top: .75vw;
+  text-align: center;
+}
+
+#refer-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.close {
+  color: white;
+  font-size: 2.5vw;
+  font-weight: 300;
+  margin-right: 5vw;
+  padding: 0px;
+  vertical-align: middle;
+}
+
+.product-cards {
+  border-radius: .75vw;
+  font-size: 1vw;
+  height: 7.5vw;
+  margin-bottom: 1vw;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 1.5vw;
+  width: 80%;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.weight {
+  font-size: 1vw;
+  margin-bottom: 0vw;
+}
+
+.name {
+  font-size: 1vw;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.price {
+  color: rgb(.5, .5, .5, .7);
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-bottom: 0px;
+  padding-top: 7.5%;
+}
+
+.image {
+  height: 100%;
+  width: 80%;
+}
+
+.note {
+  font-size: 1vw;
+  margin-bottom: 0px;
+}
+
+.add-note {
+  color: #F89833!important;
+  cursor: pointer;
+  font-size: 1vw;
+}
+
+.btn-group {
+  padding-top: 7.5%;
+}
+
+.increase {
+  background: #0BCDB2;
+  border: #0BCDB2;
+  border-radius: .75vw;
+  color: white;
+  font-size: 1.5vw;
+  font-weight: 800;
+  padding: 0px;
+  text-align: center;
+  width: 2vw;
+}
+
+.quantity {
+  background: white;
+  border-bottom-width: .15vw;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: .15vw;
+  border-style: solid;
+  border-color: #0BCDB2;
+  color: black;
+  font-size: 1vw;
+  text-align: center;
+  width: 3vw;
+}
+
+.decrease {
+  background: #0BCDB2;
+  border: #0BCDB2;
+  border-radius: .75vw;
+  color: white;
+  display: block;
+  font-size: 1.5vw;
+  font-weight: 800;
+  padding: 0px;
+  text-align: center;
+  width: 2vw;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.delete {
+  color: gray;
+  cursor: pointer;
+  font-size: 2.5vw;
+  font-weight: 400;
+  padding: 0px;
+  vertical-align: middle;
+}
+
+.column {
+  height: 100%;
+}
+
+.c1 {
+  width: 10%;
+}
+
+.c2 {
+  width: 22.5%;
+}
+
+.c3 {
+  width: 22.5%;
+}
+
+.c4 {
+  width: 22.5%;
+}
+
+.c5 {
+  width: 17.5%;
+}
+
+.c6 {
+  width: 5%;
+}
+
+.pencil {
+  font-size: 1vw;
+}
+
+#promo-card {
+  border-radius: .75vw;
+  font-size: 1vw;
+  height: 15vw;
+  margin-bottom: 1vw;
+  margin-right: 4%;
+  margin-top: 1vw;
+  padding: 2vw;
+  width: 48%;
+}
+
+#subtotal-card-1 {
+  border-radius: .75vw;
+  color: black;
+  font-size: 1.5vw;
+  height: 15vw;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+  padding: 1.5vw;
+  width: 48%;
+}
+
+#subtotal-card-2 {
+  border-radius: .75vw;
+  color: black;
+  font-size: 1.5vw;
+  height: 7.5vw;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+  padding: 1.5vw;
+  width: 100%;
+}
+
+.total-1 {
+  margin-left: 17.5%;
+  margin-top: 1vw;
+}
+
+.total-2 {
+  font-weight: 500;
+  margin-left: 5%;
+  margin-top: 1vw;
+}
+
+.promo {
+  width: 80%;
+}
+
+.credit-total {
+  color: #0CB7CC;
+  margin-left: -.6vw;
+}
+
+#apply {
+  background: #0BCDB2;
+  border-color: gray;
+  border-left-width: 0px;
+  color: white;
+  font-size: 1vw;
+  width: 15%;
+}
+
+#checkout {
+  background: #F89833;
+  border-color: #F89833;
+  border-radius: .75vw;
+  color: white;
+  font-size: 1.5vw;
+  height: 4vw;
+  margin-bottom: 1vw;
+  margin-top: 2.5vw;
+  width: 100%;
+}
+
+.subtotal-column {
+  width: 48%;
+}
+
+#existing {
+  background: white;
+  border-color: #0BCDB2;
+  color: #0BCDB2;
+  font-size: 1vw;
+  margin-top: 2vw;
+  width: 95%;
+}
+
+.note-input {
+  border-color: gray;
+  border-radius: .75vw;
+  color: #F89833;
+  height: 100%;
+  padding: .5vw;
+  width: 95%;
+}
+
+#note-card {
+  border-radius: .75vw;
+  font-size: 1vw;
+  height: 15vw;
+  margin-bottom: 5vw;
+  margin-right: 4%;
+  margin-top: 1vw;
+  padding: 2vw;
+  width: 48%;
+}
+
+::placeholder {
+  color: #F89833;
+  opacity: 1;
+}
+
+#view-all {
+  margin-right: 10.5%;
+  background-color: #0BCDB2;
+  border-color: #0BCDB2;
+  font-size: 1.4vw;
+  height: 3vw;
+  padding: 0px;
+  width: 10%;
+}

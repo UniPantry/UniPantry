@@ -9,13 +9,17 @@ import { ProductService } from '../product.service';
 })
 export class LoggedInLandingComponent implements OnInit {
 
+  selectedProduct: Product;
+
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
   }
 
   getSelectedProduct() {
-    return this.productService.getSelectedProduct();
+    this.productService.getSelectedProduct()
+        .subscribe(product => this.selectedProduct = product);
+    return this.selectedProduct;
   }
 
 }

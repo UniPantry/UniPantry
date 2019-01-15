@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-logged-in-landing-nav',
@@ -8,14 +9,20 @@ import { CartService } from '../cart.service';
 })
 export class LoggedInLandingNavComponent implements OnInit {
 
+  cartQuantity: number;
+
   constructor(private cartService: CartService) { }
 
   ngOnInit() {
-    (document.getElementById('cart-quantity') as any).textContent = this.cartService.getCartQuantity();
+    this.cartService.getCartQuantity()
+        .subscribe(quantity => this.cartQuantity = quantity);
+    (document.getElementById('cart-quantity') as any).textContent = this.cartQuantity;
   }
 
-  public addToCart() {
-    this.cartService.addToCart();
-    (document.getElementById('cart-quantity') as any).textContent = this.cartService.getCartQuantity();
+  public addToCart(product: Product, quantity: number) {
+    this.cartService.addToCart(product, quantity);
+    this.cartService.getCartQuantity()
+        .subscribe(cartQuantity => this.cartQuantity = cartQuantity);
+    (document.getElementById('cart-quantity') as any).textContent = this.cartQuantity;
   }
 }

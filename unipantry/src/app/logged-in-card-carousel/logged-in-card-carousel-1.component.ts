@@ -8,7 +8,7 @@ import { LoggedInLandingNavComponent } from '../logged-in-landing-nav/logged-in-
   templateUrl: './logged-in-card-carousel-1.component.html',
   styleUrls: ['./logged-in-card-carousel.component.css']
 })
-export class LoggedInCardCarousel1Component {
+export class LoggedInCardCarousel1Component implements OnInit {
 
   products: Product[];
 
@@ -22,8 +22,8 @@ export class LoggedInCardCarousel1Component {
     this.getProducts();
   }
 
-  addToCart() {
-    this.nav.addToCart();
+  addToCart(product: Product) {
+    this.nav.addToCart(product, 1);
   }
 
   onSelect(product: Product): void {

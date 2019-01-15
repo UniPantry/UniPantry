@@ -1,2 +1,2 @@
 <input id="typeahead-config" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" placeholder="&#xF002; Search all products"
-  id="nav-search" />
+  id="nav-search" (keypress)="($event.charCode==13)? route() : return"/>

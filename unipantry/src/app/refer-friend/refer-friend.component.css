@@ -1,0 +1,85 @@
+body {
+  background-color: #F5F5F5;
+}
+
+.topPhrase {
+  margin-top: 3vw;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.container {
+    overflow: hidden;/* Makes this div contain its floats */
+}
+
+.container .leftBox, .container .rightBox {
+  text-align: center;
+  width: 29%;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+
+}
+
+.container .leftBox, .container .rightBox .rightTop, .container .rightBox .rightBottom {
+  border: 10px black;
+  border-radius: 1vw;
+  box-shadow: 0vw 0.1vw 0.3vw black;
+  background-color: white;
+  padding-top: 2.5vw;
+  padding-bottom: 2.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.rightTop, .rightBottom {
+  width: 100%;
+}
+
+/*.container .leftBox, .container .rightBox .rightTop, .container .rightBox .rightBottom*/
+
+.row {
+  display: block;
+}
+
+.container .leftBox {
+  margin-left: 19%;
+  float: left;
+}
+
+.container .rightBox {
+  margin-right: 19%;
+  float: right;
+}
+
+.rightBox .rightTop .btn1 {
+  background-color: transparent; 
+  color: #ff9900; 
+  border: 2px solid #ff9900;
+  border-radius: 6px;
+  width: 50%;
+  height: 3vw;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.rightBox .rightTop .btn1:hover {
+  background-color: #ff9900;
+  color: white;
+ }
+ .rightBox .rightBottom .btn2 {
+  width: 28%;
+  height: 3vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  font-size: 1.5vw;
+  background-color: #00CED1;
+  color: white;
+ }
+
+.container h1, .container h2, .container h4 {
+    display: block;
+}
+
+.container input, .container button {
+  display: inline-flex;
+}

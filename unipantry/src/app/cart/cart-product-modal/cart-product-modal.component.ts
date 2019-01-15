@@ -1,16 +1,17 @@
 import { Component, OnChanges, Input } from '@angular/core';
-import { Product } from '../product';
-import { LoggedInLandingNavComponent } from '../logged-in-landing-nav/logged-in-landing-nav.component';
+import { Product } from '../../product';
+import { CartComponent } from '../cart.component';
 
 @Component({
-  selector: 'app-product-detail',
-  templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.css']
+  selector: 'app-cart-product-modal',
+  templateUrl: './cart-product-modal.component.html',
+  styleUrls: ['./cart-product-modal.component.css']
 })
-export class ProductDetailComponent implements OnChanges {
+export class CartProductModalComponent implements OnChanges {
+
   @Input() product: Product;
 
-  constructor(private nav: LoggedInLandingNavComponent) { }
+  constructor(private cart: CartComponent) { }
 
   ngOnChanges() {
     this.resetQuantity();
@@ -18,7 +19,7 @@ export class ProductDetailComponent implements OnChanges {
 
   addToCart() {
     const quantity = parseInt((document.getElementById('quantity') as any).value, 10);
-    this.nav.addToCart(this.product, quantity);
+    this.cart.addToCart(this.product, quantity);
   }
 
   increaseQuantity() {
@@ -36,7 +37,7 @@ export class ProductDetailComponent implements OnChanges {
   }
 
   resetQuantity() {
-    $(document).on('hidden.bs.modal', '#detailModal', function () {
+    $(document).on('hidden.bs.modal', '#cartModal', function () {
       const newQuantity = <number>1;
       (document.getElementById('quantity') as any).value = newQuantity;
     });

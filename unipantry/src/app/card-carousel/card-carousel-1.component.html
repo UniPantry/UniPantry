@@ -8,7 +8,7 @@
           <div class="card-body">
             <p class="card-title">{{product.weight | titlecase}}</p>
             <p class="card-text" id="item">{{product.name | titlecase}}<br></p>
-            <p class="card-text" id="price">{{product.price}} <del style="color:gray;">{{product.oldPrice}}</del></p>
+            <p class="card-text" id="price">{{product.price | currency}} <del style="color:gray;">{{product.oldPrice | currency}}</del></p>
             <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal"
               type="button">
               Sign Up to Order Now</button>
@@ -22,7 +22,7 @@
           <div class="card-body">
             <p class="card-title">{{product.weight | titlecase}}</p>
             <p class="card-text" id="item">{{product.name | titlecase}}<br></p>
-            <p class="card-text" id="price">{{product.price}} <del style="color:gray;">{{product.oldPrice}}</del></p>
+            <p class="card-text" id="price">{{product.price | currency}} <del style="color:gray;">{{product.oldPrice | currency}}</del></p>
             <button class="btn btn-primary btn-large" id="signup-btn" data-toggle="modal" data-target="#paywallModal"
               type="button">
               Sign Up to Order Now</button>

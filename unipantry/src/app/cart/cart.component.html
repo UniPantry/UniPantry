@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <app-nav></app-nav>
+  <div class="alert alert-dismissible fade show" role="alert">
+    Want to earn some extra ? <a href="#" id="refer-link">Refer your friends to UniPantry!</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-between" style="margin-bottom: 1%; margin-top: 1%;">
+    <h3 style="margin-left: 10%;">Shopping Cart</h3>
+  </div>
+  <div *ngFor="let product of cart">
+    <div class="card row product-cards">
+      <div class="column c1 align-items-center">
+        <img src={{product.src}} class="image">
+      </div>
+      <div class="column c2 align-items-center">
+        <p class="weight">{{product.weight | titlecase}}</p>
+        <p class="name">{{product.name | titlecase}}</p>
+      </div>
+      <div class="column c3 align-items-center">
+        <p class="note">Note to Shopper</p>
+        <a class="add-note">
+          <i class="material-icons pencil">
+            edit
+          </i> Add?</a>
+      </div>
+      <div class="column c4 align-items-center">
+        <div class="btn-group" role="group" aria-label="Quantity">
+          <button type="button" class="btn btn-secondary decrease" (click)="removeFromCart(product, 1)">-</button>
+          <input class="quantity" type="number" min="1" value="1" OnlyNumber="true" (change)="updateQuantity(product)" />
+          <button type="button" class="btn btn-secondary increase" (click)="addToCart(product, 1)">+</button>
+        </div>
+      </div>
+      <div class="column c5 align-items-center">
+        <p class="price">{{product.price | currency}}</p>
+      </div>
+      <div class="column c6 align-items-center">
+        <span class="delete" (click)="removeAll(product)">&times;</span>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-left: 10%; width: 80%;">
+    <div class="card" id="promo-card">
+      <p style="font-weight: 500">Add New Gift Credit or Promo Code</p>
+      <div class="row">
+        <input class="promo" />
+        <button class="btn btn-sm btn-primary" id="apply">APPLY</button>
+      </div>
+      <button *ngIf="giftCredit" class="btn btn-sm btn-primary" id="existing">Use existing gift credit of
+        {{giftCredit | currency}}</button>
+    </div>
+    <div *ngIf="giftCredit" class="card" id="subtotal-card-1">
+      <div class="row">
+        <div class="column total-1">
+          <p>Total ({{cartQuantity}} items):</p>
+          <p>Gift Credit:</p>
+          <p>Subtotal:</p>
+        </div>
+        <div class="column total-2">
+          <p>{{total | currency}}</p>
+          <p class="credit-total">-{{giftCredit | currency}}</p>
+          <p>{{subtotal | currency}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="column subtotal-column">
+      <div *ngIf="!giftCredit" class="card" id="subtotal-card-2">
+        <div class="row">
+          <div class="column total-1">
+            <p>Subtotal ({{cartQuantity}} items):</p>
+          </div>
+          <div class="column total-2">
+            <p>{{total | currency}}</p>
+          </div>
+        </div>
+      </div>
+      <button *ngIf="!giftCredit" class="btn btn-md btn-primary" id="checkout">Checkout</button>
+    </div>
+  </div>
+  <div class="row" style="margin-left: 10%; width: 80%;">
+    <div class="card" id="note-card">
+      <p style="font-weight: 500; font-size: 1.5vw;">Note to Delivery Person</p>
+      <textarea class="note-input" placeholder="Click to add" maxlength="120"></textarea>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-between" style="margin-bottom: 1%; margin-top: 1%;">
+      <h3 style="margin-left: 11%;">Customers Like You Also Bought</h3>
+      <button class="btn btn-primary" type="button" id="view-all">View All</button>
+    </div>
+    <app-cart-carousel></app-cart-carousel>
+</div>
+<app-footer></app-footer>
