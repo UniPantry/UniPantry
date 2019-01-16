@@ -18,6 +18,8 @@ p {
   font-size: 1.5vw;
   height: 4vw;
   padding-bottom: 0px;
+  padding-left: 0vw;
+  padding-right: 0vw;
   padding-top: .75vw;
   text-align: center;
 }
@@ -60,8 +62,11 @@ p {
 .name {
   font-size: 1vw;
   font-weight: 500;
+  line-height: 1;
+  max-height: 3vw;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 90%;
   word-wrap: break-word;
 }
 
@@ -161,15 +166,15 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 .c3 {
-  width: 22.5%;
+  width: 27.5%;
 }
 
 .c4 {
-  width: 22.5%;
+  width: 20%;
 }
 
 .c5 {
-  width: 17.5%;
+  width: 15%;
 }
 
 .c6 {
@@ -229,14 +234,24 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 .total-1 {
-  margin-left: 17.5%;
   margin-top: 1vw;
+  width: 50%;
+}
+
+.total-1 > p {
+  font-weight: 400;
+  padding-left: 17.5%;
 }
 
 .total-2 {
   font-weight: 500;
-  margin-left: 5%;
   margin-top: 1vw;
+  text-align: right;
+  width: 50%;
+}
+
+.total-2 > p{
+  padding-right: 60%;
 }
 
 .promo {
@@ -245,7 +260,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .credit-total {
   color: #0CB7CC;
-  margin-left: -.6vw;
 }
 
 #apply {
@@ -266,6 +280,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   height: 4vw;
   margin-bottom: 1vw;
   margin-top: 2.5vw;
+  padding: 0vw;
   width: 100%;
 }
 
@@ -278,6 +293,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   height: 4vw;
   margin-bottom: 16vw;
   margin-top: 1vw;
+  padding: 0vw;
   width: 48%;
 }
 
@@ -290,6 +306,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   height: 4vw;
   margin-bottom: 1vw;
   margin-top: 2.5vw;
+  padding: 0vw;
   width: 100%;
 }
 

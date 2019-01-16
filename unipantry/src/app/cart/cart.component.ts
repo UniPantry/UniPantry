@@ -109,4 +109,12 @@ export class CartComponent implements AfterViewInit, OnInit {
       }, 100);
     }
   }
+
+  addNote(product: Product) {
+    const str = '<textarea style="border-radius: .75vw; color: #F89833; width: 90%;" placeholder="Click to add" maxlength="70"></textarea>';
+    const Obj = document.querySelectorAll('.add-note')[this.cart.indexOf(product)];
+    if (Obj.innerHTML) {
+      Obj.innerHTML = str;
+    }
+  }
 }

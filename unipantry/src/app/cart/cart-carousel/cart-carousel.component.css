@@ -80,7 +80,7 @@
 #add-cart-btn {
   background-color: #F89833;
   border-color: #F89833;
-  border-radius: 5px;
+  border-radius: .5vw;
   font-size: 1vw;
   height: 3vw;
   margin-right: 1vw;
@@ -92,18 +92,22 @@
 .save {
   background: white;
   border-color: #F89833;
-  border-radius: 5px;
+  border-radius: .5vw;
   color: #F89833;
   font-size: 1vw;
   height: 3vw!important;
   height: 100%;
   padding: 0px;
-  vertical-align: text-bottom;
+  vertical-align: top;
   width: 4vw;
 }
 
 .save::after {
   color: #F89833;
+}
+
+.card-body > .row > .dropdown {
+  height: 3vw;
 }
 
 .dropdown:hover>.dropdown-menu {

@@ -1,22 +1,22 @@
-<div class="container-fluid">
+<div *ngIf="!loggedIn else foot2">
   <nav class="navbar navbar-expand-xl navbar-dark sticky-bottom" style="background: rgb(52, 52, 52);">
     <div class="container">
       <div class="d-flex flex-column align-items-start w-100">
         <ul class="navbar-nav centered-nav">
           <li class="nav-item active footer-link">
-            <a class="nav-link" id="footer-button" routerLink="/logged-out">Home</a>
+            <a class="nav-link" routerLink="/logged-out">Home</a>
           </li>
           <li class="nav-item active footer-link">
-            <a class="nav-link" id="footer-button" routerLink="/about">About</a>
-          </li>
-          <li class="nav-item active footer-link" id="contact">
-            <a class="nav-link" id="footer-button" href="#">Contact Us</a>
+            <a class="nav-link" routerLink="/about">About</a>
           </li>
           <li class="nav-item active footer-link">
-            <a class="nav-link" id="footer-button" routerLink="/logged-in">Log In</a>
+            <a class="nav-link" href="#">Contact Us</a>
           </li>
           <li class="nav-item active footer-link">
-            <a class="nav-link" id="footer-button" href="#" data-toggle="modal" data-target="#paywallModal">Sign Up</a>
+            <a class="nav-link" routerLink="/logged-in">Log In</a>
+          </li>
+          <li class="nav-item active footer-link">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#paywallModal">Sign Up</a>
           </li>
         </ul>
         <img class="centered-nav" id="footer-logo" src="assets/images/Logos/UniPantry Logo.png" alt="Logo">
@@ -24,3 +24,30 @@
     </div>
   </nav>
 </div>
+
+<ng-template #foot2>
+  <nav class="navbar navbar-expand-xl navbar-dark sticky-bottom" style="background: rgb(52, 52, 52);">
+    <div class="container">
+      <div class="d-flex flex-column align-items-start w-100">
+        <ul class="navbar-nav centered-nav">
+          <li class="nav-item active footer-link">
+            <a class="nav-link" routerLink="/logged-in">Home</a>
+          </li>
+          <li class="nav-item active footer-link">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item active footer-link">
+            <a class="nav-link" routerLink="/profile">My Account</a>
+          </li>
+          <li class="nav-item active footer-link">
+            <a class="nav-link" routerLink="/refer-friend">Refer a Friend</a>
+          </li>
+          <li class="nav-item active footer-link">
+            <a class="nav-link" routerLink="/lists">My Lists</a>
+          </li>
+        </ul>
+        <img class="centered-nav" id="footer-logo" src="assets/images/Logos/UniPantry Logo.png" alt="Logo">
+      </div>
+    </div>
+  </nav>
+</ng-template>

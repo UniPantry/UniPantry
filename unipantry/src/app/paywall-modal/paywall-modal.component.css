@@ -75,3 +75,12 @@ img {
 .line-2 {
   margin-left: 2.6vw;
 }
+
+.modal-body {
+  padding: 2.5vw;
+}
+
+ul {
+  margin-bottom: 0vw;
+  padding-left: 0vw;
+}

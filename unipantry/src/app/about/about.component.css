@@ -134,3 +134,8 @@
   font-size: 1.22vw;
   padding: 0.61vw 1.22vw;
 }
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
