@@ -17,11 +17,8 @@ export class ProductDetailComponent implements OnChanges {
   }
 
   addToCart() {
-    let i: number;
     const quantity = parseInt((document.getElementById('quantity') as any).value, 10);
-    for (i = 0; i < quantity; i++) {
-      this.nav.addToCart();
-    }
+    this.nav.addToCart(this.product, quantity);
   }
 
   increaseQuantity() {

@@ -1,0 +1,44 @@
+<app-nav></app-nav>
+<h1 class="topPhrase">Get up to 2 months of membership for free for inviting your friends!</h1>
+
+<div class="container">
+  <div class="leftBox">
+    <h1 style="font-size: 1.7vw; font-weight: 450; margin-bottom: 3vw;">How it Works</h1>
+    <h4 style="font-size: 1vw; margin: 0vw; font-weight: 300;">1. You and your friend each get</h4>
+    <h2 style="font-size: 3vw; color: #00CED1; font-weight: 300; margin: 0vw;">10 points</h2>
+    <h4 style="font-size: 1vw; margin-top: 0vw; margin-bottom: 4vw; font-weight: 300;">when they sign up for a free
+      trial<br>and place their first order.</h4>
+    <h4 style="font-size: 1vw; margin: 0vw; font-weight: 300;">2. You and your friends each get</h4>
+    <h2 style="font-size: 3vw; color: #00CED1; font-weight: 300; margin: 0vw;">30 points</h2>
+    <h4 style="font-size: 1vw; margin-top: 0vw; margin-bottom: 4vw; font-weight: 300;">when they continue their paid<br>membership
+      after the trial period.</h4>
+    <h4 style="font-size: 1vw; margin: 0vw; font-weight: 300;">3. When you reach</h4>
+    <h2 style="font-size: 3vw; color: #00CED1; font-weight: 300; margin: 0vw;">100 points</h2>
+    <h4 style="font-size: 1vw; margin-top: 0vw; margin-bottom: 4vw; font-weight: 300;">we'll send you an email and
+      automatically<br>waive your membership fee<br>for the next full month!.</h4>
+    <h4 style="font-size: 1vw; margin: 0vw; font-weight: 300; font-style: italic;">Free membership offer can only be
+      redeemed for up<br>to 3 months or 300 points total per account.</h4>
+  </div>
+  <div class="rightBox">
+    <div class="row rightTop" style="margin-bottom: 1vw;">
+      <h1 style="font-size: 1.7vw; font-weight: 450; margin-bottom: 2.8vw;">Invite Friends by Email</h1>
+      <h4 style="font-size: 1vw; margin-bottom: 0.5vw; margin-left: 10%;font-weight: 400; text-align: left;">Friend's
+        Name</h4>
+      <input style="width: 80%; height: 3vw; margin-bottom: 2vw;" type="text" id="friendName" />
+      <h4 style="font-size: 1vw; margin-bottom: 0.5vw; margin-left: 10%;font-weight: 400; text-align: left;">Friend's
+        Email</h4>
+      <input style="width: 80%; height: 3vw; margin-bottom: 2vw;" type="text" id="friendEmail" />
+      <input class="btn1" type="button" value="Send Invite" onclick=# />
+    </div>
+
+    <div class="row rightBottom">
+      <h1 style="font-size: 1.5vw; font-weight: 450; margin-bottom: 2.8vw;">Or Share Your Referral Link</h1>
+      <h4 style="font-size: 1vw; margin-bottom: 0.5vw; margin-left: 10%;font-weight: 400; text-align: left;">Your
+        Referral Link</h4>
+      <input style="width: 62%; height: 3vw; margin-bottom: 2vw;" type="text" id="referLink" />
+      <button class="btn2" (click)="copyToClipboard()">COPY</button>
+    </div>
+
+  </div>
+</div>
+<app-footer></app-footer>

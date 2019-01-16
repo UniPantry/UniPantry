@@ -4,10 +4,10 @@
 
 .nav-link {
   color: white;
-  font-size: 22px;
-  margin-bottom: 5px;
-  margin-right: 50px;
-  margin-top: 5px;
+  font-size: 1.22vw;
+  margin-bottom: 0.28vw;
+  margin-right: 2.78vw;
+  margin-top: 0.28vw;
 }
 
 .navbar {
@@ -15,7 +15,7 @@
 }
 
 .navbar-brand {
-  font-size: 22px;
+  font-size: 1.22vw;
 }
 
 .btn-primary {
@@ -32,10 +32,10 @@
 .getup {
   background-color: white;
   color: black;
-  font-size: 22px;
-  height: 100px;
-  padding-top: 20px;
-  padding-bottom: 150px;
+  font-size: 1.22vw;
+  height: 5.56vw;
+  padding-top: 1.11vw;
+  padding-bottom: 8.33vw;
   text-align: center;
 }
 
@@ -48,16 +48,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50px;
+  font-size: 2.78vw;
   text-shadow: -1px 1px #000000
 }
 
 .join {
   background-color: #0BCDB2;
   color: white;
-  font-size: 24px;
-  height: 85px;
-  padding-top: 24px;
+  font-size: 1.33vw;
+  height: 4.72vw;
+  padding-top: 1.33vw;
   text-align: center;
 }
 
@@ -96,46 +96,46 @@
   display: block;
   margin-left: auto;
   margin-right: 0px;
-  margin-top: 40px;
+  margin-top: 2.22vw;
   width: 70%;
 }
 
 .hanpic2 {
   display: block;
   margin-left: auto;
-  margin-right: 20px;
-  margin-top: 40px;
+  margin-right: 1.11vw;
+  margin-top: 2.22vw;
   width: 40%;
 }
 
 .head1 {
-  font-size: 30px;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  font-size: 1.67vw;
+  margin-top: 2.78vw;
+  margin-bottom: 1.67vw;
 }
 
 .par1 {
-  font-size: 20px;
+  font-size: 1.11vw;
 }
 
 .head2 {
-  font-size: 30px;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  font-size: 1.67vw;
+  margin-top: 2.78vw;
+  margin-bottom: 1.11vw;
 }
 
 .par2 {
-  font-size: 20px;
+  font-size: 1.11vw;
 }
 
 #carousel-btn-2 {
   background-color: #F89833;
   border-color: #F89833;
-  font-size: 22px;
-  padding: 11px 22px;
+  font-size: 1.22vw;
+  padding: 0.61vw 1.22vw;
 }
 
-.nav-logo {
-  margin-left: 25px;
-  width: 160px;
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }

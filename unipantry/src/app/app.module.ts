@@ -37,6 +37,10 @@ import { ListsCarouselComponent } from './lists-carousel/lists-carousel.componen
 import { ListSelectedComponent } from './list-selected/list-selected.component';
 import { ProductService } from './product.service';
 import { CartService } from './cart.service';
+import { CartComponent } from './cart/cart.component';
+import { CartCarouselComponent } from './cart/cart-carousel/cart-carousel.component';
+import { ReferFriendComponent } from './refer-friend/refer-friend.component';
+import { CartProductModalComponent } from './cart/cart-product-modal/cart-product-modal.component';
 
 
 @NgModule({
@@ -70,7 +74,11 @@ import { CartService } from './cart.service';
     NavComponent,
     ListsComponent,
     ListsCarouselComponent,
-    ListSelectedComponent
+    ListSelectedComponent,
+    CartComponent,
+    CartCarouselComponent,
+    ReferFriendComponent,
+    CartProductModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div id="carousel-1" class="carousel slide" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner row mx-auto inner-1">
+      <div *ngFor="let product of dormRoomEssentials.slice(0,1)" (click)="onSelect(product)" class="carousel-item col-sm-3 active"
+        id="c1">
+        <div class="card material-elevation mdc-elevation--z3">
+          <a data-toggle="modal" data-target="#cartModal" style="text-decoration: none; color: black;">
+            <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
+          </a>
+          <div class="card-body">
+            <p class="card-title">{{product.weight | titlecase}}</p>
+            <p class="card-text" id="item">{{product.name | titlecase}}</p>
+            <p class="card-text" id="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del></p>
+            <div class="row justify-content-center">
+              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)" type="button">
+                Add to Cart</button>
+              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save</button>
+                <div class="dropdown-menu save-menu material-elevation mdc-elevation--z3" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item disabled">Friendsgiving</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item disabled">Monthly Order</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item disabled">Kathleen's Birthday Party</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item disabled" style="color: #F89833">+ New List</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let product of dormRoomEssentials.slice(1)" (click)="onSelect(product)" class="carousel-item col-sm-3"
+        id="c1">
+        <div class="card material-elevation mdc-elevation--z3">
+          <a data-toggle="modal" data-target="#cartModal" style="text-decoration: none; color: black;">
+            <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
+          </a>
+          <div class="card-body">
+            <p class="card-title">{{product.weight | titlecase}}</p>
+            <p class="card-text" id="item">{{product.name | titlecase}}</p>
+            <p class="card-text" id="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del></p>
+            <div class="row justify-content-center">
+              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)" type="button">
+                Add to Cart</button>
+              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save</button>
+                <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z3" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item disabled">Friendsgiving</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item disabled">Monthly Order</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item disabled">Kathleen's Birthday Party</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item disabled" style="color: #F89833">+ New List</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-control-prev" id="left-control">
+      <a class="material-icons" id="left-chevron" href="#carousel-1" role="button" data-slide="prev" aria-hidden="true">chevron_left</a>
+      <span class="sr-only">Previous</span>
+    </div>
+    <div class="carousel-control-next" id="right-control">
+      <a class="material-icons" id="right-chevron" href="#carousel-1" role="button" data-slide="next" aria-hidden="true">chevron_right</a>
+      <span class="sr-only">Next</span>
+    </div>
+  </div>
+</div>
+<app-cart-product-modal [product]="selectedProduct"></app-cart-product-modal>

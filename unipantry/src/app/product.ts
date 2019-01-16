@@ -1,8 +1,8 @@
 export class Product {
   name: string;
   weight: string;
-  price: string;
-  oldPrice: string;
+  price: number;
+  oldPrice: number;
   allergens: string;
   ingredients: string;
   src: string;

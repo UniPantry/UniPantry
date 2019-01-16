@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../product';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-logged-in-landing',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoggedInLandingComponent implements OnInit {
 
-  constructor() { }
+  selectedProduct: Product;
+
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+  }
+
+  getSelectedProduct() {
+    this.productService.getSelectedProduct()
+        .subscribe(product => this.selectedProduct = product);
+    return this.selectedProduct;
   }
 
 }
