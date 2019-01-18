@@ -41,6 +41,7 @@ import { CartComponent } from './cart/cart.component';
 import { CartCarouselComponent } from './cart/cart-carousel/cart-carousel.component';
 import { ReferFriendComponent } from './refer-friend/refer-friend.component';
 import { CartProductModalComponent } from './cart/cart-product-modal/cart-product-modal.component';
+import { GiftCardComponent } from './gift-card/gift-card.component';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { CartProductModalComponent } from './cart/cart-product-modal/cart-produc
     CartComponent,
     CartCarouselComponent,
     ReferFriendComponent,
-    CartProductModalComponent
+    CartProductModalComponent,
+    GiftCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <app-nav></app-nav>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-between" style="margin-bottom: 2.5%; margin-top: 2.5%;">
+    <h3 style="margin-left: 10%;">Parents! Want to get something your kids can actually use for exactly what they need?</h3>
+  </div>
+  <div class="card row" style="margin-bottom: 10%;">
+    <div class="column c1 align-items-center">
+      <img src="https://cdn.shopify.com/s/files/1/2208/6477/products/GC_Blank_Image_d8b27814-e00b-48d7-9844-c0cb8ca464cb_2000x.png?v=1526936252"
+        class="image">
+      <div style="width: 150%;">
+        <p class="title">Description</p>
+        <p>Give the gift of UniPantry!</p>
+        <p>-Select a recipient at checkout.</p>
+        <p>-Delivered via email.</p>
+        <p>-Valid on all products on UniPantry website and app or membership fees.</p>
+      </div>
+    </div>
+    <div class="column c2 align-items-center">
+      <p class="title">UniPantry Gift Card</p>
+      <div class="row">
+        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(25)">$25.00</button>
+        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(50)">$50.00</button>
+        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(75)">$75.00</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(100)">$100.00</button>
+        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(125)">$125.00</button>
+        <button class="btn btn-primary" type="button" id="other-amount" (click)="onSelect(0)">Other Amount</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-primary" type="button" id="add-cart-btn" (click)="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
