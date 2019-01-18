@@ -81,6 +81,7 @@
   background-color: #F89833;
   border-color: #F89833;
   border-radius: .5vw;
+  border-width: .15vw;
   font-size: 1vw;
   height: 3vw;
   margin-right: 1vw;
@@ -134,7 +135,7 @@
   border-width: .15vw;
   border-color: #F89833;
   margin-top: -.3vw;
-  width: 12.5vw;
+  width: 12vw;
 }
 
 .dropdown-item {

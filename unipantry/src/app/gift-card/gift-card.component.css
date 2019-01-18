@@ -1,0 +1,97 @@
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+h3 {
+  font-size: 1.8vw;
+  margin-bottom: .2vw;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 0vw;
+}
+
+.card {
+  border-radius: .75vw;
+  font-size: 1vw;
+  height: 40vw;
+  margin-bottom: 1vw;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5vw;
+  width: 80%;
+}
+
+.column {
+  height: 100%;
+}
+
+.c1 {
+  margin-right: 5%;
+  width: 33%;
+}
+
+.c2 {
+  width: 62%;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.image {
+  height: 50%;
+  width: 100%;
+  margin-bottom: 40%;
+}
+
+.title {
+  font-size: 1.75vw;
+  font-weight: 500;
+}
+
+#amount {
+  background-color: white;
+  border-color: #0BCDB2;
+  border-radius: .75vw;
+  border-width: .15vw;
+  color: #0BCDB2;
+  font-size: 1.4vw;
+  height: 3vw;
+  margin-right: 3vw;
+  margin-top: 2vw;
+  padding: 0vw;
+  position: relative;
+  width: 11vw;
+}
+
+#other-amount {
+  background-color: white;
+  border-color: #0BCDB2;
+  border-radius: .75vw;
+  border-width: .15vw;
+  color: #0BCDB2;
+  font-size: 1.4vw;
+  height: 3vw;
+  margin-right: 3vw;
+  margin-top: 2vw;
+  padding: 0vw;
+  position: relative;
+  width: 11vw;
+}
+
+#add-cart-btn {
+  background-color: #F89833;
+  border-color: #F89833;
+  border-radius: .75vw;
+  border-width: .15vw;
+  font-size: 1.4vw;
+  height: 3vw;
+  margin-top: 2vw;
+  padding: 0px;
+  position: relative;
+  width: 11vw;
+}
