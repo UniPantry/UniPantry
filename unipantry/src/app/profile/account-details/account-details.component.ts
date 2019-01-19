@@ -15,6 +15,19 @@ export class AccountDetailsComponent implements OnInit {
     startOfMem: "12/16/2000"
   };
 
+  edit = false;
+
+  allowEdit() {
+    this.edit = true;
+  }
+
+  save(name,phone,email) {
+    if (name) this.user.name = name;
+    if (phone) this.user.phone = phone;
+    if (email) this.user.email = email;
+    this.edit = false;
+  }
+
   constructor() { }
 
   ngOnInit() {

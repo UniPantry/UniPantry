@@ -2,15 +2,17 @@
   background-color: white;
   width: 60%;
   border: 1px solid black;
-  margin-top: 0px;
+  margin-top: 20px;
   margin-left: 0px;
   border-radius: 5px;
   border-color: #909090;
   position: relative;
+  padding: 40px 0px;
 }
 
 p {
-  font-size: 1.25em;
+  font-size: 1.5vw;
+  font-weight: 500;
 }
 
 span {
@@ -20,8 +22,4 @@ span {
 
 .info {
   font-weight: 300;
-}
-
-::placeholder {
-  color: black;
 }
