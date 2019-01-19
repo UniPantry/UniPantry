@@ -3,19 +3,19 @@
   <div class="container-fluid row">
     <div class="sidenav material-elevation mdc-elevation--z5">
       <div style="width:100%; border-bottom: 1px solid gray; padding-bottom: 20px; padding-left: 20px; padding-top:20px;">
-        <a class="nav-link2 active ml-auto" (click)="getAccount()" href="#">My Account</a>
-        <a class="nav-link2 active" (click)="getOrder()" href="#">My Orders</a>
-        <a class="nav-link2 active" href="#">Gift Credit</a>
+        <a  id="account" class="nav-link2 active ml-auto" (click)="getAccount()" routerLink="/profile">My Account</a>
+        <a  id="order" class="nav-link2 active" (click)="getOrder()" routerLink="/profile">My Orders</a>
+        <a  id="gifty" class="nav-link2 active" (click)="getGift()" routerLink="/profile">Gift Credit</a>
       </div>
       <div style="width:100%; border-bottom: 1px solid gray; padding-bottom: 20px; padding-left: 20px; padding-top:20px;">
-        <a class="nav-link2 active ml-auto" href="#">Refer A Friend</a>
-        <a class="nav-link2 active" href="#">Buy A Gift Card</a>
+        <a class="nav-link2 active ml-auto" routerLink="/refer-friend">Refer A Friend</a>
+        <a class="nav-link2 active" routerLink="">Buy A Gift Card</a>
       </div>
       <div style="width:100%; border-bottom: 1px solid gray; padding-bottom: 20px; padding-left: 20px; padding-top:20px;">
-        <a class="nav-link2 active ml-auto" href="#">Contact Us</a>
+        <a  id="contact" class="nav-link2 active ml-auto" (click)="getContact()" routerLink="/profile">Contact Us</a>
       </div>
       <div style="width:100%; padding-left: 20px; padding-top:20px;">
-        <a class="nav-link2 active ml-auto" href="#">Log Out</a>
+        <a class="nav-link2 active ml-auto" routerLink="/logged-out">Log Out</a>
       </div>
     </div>
 
@@ -23,8 +23,8 @@
 
       <div *ngIf="!accCollapse">
         <!-- show my account section if accCollapse = false and hide otherwise-->
-        <div class="page account">
-          <h2 style="font-weight: 250;">My Account</h2>
+        <div class="page">
+          <h2 style="font-weight: 400;">My Account</h2>
           <app-account-details></app-account-details>
           <app-shipping-addresses></app-shipping-addresses>
           <app-payment-methods></app-payment-methods>
@@ -33,11 +33,29 @@
 
       <div *ngIf="!ordCollapse">
         <!-- show my account section if accCollapse = false and hide otherwise-->
-        <div class="page order">
-          <h2 style="font-weight: 250;">My Orders</h2>
+        <div class="page">
+          <h2 style="font-weight: 400;">My Orders</h2>
           <app-order-history></app-order-history>
         </div>
       </div>
+
+      <div *ngIf="!giftCollapse">
+        <!-- show my gift credit section if giftCollapse = false and hide otherwise-->
+        <div class="page">
+          <h2 style="font-weight: 400;">Gift Credit</h2>
+          <app-gift-credit></app-gift-credit>
+        </div>
+      </div>
+
+      <div *ngIf="!contactCollapse">
+        <!-- show my contact us section if contactCollapse = false and hide otherwise-->
+        <div class="page">
+          <h2 style="font-weight: 400;">Contact Us</h2>
+          <p>Send us a message and a member of the UniPantry team will get back to you within 24 hours.
+          <app-contact></app-contact>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
