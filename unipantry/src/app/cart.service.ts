@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Product } from './product';
+import { AccountService } from './profile/account.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +16,12 @@ export class CartService {
 
   private total: number;
 
-  private giftCredit = 1;
+  private giftCredit = 0;
 
   private subtotal: number;
 
-  constructor() {
+  constructor(accountService: AccountService) {
+    accountService.getAccount().subscribe(account => this.giftCredit = account.giftCred);
   }
 
   public addToCart(product: Product, quantity: number) {
@@ -56,7 +58,7 @@ export class CartService {
       const product = this.cart[i];
       this.total += product.price * this.productDict[product.name];
     }
-    if (this.giftCredit) {
+    if (this.giftCredit > 0) {
       this.subtotal = this.total - this.giftCredit;
     }
   }

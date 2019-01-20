@@ -3,11 +3,11 @@ import { Account } from '../account';
 import { AccountService } from '../account.service';
 
 @Component({
-  selector: 'app-shipping-addresses',
-  templateUrl: './shipping-addresses.component.html',
-  styleUrls: ['./shipping-addresses.component.css']
+  selector: 'app-gift-credit',
+  templateUrl: './gift-credit.component.html',
+  styleUrls: ['./gift-credit.component.css']
 })
-export class ShippingAddressesComponent implements OnInit {
+export class GiftCreditComponent implements OnInit {
 
   user: Account;
 
@@ -21,5 +21,6 @@ export class ShippingAddressesComponent implements OnInit {
     this.accountService.getAccount()
       .subscribe(user => this.user = user);
   }
+
 
 }

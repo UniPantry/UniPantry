@@ -1,18 +1,18 @@
 .details {
   background-color: white;
-  width: 95%;
+  width: 60%;
   border: 1px solid black;
   margin-top: 20px;
   margin-left: 0px;
   border-radius: 5px;
   border-color: #909090;
   position: relative;
-  padding: 40px 0px;
+  padding: 40px 20px;
 }
 
 p {
-  font-size: 1.5vw;
-  font-weight: 500;
+  font-size: 1vw;
+  font-weight: 300;
 }
 
 span {
@@ -24,16 +24,22 @@ span {
   font-weight: 300;
 }
 
-button {
+.type1 {
   padding: 5px 45px;
   background-color: white;
   color: #0BCDB2;
   border-radius: 10px;
   border-color: #0BCDB2;
-  font-size: 1.25vw;
+  font-size: 1vw;
 }
 
-button:hover {
+.type1:hover {
   background-color: #0BCDB2;
   border-color: #0BCDB2;
+  color: white;
+}
+
+.type2 {
+  background-color: #F89833;
+  color: white;
 }

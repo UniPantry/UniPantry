@@ -7,7 +7,7 @@
   border-radius: 5px;
   border-color: #909090;
   position: relative;
-  padding: 40px 70px;
+  padding: 3% 5%;
 }
 
 p {
@@ -16,22 +16,27 @@ p {
 
 span {
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 .info {
-  font-weight: 400;
+  font-weight: 300;
   font-size: .9em;
 }
 
 .add {
-  font-size: 1.5em;
+  font-size: 2vw;
+  font-weight: 200px;
 }
 
 #add {
   color: #0BCDB2;
   font-size: 2em;
-  border-radius: 50%;
+  border: 1px solid black;
   padding: 0px;
   margin: 0px;
+}
+
+a {
+  color: black;
 }

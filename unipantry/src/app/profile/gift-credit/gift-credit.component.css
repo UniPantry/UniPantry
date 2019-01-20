@@ -2,26 +2,30 @@
   background-color: white;
   width: 60%;
   border: 1px solid black;
-  margin-top: 0px;
+  margin-top: 20px;
   margin-left: 0px;
   border-radius: 5px;
   border-color: #909090;
   position: relative;
+  padding: 3% 2%;
 }
 
 p {
-  font-size: 1.25em;
+  font-size: 1.5vw;
+  font-weight: 400;
 }
 
 span {
-  font-weight: 500;
-  font-size: 1em;
+  font-weight: 200;
+  font-size: 1vw;
 }
 
 .info {
   font-weight: 300;
 }
 
-::placeholder {
-  color: black;
+.add {
+  background-color: #F89833;
+  color: white;
+  text-align: center;
 }

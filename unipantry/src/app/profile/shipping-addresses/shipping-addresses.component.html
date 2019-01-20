@@ -5,15 +5,19 @@
 
   <div class="row details">
 
-    <div style="padding:10px 20px; border: 1px solid #909090; border-radius:5px; width:50%">
-      <div class="info">{{address.name}}</div>
-      <div class="info">{{address.line1}}</div>
-      <div class="info">{{address.line2}}</div>
+    <div *ngFor="let addy of user.shipping" style="margin-left:2%; margin-bottom:3%; position:relative; border: 1px solid #909090; border-radius:10px; width:48%">
+      <button (click)="allowEdit()" class="btn btn-secondary" type="button" name="button" style="background-color: white;border-color: white; color: #F89833; position:absolute; right:1%; top: 1%;">
+        EDIT</button>
+      <div style="margin: 7% 7%;">
+        <div class="info">{{addy.name}}</div>
+        <div class="info">{{addy.line1}}</div>
+        <div class="info">{{addy.line2}}</div>
+      </div>
     </div>
 
-    <div style="width:48%; margin-left: 10px; padding:30px 20px; border: 1px solid #909090; border-radius:5px; text-align: center;">
-      <a class="add" href="#"><i class="material-icons" id="add">add_circle</i>
-        <div>Add New Address</div>
+    <div style="width:48%; margin-left: 10px; padding:30px 20px; border: 1px solid #909090; border-radius:10px; text-align: center;">
+      <a class="add" href="#"><i class="material-icons" id="add">add_circle_outline</i>
+        <div style="color:black;">Add New Address</div>
       </a>
     </div>
 

@@ -2,8 +2,8 @@
   <app-nav></app-nav>
 </div>
 <div class="container-fluid">
-  <div class="row justify-content-between" style="margin-bottom: 2.5%; margin-top: 2.5%;">
-    <h3 style="margin-left: 10%;">Parents! Want to get something your kids can actually use for exactly what they need?</h3>
+  <div class="row justify-content-center" style="margin-bottom: 2.5%; margin-top: 2.5%;">
+    <h3>Parents! Want to get something your kids can actually use for exactly what they need?</h3>
   </div>
   <div class="card row" style="margin-bottom: 10%;">
     <div class="column c1 align-items-center">
@@ -27,7 +27,9 @@
       <div class="row">
         <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(100)">$100.00</button>
         <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(125)">$125.00</button>
-        <button class="btn btn-primary" type="button" id="other-amount" (click)="onSelect(0)">Other Amount</button>
+        <form>
+          <input type="number" id="other-amount" placeholder="Other Amount" maxlength="4" min="1" (click)="onSelect(0)"/>
+        </form>
       </div>
       <div class="row">
         <button class="btn btn-primary" type="button" id="add-cart-btn" (click)="addToCart()">Add to Cart</button>

@@ -240,7 +240,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .total-1 > p {
   font-weight: 400;
-  padding-left: 15%;
+  padding-left: 12.5%;
 }
 
 .total-2 {
@@ -251,7 +251,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 .total-2 > p{
-  padding-right: 60%;
+  padding-right: 58%;
 }
 
 .promo {

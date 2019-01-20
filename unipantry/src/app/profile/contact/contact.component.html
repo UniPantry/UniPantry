@@ -1,0 +1,31 @@
+<div style="overflow: auto;">
+
+
+  <div class="row justify-content-between details">
+
+    <p>I have a concern about: </p>
+    <div style="width:100%; padding:1% 5%;margin:0% 0px;">
+      <button class="btn btn-secondary type1" type="button" name="button" style="margin-right:10px;">My Order</button>
+      <button class="btn btn-secondary type1" type="button" name="button" style="margin-right:10px;">My Membership</button>
+      <button class="btn btn-secondary type1" type="button" name="button">Other</button>
+    </div>
+
+    <div style="width:100%; ">
+      <p>Subject Line</p>
+      <input style="width: 100%; height: 3vw; margin-bottom: 2vw;" type="text" />
+    </div>
+
+    <div style="width:100%; ">
+      <p>Message</p>
+      <textarea placeholder="Write..." name="name" rows="8" cols="80" style="width: 100%;margin-bottom: 2vw;"></textarea>
+    </div>
+
+    <div style="width:100%; padding-right:70%; padding-left:30%;">
+      <button class="btn btn-secondary type2" type="button" name="button" style=" min-width:40%;padding:0% 70px;"
+        (click)="submit()">
+        {{submitButton}}</button>
+    </div>
+
+  </div>
+
+</div>

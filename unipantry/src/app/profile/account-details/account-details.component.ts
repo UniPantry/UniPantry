@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserAccount } from '../account-details';
+import { Account } from '../account';
+import { AccountService } from '../account.service';
 
 @Component({
   selector: 'app-account-details',
@@ -8,16 +9,30 @@ import { UserAccount } from '../account-details';
 })
 export class AccountDetailsComponent implements OnInit {
 
-  user: UserAccount = {
-    name: "Rah Yan",
-    phone: "634-123-4238",
-    email: 'blah@gmail.com',
-    startOfMem: "12/16/2000"
-  };
+  user: Account;
 
-  constructor() { }
+  edit = false;
+
+  allowEdit() {
+    this.edit = true;
+  }
+
+  save(name, phone, email) {
+    if (name) this.user.name = name;
+    if (phone) this.user.phone = phone;
+    if (email) this.user.email = email;
+    this.edit = false;
+  }
+
+  constructor(private accountService: AccountService) { }
 
   ngOnInit() {
+    this.getAccount();
+  }
+
+  getAccount(): void {
+    this.accountService.getAccount()
+      .subscribe(user => this.user = user);
   }
 
 }

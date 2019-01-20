@@ -5,31 +5,38 @@
 
   <div class="row details">
 
-    <div style="position:relative;padding:10px 20px; border: 1px solid #909090; border-radius:5px; width:100%;">
+    <div *ngFor="let bill of user.billing" style="position:relative; margin-bottom: 5%; padding:3% 20px; border: 1px solid #909090; border-radius:5px; width:100%;">
 
-      <span>Visa Card ending in {{bill.cardNum%10000}}</span>
+      <div class="row" style="padding-left:2%;">
+        <div style="width:100%;"><span>Visa Card ending in {{bill.cardNum%10000}}</span></div>
 
-      <div style="margin-top: 10px; width:40%; ">
-        <span>Name on Card</span>
-        <div class="info">{{bill.name}}</div>
+        <div style="margin-top: 10px; width:50%; ">
+          <span>Name on Card</span>
+          <div class="info">{{bill.name}}</div>
+        </div>
+
+        <div style="margin-top: 10px;width:50%; ">
+          <span>Expiration Date</span>
+          <div class="info">{{bill.exp}}</div>
+        </div>
+
+        <div style="margin-top: 10px;width:100%; ">
+          <span>Billing Address</span>
+          <div class="info">{{bill.address.line1}}</div>
+          <div class="info">{{bill.address.line2}}</div>
+        </div>
       </div>
 
-      <div style="margin-top: 10px;width:40%; ">
-        <span>Expiration Date</span>
-        <div class="info">{{bill.exp}}</div>
-      </div>
 
-      <div style="margin-top: 10px;width:100%; ">
-        <span>Billing Address</span>
-        <div class="info">{{bill.address.line1}}</div>
-        <div class="info">{{bill.address.line2}}</div>
-      </div>
-
+      <button (click)="allowEdit()" class="btn btn-secondary" type="button" name="button" style="margin:20px; background-color: white;border-color: white; color: #F89833; position:absolute; right:0; top: 0;">
+        EDIT</button>
 
     </div>
 
-    <div style="margin-top:20px; padding:20px; border: 1px solid #909090; border-radius:5px; text-align: center; width:100%;">
-      <a class="add" href="#"><i class="material-icons" id="add">add_circle</i> Add New Payment Methods </a>
+    <div style="padding:20px; border: 1px solid #909090; border-radius:5px; text-align: center; height: 10vh; width:100%;position:relative;">
+      <a class="add" href="#"><i style="position: absolute;top:2.5vh; left: 2.5vw;" class="material-icons" id="add">add_circle</i>
+        <span style="position: absolute; border: 1px solid black; top:3vh; left:8vw; font-weight:200;">Add New Payment
+          Methods</span> </a>
     </div>
 
   </div>
