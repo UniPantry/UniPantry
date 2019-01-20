@@ -18,6 +18,7 @@
       <div style=" padding:10px 20px;width:100%;"><span>Email </span>
         <div class="info">{{user.email}}</div>
       </div>
+<<<<<<< HEAD
 
       <div style=" padding:10px 20px;width:100%;"><span>UP Member Since </span>
         <div class="info">{{user.startOfMem}}</div>
@@ -56,3 +57,48 @@
     </label>
   </div>
 </div>-->
+=======
+
+      <div style=" padding:10px 20px;width:100%;"><span>UP Member Since </span>
+        <div class="info">{{user.startOfMem}}</div>
+      </div>
+
+      <button (click)="allowEdit()" class="btn btn-secondary" type="button" name="button" style="margin:20px; background-color: white; color: #0BCDB2; position:absolute; right:0; top: 0;">
+        EDIT</button>
+
+    </div>
+
+    <ng-template #editing>
+      <div style=" padding:10px 20px;width:100%;">
+        <div>Name </div>
+        <input class="info" style="margin-top: 2%" placeholder="{{user.name}}" #userName />
+      </div>
+
+      <div style=" padding:10px 20px;width:100%;">
+        <div>Phone </div>
+        <input class="info" style="margin-top: 2%" placeholder="{{user.phone}}" #userPhone />
+      </div>
+
+      <div style=" padding:10px 20px;width:100%;">
+        <div>Email </div>
+        <input class="info" style="margin-top: 2%" placeholder="{{user.email}}" #userEmail />
+      </div>
+
+      <div style=" padding:10px 20px;width:100%;">
+        <div>UP Member Since </div>
+        <div class="info">{{user.startOfMem}}</div>
+      </div>
+
+      <button (click)="save(userName.value, userPhone.value, userEmail.value)" class="btn btn-secondary" type="button"
+        name="button" style="margin:20px; background-color: white; color: #0BCDB2; position:absolute; right:0; top: 0;">
+        SAVE</button>
+    </ng-template>
+  </div>
+  <!--
+    <div style=" padding:10px 20px;width:100%;">
+      <label>Name:
+        <input [(ngModel)]="user.name" placeholder="name" />
+      </label>
+    </div>
+  </div>-->
+>>>>>>> Johnathan-patch-2

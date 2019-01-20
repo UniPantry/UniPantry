@@ -42,6 +42,9 @@ import { CartCarouselComponent } from './cart/cart-carousel/cart-carousel.compon
 import { ReferFriendComponent } from './refer-friend/refer-friend.component';
 import { CartProductModalComponent } from './cart/cart-product-modal/cart-product-modal.component';
 import { GiftCardComponent } from './gift-card/gift-card.component';
+import { ContactComponent } from './profile/contact/contact.component';
+import { GiftCreditComponent } from './profile/gift-credit/gift-credit.component';
+import { AccountService } from './profile/account.service';
 
 
 @NgModule({
@@ -80,7 +83,9 @@ import { GiftCardComponent } from './gift-card/gift-card.component';
     CartCarouselComponent,
     ReferFriendComponent,
     CartProductModalComponent,
-    GiftCardComponent
+    GiftCardComponent,
+    ContactComponent,
+    GiftCreditComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +97,8 @@ import { GiftCardComponent } from './gift-card/gift-card.component';
     LoggedInLandingNavComponent,
     AppComponent,
     ProductService,
-    CartService
+    CartService,
+    AccountService
   ],
   bootstrap: [AppComponent]
 })

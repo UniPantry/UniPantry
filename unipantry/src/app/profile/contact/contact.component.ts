@@ -7,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+<<<<<<< HEAD
   submitButton = "SUBMIT";
 
   submit() {
     this.submitButton = "DONE";
+=======
+  submitButton = 'SUBMIT';
+
+  submit() {
+    this.submitButton = 'DONE';
+>>>>>>> Johnathan-patch-2
   }
 
   constructor() { }

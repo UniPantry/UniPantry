@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Billing } from '../billing';
-import { Address } from '../address';
+import { Account } from '../account';
+import { AccountService } from '../account.service';
 
 @Component({
   selector: 'app-payment-methods',
@@ -8,22 +8,20 @@ import { Address } from '../address';
   styleUrls: ['./payment-methods.component.css']
 })
 export class PaymentMethodsComponent implements OnInit {
-  addy: Address = {
-    name: "Rah Yan",
-    line1: "266D William Keeton House",
-    line2: "Ithaca, NY 14853"
-  };
+  user: Account;
 
-  bill: Billing = {
-    name: "Rah Yan",
-    cardNum: 123445677890,
-    exp: "12/25",
-    address: this.addy
-  };
-
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit() {
+    this.getAccount();
   }
 
+  getAccount(): void {
+    this.accountService.getAccount()
+      .subscribe(user => this.user = user);
+  }
+
+  allowEdit() {
+
+  }
 }

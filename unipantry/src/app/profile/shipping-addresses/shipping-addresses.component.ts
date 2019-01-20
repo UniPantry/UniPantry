@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Address } from '../address';
+import { Account } from '../account';
+import { AccountService } from '../account.service';
 
 @Component({
   selector: 'app-shipping-addresses',
@@ -8,15 +9,17 @@ import { Address } from '../address';
 })
 export class ShippingAddressesComponent implements OnInit {
 
-  address: Address = {
-    name: "Rah Yan",
-    line1: "266D William Keeton House",
-    line2: "Ithaca, NY 14853"
-  };
+  user: Account;
 
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit() {
+    this.getAccount();
+  }
+
+  getAccount(): void {
+    this.accountService.getAccount()
+      .subscribe(user => this.user = user);
   }
 
 }
