@@ -40,11 +40,7 @@ export class ProfileComponent implements OnInit {
     document.getElementById('contact').style.color = 'black';
   }
 
-<<<<<<< HEAD
-  getGift(){
-=======
   getGift() {
->>>>>>> Johnathan-patch-2
     this.ordCollapse = true;
     this.accCollapse = true;
     this.giftCollapse = false;
@@ -56,11 +52,7 @@ export class ProfileComponent implements OnInit {
     document.getElementById('contact').style.color = 'black';
   }
 
-<<<<<<< HEAD
-  getContact(){
-=======
   getContact() {
->>>>>>> Johnathan-patch-2
     this.ordCollapse = true;
     this.accCollapse = true;
     this.giftCollapse = true;

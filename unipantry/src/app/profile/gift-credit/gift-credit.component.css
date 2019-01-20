@@ -7,41 +7,25 @@
   border-radius: 5px;
   border-color: #909090;
   position: relative;
-<<<<<<< HEAD
-  padding: 40px 0px;
-=======
   padding: 3% 2%;
->>>>>>> Johnathan-patch-2
 }
 
 p {
   font-size: 1.5vw;
-<<<<<<< HEAD
-  font-weight: 500;
-}
-
-span {
-  font-weight: 500;
-  font-size: 1em;
-=======
   font-weight: 400;
 }
 
 span {
   font-weight: 200;
   font-size: 1vw;
->>>>>>> Johnathan-patch-2
 }
 
 .info {
   font-weight: 300;
 }
-<<<<<<< HEAD
-=======
 
 .add {
   background-color: #F89833;
   color: white;
   text-align: center;
 }
->>>>>>> Johnathan-patch-2

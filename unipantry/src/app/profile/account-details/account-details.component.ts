@@ -17,22 +17,14 @@ export class AccountDetailsComponent implements OnInit {
     this.edit = true;
   }
 
-<<<<<<< HEAD
-  save(name,phone,email) {
-=======
   save(name, phone, email) {
->>>>>>> Johnathan-patch-2
     if (name) this.user.name = name;
     if (phone) this.user.phone = phone;
     if (email) this.user.email = email;
     this.edit = false;
   }
 
-<<<<<<< HEAD
-  constructor() { }
-=======
   constructor(private accountService: AccountService) { }
->>>>>>> Johnathan-patch-2
 
   ngOnInit() {
     this.getAccount();

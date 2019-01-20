@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { Account } from '../account';
 import { AccountService } from '../account.service';
->>>>>>> Johnathan-patch-2
 
 @Component({
   selector: 'app-gift-credit',
@@ -12,13 +9,6 @@ import { AccountService } from '../account.service';
 })
 export class GiftCreditComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-=======
   user: Account;
 
   constructor(private accountService: AccountService) { }
@@ -33,5 +23,4 @@ export class GiftCreditComponent implements OnInit {
   }
 
 
->>>>>>> Johnathan-patch-2
 }
