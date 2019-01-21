@@ -1,0 +1,68 @@
+<form class="container">
+  <div>
+    <h2>Confirm Your Membership</h2>
+    <p>You can edit your details later in your account settings.</p>
+  </div>
+
+
+  <div class="form-group">
+    <label>Account Details</label>
+    <button inline style="text-align: right;" (click)="edit1()">Edit</button>
+    <div class="container2">
+      <div>
+        <div>
+          <label for="name">Name: <p inline id="name">
+              {{formData.firstName + ' ' + formData.lastName}}
+            </p> </label> </div>
+        <div> <label for="phone">Phone:<p inline id="phone"> {{formData.phoneNumber}}</p> </label></div>
+        <div>
+          <label>Email: <p inline>
+              {{formData.email}}
+            </p></label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group" class="A">
+      <label>Shipping Address</label>
+      <button inline style="text-align: right;" (click)="edit2()">Edit</button>
+      <div class="container2">
+        <div>
+          <p>{{formData.address}} <br>
+            {{formData.city + ',' + formData.state + ' ' + formData.zip}} <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" class="A">
+      <label>Billing Address </label>
+      <button inline style="text-align: right;" (click)="edit3()">Edit</button>
+      <div class="container2">
+        <div>
+          <p> {{formData.billingAddress}} <br>
+            {{formData.billingCity + ',' + formData.billingState + ' ' + formData.billingZip}} <br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-check">
+    <label><input type="checkbox" required>
+      <small>By checking this box, I agree to the terms & conditions. I understand that after my 14-day<br>
+        free trial period, my card will be charged $19.99 a month for a UniPantry membership that <br>
+        can be cancelled at any time. </small>
+    </label>
+  </div>
+
+  <div class="form-actions">
+    <!-- <div class = "form-row"> -->
+    <button type="button" class="btn btn-primary" (click)="router.navigate(['/payment']);">Back</button>
+    <button type="button" class="btn btn-secondary">Next</button>
+    <!-- </div> -->
+  </div>
+
+
+</form>

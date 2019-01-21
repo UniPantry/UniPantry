@@ -1,0 +1,37 @@
+.form-actions {
+  margin: 0;
+  background-color: transparent;
+  text-align: center;
+}
+
+button {
+  margin: 13px;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.container2 {
+  /* remember to set a width */
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 25px;
+  border: 1px solid black;
+}
+
+.form-check {
+  text-align: center;
+}
+
+.A {
+  margin: 13px;
+}
+
+.container2 div {
+  padding: 10px;
+}

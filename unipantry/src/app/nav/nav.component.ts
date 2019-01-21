@@ -11,12 +11,10 @@ export class NavComponent implements OnInit {
 
   loggedIn = this.app.isLoggedIn();
 
+  onboarding = this.app.isOnboarding();
+
   constructor( private app: AppComponent) { }
 
   ngOnInit() {}
-
-  logIn() {
-    this.app.logIn();
-  }
 
 }

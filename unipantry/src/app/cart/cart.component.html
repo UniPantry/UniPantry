@@ -12,7 +12,7 @@
     <h3 style="margin-left: 10%;">Shopping Cart</h3>
   </div>
   <div *ngFor="let product of cart">
-    <div class="card row product-cards">
+    <div class="card row product-cards material-elevation mdc-elevation--z3">
       <div class="column c1 align-items-center">
         <a data-toggle="modal" data-target="#cartModal" style="text-decoration: none; color: black;">
           <img src={{product.src}} class="image">
@@ -48,7 +48,7 @@
     </div>
   </div>
   <div class="row" style="margin-left: 10%; width: 80%;">
-    <div *ngIf="total >= 30" class="card" id="promo-card">
+    <div *ngIf="total >= 30" class="card material-elevation mdc-elevation--z3" id="promo-card">
       <p style="font-weight: 500">Add New Gift Credit or Promo Code</p>
       <div class="row">
         <input class="promo" />
@@ -58,11 +58,11 @@
         gift credit of
         {{giftCredit | currency}}</button>
     </div>
-    <div *ngIf="total < 30" class="card" id="not-enough">
+    <div *ngIf="total < 30" class="card material-elevation mdc-elevation--z3" id="not-enough">
       <p>Add <span style="color: #0CB7CC;">{{totalRemaining | currency}}</span> worth of items to<br>reach $30 order
         minimum.</p>
     </div>
-    <div *ngIf="giftCredit && (total >= 30) && giftCreditUsed" class="card" id="subtotal-card-1">
+    <div *ngIf="giftCredit && (total >= 30) && giftCreditUsed" class="card material-elevation mdc-elevation--z3" id="subtotal-card-1">
       <div class="row">
         <div class="column total-1">
           <p>Total ({{cartQuantity}} items):</p>
@@ -79,7 +79,7 @@
       </div>
     </div>
     <div class="column subtotal-column">
-      <div *ngIf="!giftCredit || (total < 30) || !giftCreditUsed" class="card" id="subtotal-card-2">
+      <div *ngIf="!giftCredit || (total < 30) || !giftCreditUsed" class="card material-elevation mdc-elevation--z3" id="subtotal-card-2">
         <div class="row">
           <div class="column total-1">
             <p>Subtotal ({{cartQuantity}} items):</p>
@@ -94,7 +94,7 @@
     </div>
   </div>
   <div class="row" style="margin-left: 10%; width: 80%;">
-    <div *ngIf="total >= 30" class="card" id="note-card">
+    <div *ngIf="total >= 30" class="card material-elevation mdc-elevation--z3" id="note-card">
       <p style="font-weight: 500; font-size: 1.5vw;">Note to Delivery Person</p>
       <textarea class="note-input" placeholder="Click to add" maxlength="120"></textarea>
     </div>

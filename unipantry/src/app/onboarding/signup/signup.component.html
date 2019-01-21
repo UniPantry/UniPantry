@@ -1,0 +1,64 @@
+<app-nav></app-nav>
+<div class="card material-elevation mdc-elevation--z3">
+  <form class="container" #signupForm="ngForm" novalidate>
+    <div class="row justify-content-center">
+      <img class="timeline" src="assets/images/Onboarding/timeline1.png">
+    </div>
+    <div class="form-group">
+      <label for="zip">Zip Code</label>
+      <div class="row">
+        <input type="number" class="form-control" id="zip" pattern="[0-9]{5}" #zip="ngModel" name="zip" placeholder="Zip Code"
+          required [(ngModel)]="signup.zip">
+          <p [hidden]="available(zip) || available(zip)===-1" class="unavailable">UniPantry isn't available in your area right now.<br>
+            <a class="request" routerLink="/request">Click here to request it at your school!</a>
+          </p>
+          <p [hidden]="!available(zip) || available(zip)===-1" class="available">UniPantry is available at your school!</p>
+      </div>
+      <div class="alert alert-danger" [hidden]="zip.valid">A valid 5-digit Zip Code is required</div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstName" pattern="^([a-zA-Z]+?)([-\s'][a-zA-Z]+)*?$" placeholder="First Name"
+          name="firstname" #firstName="ngModel" required [(ngModel)]="signup.firstName">
+        <div class="alert alert-danger" [hidden]="firstName.valid">First Name is required</div>
+      </div>
+      <div class="col">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" id="lastName" pattern="^([a-zA-Z]+?)([-\s'][a-zA-Z]+)*?$" placeholder="Last Name"
+          name="lastname" #lastName="ngModel" required [(ngModel)]="signup.lastName">
+        <div class="alert alert-danger" [hidden]="lastName.valid">Last Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        name="email" placeholder="Email Address" #email="ngModel" required [(ngModel)]="signup.email">
+      <div class="alert alert-danger" [hidden]="email.valid">Must contain an email address with format john@doe.com</div>
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone number" pattern="^(1?)(-| ?)(\()?([0-9]{3})(\)|-| |\)-|\) )?([0-9]{3})(-| )?([0-9]{4}|[0-9]{4})$"
+        #phoneNumber="ngModel" required [(ngModel)]="signup.phoneNumber">
+      <div class="alert alert-danger" [hidden]="phoneNumber.valid">Must contain a valid phone number</div>
+    </div>
+    <div class="form-group">
+      <label for="password">Set a Password</label>
+      <input type="password" class="form-control" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}"
+        placeholder="Password" name="password" #password="ngModel" required validateEqual="confirmPassword" reverse="true"
+        [(ngModel)]="signup.password">
+      <div class="alert alert-danger" [hidden]="password.valid">Must contain at least one number, one uppercase letter,
+        one lowercase letter, and 8-15 characters</div>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword"
+        #confirmPassword="ngModel" required validateEqual="password" reverse="false" [(ngModel)]="signup.confirmPassword">
+      <div class="alert alert-danger" [hidden]="confirmPassword.valid">Passwords don't match</div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-primary next" [disabled]="!signupForm.valid" (click)="goToNext(signupForm)">Next</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>
