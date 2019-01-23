@@ -10,6 +10,7 @@ import { FormDataService } from '../form-data.service';
 export class ConfirmComponent implements OnInit {
   @Input() formData: FormData;
   isFormValid = false;
+  checked = false;
 
   constructor(private router: Router, private formDataService: FormDataService) { }
 
@@ -18,29 +19,15 @@ export class ConfirmComponent implements OnInit {
     this.isFormValid = this.formDataService.isFormValid();
   }
   submit() {
-
-
-    alert('Excellent Job!');
     this.formData = this.formDataService.resetFormData();
     this.isFormValid = false;
-
   }
-  edit1() {
 
-    // Navigate to the personal page
-    this.router.navigate(['/signup']);
-
-  }
-  edit2() {
-
-    // Navigate to the personal page
-    this.router.navigate(['/shipping']);
-
-  }
-  edit3() {
-
-    // Navigate to the personal page
-    this.router.navigate(['/payment']);
-
+  check() {
+    if (!this.checked) {
+      this.checked = true;
+    } else {
+      this.checked = false;
+    }
   }
 }

@@ -42,8 +42,9 @@ export class FormDataService {
       address: this.formData.address,
       city: this.formData.city,
       state: this.formData.state,
-      zip: this.formData.zip
-    }
+      zip: this.formData.zip,
+      dorm: this.formData.dorm
+    };
     return shipping;
   }
 
@@ -54,6 +55,7 @@ export class FormDataService {
     this.formData.city = data.city;
     this.formData.state = data.state;
     this.formData.zip = data.zip;
+    this.formData.dorm = data.dorm;
   }
 
   getPayment(): Payment {
@@ -61,12 +63,13 @@ export class FormDataService {
     const payment: Payment = {
       cardName: this.formData.cardName,
       cardNumber: this.formData.cardNumber,
-      experationDate: this.formData.experationDate,
+      expirationDate: this.formData.expirationDate,
       cvc: this.formData.cvc,
       billingAddress: this.formData.billingAddress,
       billingCity: this.formData.billingCity,
       billingState: this.formData.billingState,
-      billingZip: this.formData.billingZip
+      billingZip: this.formData.billingZip,
+      newAddress: this.formData.newAddress
     };
     return payment;
   }
@@ -76,13 +79,13 @@ export class FormDataService {
     this.isPaymentFormValid = true;
     this.formData.cardName = data.cardName;
     this.formData.cardNumber = data.cardNumber;
-    this.formData.experationDate = data.experationDate;
+    this.formData.expirationDate = data.expirationDate;
     this.formData.cvc = data.cvc;
     this.formData.billingAddress = data.billingAddress;
     this.formData.billingCity = data.billingCity;
     this.formData.billingState = data.billingState;
     this.formData.billingZip = data.billingZip;
-
+    this.formData.newAddress = data.newAddress;
   }
 
   getFormData(): FormData {

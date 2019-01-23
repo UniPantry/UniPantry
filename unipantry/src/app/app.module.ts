@@ -56,6 +56,7 @@ import { FormDataService } from './onboarding/form-data.service';
 import { EqualValidator } from './onboarding/equal-validator.directive';
 import { RequestComponent } from './onboarding/request/request.component';
 import { CompleteRequestComponent } from './onboarding/request/complete-request/complete-request.component';
+import { WelcomeComponent } from './onboarding/welcome/welcome.component';
 
 
 @NgModule({
@@ -106,7 +107,8 @@ import { CompleteRequestComponent } from './onboarding/request/complete-request/
     OnboardingNavComponent,
     EqualValidator,
     RequestComponent,
-    CompleteRequestComponent
+    CompleteRequestComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

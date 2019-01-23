@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   public isOnboarding() {
     if (this.router.url === '/login' || this.router.url === '/signup' || this.router.url === '/payment' ||
       this.router.url === '/shipping' || this.router.url === '/confirm' || this.router.url === '/request' ||
-      this.router.url === '/complete-request') {
+      this.router.url === '/complete-request' || this.router.url === '/welcome') {
       return true;
     }
     return false;

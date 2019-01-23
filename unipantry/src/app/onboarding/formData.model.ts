@@ -11,12 +11,14 @@ export class FormData {
   state = '';
   cardName = '';
   cardNumber = '';
-  experationDate = '';
+  expirationDate = '';
   cvc = '';
   billingAddress = '';
   billingCity = '';
   billingState = '';
   billingZip = '';
+  dorm = false;
+  newAddress = false;
 
   clear() {
     this.zip = '';
@@ -31,12 +33,14 @@ export class FormData {
     this.state = '';
     this.cardName = '';
     this.cardNumber = '';
-    this.experationDate = '';
+    this.expirationDate = '';
     this.cvc = '';
     this.billingAddress = '';
     this.billingCity = '';
     this.billingState = '';
     this.billingZip = '';
+    this.dorm = false;
+    this.newAddress = false;
   }
 }
 
@@ -63,15 +67,17 @@ export class Shipping {
   city = '';
   state = '';
   zip = '';
+  dorm = false;
 }
 
 export class Payment {
   cardName = '';
   cardNumber = '';
-  experationDate = '';
+  expirationDate = '';
   cvc = '';
   billingAddress = '';
   billingCity = '';
   billingState = '';
   billingZip = '';
+  newAddress = false;
 }

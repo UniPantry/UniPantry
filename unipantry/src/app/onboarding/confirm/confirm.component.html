@@ -1,68 +1,88 @@
-<form class="container">
-  <div>
-    <h2>Confirm Your Membership</h2>
-    <p>You can edit your details later in your account settings.</p>
-  </div>
-
-
-  <div class="form-group">
-    <label>Account Details</label>
-    <button inline style="text-align: right;" (click)="edit1()">Edit</button>
-    <div class="container2">
-      <div>
-        <div>
-          <label for="name">Name: <p inline id="name">
-              {{formData.firstName + ' ' + formData.lastName}}
-            </p> </label> </div>
-        <div> <label for="phone">Phone:<p inline id="phone"> {{formData.phoneNumber}}</p> </label></div>
-        <div>
-          <label>Email: <p inline>
-              {{formData.email}}
-            </p></label></div>
-      </div>
+<app-nav></app-nav>
+<div class="card material-elevation mdc-elevation--z3">
+  <form class="container" #confirmForm="ngForm" novalidate>
+    <div class="row justify-content-center">
+      <img class="timeline" src="assets/images/Onboarding/timeline3.png">
     </div>
-  </div>
-
-  <div class="form-row">
-    <div class="form-group" class="A">
-      <label>Shipping Address</label>
-      <button inline style="text-align: right;" (click)="edit2()">Edit</button>
-      <div class="container2">
+    <h3>Confirm Your Membership</h3>
+    <p style="text-align: center;">You can edit details later in your account settings.</p>
+    <div class="form-group">
+      <div class="row justify-content-between" style="width: 90%; margin-left: 5%; margin-right: 5%;">
+        <label>Account Details</label>
+        <a class="edit" routerLink="/signup">
+          <i class="material-icons pencil">
+            edit
+          </i> Edit
+        </a>
+      </div>
+      <div class="card1">
         <div>
-          <p>{{formData.address}} <br>
-            {{formData.city + ',' + formData.state + ' ' + formData.zip}} <br>
-          </p>
+          <div>
+            <label for="name">Name<br>{{formData.firstName + ' ' + formData.lastName}}</label>
+          </div>
+          <div>
+            <label for="phone">Phone<br>{{formData.phoneNumber}}</label>
+          </div>
+          <div>
+            <label>Email<br>{{formData.email}}</label>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="form-group" class="A">
-      <label>Billing Address </label>
-      <button inline style="text-align: right;" (click)="edit3()">Edit</button>
-      <div class="container2">
-        <div>
-          <p> {{formData.billingAddress}} <br>
-            {{formData.billingCity + ',' + formData.billingState + ' ' + formData.billingZip}} <br>
-          </p>
+    <div class="form-row">
+      <div class="form-group" style="width: 43%; margin-left: 5%; margin-right: 4%;">
+        <div class="row justify-content-between">
+          <label>Shipping Address</label>
+          <a class="edit" routerLink="/shipping">
+            <i class="material-icons pencil">
+              edit
+            </i> Edit
+          </a>
+        </div>
+        <div class="card2">
+          <div>
+            <p>{{formData.firstName + ' ' + formData.lastName}}<br>{{formData.address}}<br>
+              {{formData.city + ', ' + formData.state + ' ' + formData.zip}}<br></p>
+            <p *ngIf="!formData.dorm" style="font-style: italic">This is not a dorm address</p>
+            <p *ngIf="formData.dorm" style="font-style: italic">This is a dorm address</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="margin-right: 5%; width: 43%;">
+        <div class="row justify-content-between">
+          <label>Billing Address</label>
+          <a class="edit" routerLink="/payment">
+            <i class="material-icons pencil">
+              edit
+            </i> Edit
+          </a>
+        </div>
+        <div class="card3">
+          <div>
+            <p>{{formData.cardName}}<br>{{formData.billingAddress}}<br>
+              {{formData.billingCity + ', ' + formData.billingState + ' ' + formData.billingZip}}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="form-check">
-    <label><input type="checkbox" required>
-      <small>By checking this box, I agree to the terms & conditions. I understand that after my 14-day<br>
-        free trial period, my card will be charged $19.99 a month for a UniPantry membership that <br>
-        can be cancelled at any time. </small>
-    </label>
-  </div>
-
-  <div class="form-actions">
-    <!-- <div class = "form-row"> -->
-    <button type="button" class="btn btn-primary" (click)="router.navigate(['/payment']);">Back</button>
-    <button type="button" class="btn btn-secondary">Next</button>
-    <!-- </div> -->
-  </div>
-
-
-</form>
+    <div class="form-group">
+      <div class="checkbox row justify-content-center">
+        <label class="checkbox-container">
+          <input type="checkbox" id="checkbox">
+          <span class="checkmark" (click)="check()"></span>
+        </label>
+        <small>By checking this box, I agree to the <a href="#" class="terms">terms & conditions</a>.
+          I understand
+          that after my 14-day<br>
+          free trial period, my card will be charged $19.99 a month for a UniPantry membership that<br>
+          can be cancelled at any time.</small>
+      </div>
+    </div>
+    <div class="alert alert-danger" [hidden]="checked">Must accept terms & conditions</div>
+    <div class="form-actions">
+      <button type="button" class="btn btn-primary back" routerLink="/payment">Back</button>
+      <button type="button" [disabled]="!checked" class="btn btn-primary submit" routerLink="/welcome">Submit</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

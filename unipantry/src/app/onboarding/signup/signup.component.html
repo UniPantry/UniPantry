@@ -4,29 +4,31 @@
     <div class="row justify-content-center">
       <img class="timeline" src="assets/images/Onboarding/timeline1.png">
     </div>
+    <h3>Sign Up For Your 14-day Free Trial!</h3>
     <div class="form-group">
       <label for="zip">Zip Code</label>
       <div class="row">
-        <input type="number" class="form-control" id="zip" pattern="[0-9]{5}" #zip="ngModel" name="zip" placeholder="Zip Code"
+        <input type="text" class="form-control" id="zip" pattern="[0-9]{5}" #zip="ngModel" name="zip" placeholder="Zip Code"
           required [(ngModel)]="signup.zip">
-          <p [hidden]="available(zip) || available(zip)===-1" class="unavailable">UniPantry isn't available in your area right now.<br>
-            <a class="request" routerLink="/request">Click here to request it at your school!</a>
-          </p>
-          <p [hidden]="!available(zip) || available(zip)===-1" class="available">UniPantry is available at your school!</p>
+        <p [hidden]="available(zip) || available(zip)===-1" class="unavailable">UniPantry isn't available in your area
+          right now.<br>
+          <a class="request" routerLink="/request">Click here to request it at your school!</a>
+        </p>
+        <p [hidden]="!available(zip) || available(zip)===-1" class="available">UniPantry is available at your school!</p>
       </div>
-      <div class="alert alert-danger" [hidden]="zip.valid">A valid 5-digit Zip Code is required</div>
+      <div class="alert alert-danger" style="width: 50%;" [hidden]="zip.valid">A valid 5-digit Zip Code is required</div>
     </div>
     <div class="form-row">
       <div class="col">
         <label for="firstname">First Name</label>
-        <input type="text" class="form-control" id="firstName" pattern="^([a-zA-Z]+?)([-\s'][a-zA-Z]+)*?$" placeholder="First Name"
+        <input type="text" class="form-control" id="firstName" pattern="^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$" placeholder="First Name"
           name="firstname" #firstName="ngModel" required [(ngModel)]="signup.firstName">
         <div class="alert alert-danger" [hidden]="firstName.valid">First Name is required</div>
       </div>
       <div class="col">
         <label for="lastname">Last Name</label>
-        <input type="text" class="form-control" id="lastName" pattern="^([a-zA-Z]+?)([-\s'][a-zA-Z]+)*?$" placeholder="Last Name"
-          name="lastname" #lastName="ngModel" required [(ngModel)]="signup.lastName">
+        <input type="text" class="form-control" id="lastName" pattern="^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$"
+          placeholder="Last Name" name="lastname" #lastName="ngModel" required [(ngModel)]="signup.lastName">
         <div class="alert alert-danger" [hidden]="lastName.valid">Last Name is required</div>
       </div>
     </div>

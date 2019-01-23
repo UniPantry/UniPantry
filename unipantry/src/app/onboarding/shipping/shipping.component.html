@@ -15,12 +15,11 @@
       <div class="form-group city">
         <label for="city">City</label>
         <input type="text" class="form-control" placeholder="City" id="city" #city="ngModel" required name="city"
-          [(ngModel)]="shipping.city">
-        <div class="alert alert-danger" [hidden]="city.valid">City is required</div>
+          [(ngModel)]="shipping.city" disabled>
       </div>
       <div class="form-group state">
         <label for="state">State</label>
-        <select id="state" class="form-control" #state="ngModel" required name="state" [(ngModel)]="shipping.state">
+        <select id="state" class="form-control" #state="ngModel" required name="state" [(ngModel)]="shipping.state" disabled>
           <option value="" disabled selected>Select</option>
           <option>AL</option>
           <option>AK</option>
@@ -73,18 +72,20 @@
           <option>WI</option>
           <option>WY</option>
         </select>
-        <div class="alert alert-danger" [hidden]="state.valid">Please select a state</div>
       </div>
       <div class="form-group zipcode">
         <label for="inputZip">Zip Code</label>
         <input type="text" class="form-control" placeholder="Zip Code" id="inputZip" pattern="[0-9]{5}" name="inputZip"
-          required #inputZip="ngModel" [(ngModel)]="shipping.zip">
-        <div class="alert alert-danger" [hidden]="inputZip.valid">5-digit Zip Code</div>
+          required #inputZip="ngModel" [(ngModel)]="shipping.zip" disabled>
       </div>
     </div>
     <div class="form-group">
       <div class="checkbox">
-        <label><input type="checkbox" id="checkbox"> This is a dorm address</label>
+        <label class="checkbox-container">
+            <input type="checkbox" id="checkbox" #dorm="ngModel" [(ngModel)]="shipping.dorm" name="dorm">
+          <span class="checkmark"></span>
+          This is a dorm address
+        </label>
       </div>
     </div>
     <div class="form-actions">

@@ -11,7 +11,7 @@ import { FormDataService } from '../form-data.service';
 export class SignupComponent implements OnInit, AfterViewChecked {
   signup: Signup;
   form: any;
-  availableZipcodes = [14850, 14853];
+  availableZipcodes = ['14850', '14853'];
 
   constructor(private router: Router, private formDataService: FormDataService, private cdr: ChangeDetectorRef) { }
 

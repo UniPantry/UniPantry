@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { Payment, Shipping } from '../formData.model';
 import { FormDataService } from '../form-data.service';
@@ -7,39 +7,52 @@ import { FormDataService } from '../form-data.service';
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css']
 })
-export class PaymentComponent implements OnInit {
+export class PaymentComponent implements OnInit, AfterViewChecked {
   payment: Payment;
   shipping: Shipping;
   form: any;
-  constructor(private router: Router, private formDataService: FormDataService) { }
+
+  constructor(private router: Router, private formDataService: FormDataService, private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.payment = this.formDataService.getPayment();
     this.shipping = this.formDataService.getShipping();
+    if (this.payment.newAddress) {
+      (document.getElementById('customRadio1') as any).checked = false;
+      (document.getElementById('customRadio2') as any).checked = true;
+    } else {
+      (document.getElementById('customRadio1') as any).checked = true;
+      (document.getElementById('customRadio2') as any).checked = false;
+      this.setBilling();
+    }
+  }
+
+  ngAfterViewChecked() {
+    this.cdr.detectChanges();
   }
 
   save(form: any): boolean {
     if (!form.valid) {
       return false;
     }
-
     this.formDataService.setPayment(this.payment);
     return true;
   }
-  SetBilling() {
 
-    const address = this.shipping.address;
-    const city = this.shipping.city;
-    const state = this.shipping.state;
-    const zip = this.shipping.zip;
-
-    this.payment.billingAddress = address;
-    this.payment.billingCity = city;
-    this.payment.billingState = state;
-    this.payment.billingZip = zip;
+  setBilling() {
+    this.payment.newAddress = false;
+    this.payment.billingAddress = this.shipping.address;
+    this.payment.billingCity = this.shipping.city;
+    this.payment.billingState = this.shipping.state;
+    this.payment.billingZip = this.shipping.zip;
   }
 
-  goToPrevious() {
+  addNewAddress() {
+    this.payment.newAddress = true;
+  }
+
+  goToPrevious(form) {
+    this.save(form);
     // Navigate to the personal page
     this.router.navigate(['/shipping']);
   }

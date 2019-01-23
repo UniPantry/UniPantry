@@ -10,9 +10,14 @@
       <label for="password">Password</label>
       <input type="password" class="form-control" id="password" placeholder="Password">
     </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="checkbox" value="option1">
-      <label class="form-check-label" for="checkbox" style="font-weight: 500;">Remember this account</label>
+    <div class="form-group">
+      <div class="checkbox">
+        <label class="checkbox-container">
+          <input type="checkbox" id="checkbox">
+          <span class="checkmark"></span>
+          Remember this account
+        </label>
+      </div>
     </div>
     <label>Forgot your password? <a href="#" class="click-here">Click here</a></label><br>
     <label>Don't have an account? <a routerLink="/signup" class="click-here">Sign up here</a></label>
