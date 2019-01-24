@@ -8,7 +8,9 @@ import { AppComponent } from '../app.component'
 })
 export class FooterComponent implements OnInit {
 
-  loggedIn = this.app.isLoggedIn();
+  private loggedIn = this.app.isLoggedIn();
+
+  private onboarding = this.app.isOnboarding();
 
   constructor(private app: AppComponent) { }
 

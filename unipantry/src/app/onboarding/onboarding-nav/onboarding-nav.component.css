@@ -1,0 +1,22 @@
+.top-nav {
+  height: 6vw;
+}
+
+.navbar {
+  background-color: #0CB7CC;
+  padding: 0px;
+}
+
+.nav-logo {
+  width: 10vw;
+}
+
+.container-fluid {
+  padding: 0%;
+  width: 100%;
+}
+
+.row {
+  margin-left: 0vw;
+  margin-right: 0vw;
+}

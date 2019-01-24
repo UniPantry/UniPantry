@@ -1,0 +1,107 @@
+.form-actions {
+  margin: 0;
+  background-color: transparent;
+  text-align: center;
+}
+
+.card {
+  border-radius: .75vw;
+  font-size: 1vw;
+  height: 100%;
+  margin-bottom: 5vw;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 3vw;
+  padding: 2.5vw;
+  width: 60%;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: .5vw;
+}
+
+.form-control {
+  border-radius: .5vw;
+  font-size: 1.15vw;
+  height: 3vw;
+  padding: .375vw .75vw;
+}
+
+.form-group {
+  margin-bottom: 1vw;
+}
+
+.alert {
+  height: 3vw;
+  margin-bottom: 1vw;
+  padding: .75vw 1.25vw;
+}
+
+.next {
+  background-color: #F89833;
+  border-color: #F89833;
+  border-radius: .5vw;
+  border-width: .15vw;
+  font-size: 1vw;
+  height: 2vw;
+  margin-top: .5vw;
+  padding: 0px;
+  position: relative;
+  text-align: center;
+  width: 7vw;
+}
+
+.container {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.timeline {
+  height: 7vw;
+  margin-bottom: 3vw;
+  width: 70%;
+}
+
+.row {
+  margin: 0vw;
+}
+
+.unavailable {
+  font-size: 1vw;
+  margin-left: 3%;
+}
+
+.available {
+  color: #0BCDB2;
+  font-size: 1vw;
+  margin-left: 3%;
+  padding-top: .75vw;
+}
+
+.request {
+  color: #F89833;
+  font-size: 1vw;
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 0vw;
+}
+
+#zip {
+  width: 50%;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+h3 {
+  font-size: 1.6vw;
+  margin-bottom: 2vw;
+  text-align: center;
+}

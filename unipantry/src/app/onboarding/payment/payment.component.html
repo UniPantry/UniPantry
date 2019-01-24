@@ -1,0 +1,133 @@
+<app-nav></app-nav>
+<div class="card material-elevation mdc-elevation--z3">
+  <form class="container" #paymentForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="row justify-content-center">
+      <img class="timeline" src="assets/images/Onboarding/timeline2.png">
+    </div>
+    <h3>Set a Payment Method</h3>
+    <p>Your 14-day free trial begins when you create your account. Your card<br>
+      will automatically be charged $19.99 each month once the trial ends.<br>
+      You may cancel your account at any time.</p>
+    <div class="form-group">
+      <label for="cardName">Name on Card</label>
+      <input type="text" class="form-control" pattern="^([\u00c0-\u01ffa-zA-Z'\-]+[ ]?[\u00c0-\u01ffa-zA-Z'\-]*)+$"
+        placeholder="Name" #cardName="ngModel" required name="cardName" [(ngModel)]="payment.cardName">
+      <div class="alert alert-danger" [hidden]="cardName.valid">Name is required</div>
+    </div>
+    <div class="form-group">
+      <label for="cardNumber">Card Number</label>
+      <input type="number" class="form-control" id="cardNumber" pattern="^((67\d{2})|(4\d{3})|(5[1-5]\d{2})|(6011))-?\s?\d{4}-?\s?\d{4}-?\s?\d{4}|3[4,7]\d{13}$"
+        placeholder="Card Number" #cardNumber="ngModel" required name="cardNumber" [(ngModel)]="payment.cardNumber">
+      <div class="alert alert-danger" [hidden]="cardNumber.valid">Card Number is required</div>
+    </div>
+    <div class="form-row">
+      <div class="col" style="margin-right: 4%;">
+        <label for="expirationDate">Expiration Date</label>
+        <input type='text' class="form-control" placeholder="MM/YY" #expirationDate="ngModel" required pattern="^((0[1-9])|(1[0-2]))[\/\.\-]*((19)|(2[0-9]))$"
+          name="expirationDate" [(ngModel)]="payment.expirationDate">
+        <div class="alert alert-danger" [hidden]="expirationDate.valid">A valid expiration date is required</div>
+      </div>
+      <div class="col">
+        <label for="cvc">CVC</label>
+        <input type='text' class="form-control" placeholder="123" pattern="^([0-9]{3,4})$" #cvc="ngModel" required name="cvc"
+          [(ngModel)]="payment.cvc">
+        <div class="alert alert-danger" [hidden]="cvc.valid">A valid CVC is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Billing Address</label>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="customRadio1" name="address" class="custom-control-input" (click)="setBilling()"
+          (checked)="setBilling()">
+        <label class="custom-control-label" for="customRadio1">Same as Shipping Address</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="customRadio2" name="address" class="custom-control-input" (click)="addNewAddress()"
+          (checked)="addNewAddress()">
+        <label class="custom-control-label" for="customRadio2">Add a New Address</label>
+      </div>
+    </div>
+    <div *ngIf="payment.newAddress" id="newAddress">
+      <div class="form-group">
+        <div class="form-group">
+          <label for="billingAddress">Address</label>
+          <input type="text" class="form-control" id="billingAddress" placeholder="1234 Main St" #billingAddress="ngModel"
+            name="billingAddress" [(ngModel)]="payment.billingAddress">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="billingCity">City</label>
+            <input type="text" class="form-control" id="billingCity" #billingCity="ngModel" name="billingCity"
+              [(ngModel)]="payment.billingCity">
+          </div>
+          <div class="form-group">
+            <label for="billingState">State</label>
+            <select id="billingState" class="form-control" #billingState="ngModel" name="billingState" [(ngModel)]="payment.billingState">
+              <option>AL</option>
+              <option>AK</option>
+              <option>AZ</option>
+              <option>AR</option>
+              <option>CA</option>
+              <option>CO</option>
+              <option>CT</option>
+              <option>DE</option>
+              <option>FL</option>
+              <option>GA</option>
+              <option>HI</option>
+              <option>ID</option>
+              <option>IL</option>
+              <option>IN</option>
+              <option>IA</option>
+              <option>KS</option>
+              <option>KY</option>
+              <option>LA</option>
+              <option>ME</option>
+              <option>MD</option>
+              <option>MA</option>
+              <option>MI</option>
+              <option>MN</option>
+              <option>MS</option>
+              <option>MO</option>
+              <option>MT</option>
+              <option>NE</option>
+              <option>NV</option>
+              <option>NH</option>
+              <option>NJ</option>
+              <option>NM</option>
+              <option>NY</option>
+              <option>NC</option>
+              <option>ND</option>
+              <option>OH</option>
+              <option>OK</option>
+              <option>OR</option>
+              <option>PA</option>
+              <option>RI</option>
+              <option>SC</option>
+              <option>SD</option>
+              <option>TN</option>
+              <option>TX</option>
+              <option>UT</option>
+              <option>VT</option>
+              <option>VA</option>
+              <option>WA</option>
+              <option>WV</option>
+              <option>WI</option>
+              <option>WY</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="billingZip">Zip Code</label>
+            <input type="text" class="form-control" pattern="[0-9]{5}" id="billingZip" name="billingZip" #billingZip="ngModel"
+              [(ngModel)]="payment.billingZip">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="button" class="btn btn-primary back" (click)="goToPrevious(paymentForm)">Back</button>
+      <button type="submit" class="btn btn-secondary next" [disabled]="!paymentForm.valid" (click)="goToNext(paymentForm)">Next</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

@@ -11,6 +11,51 @@
 <app-product-detail [product]="getSelectedProduct()"></app-product-detail>
 
 <div class="container-fluid">
+  <div class="row" style="margin-bottom: 1%; margin-top: 1.5%;">
+    <h3 style="padding-left: 4%;">Welcome back, {{name.split(" ")[0]}}!</h3>
+  </div>
+  <div class="row" style="margin-bottom: 1%;">
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80"
+        aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+    </div>
+  </div>
+  <div class="row" style="font-size: 1.3vw; font-weight: 500; margin-bottom: 2%; padding-left: 4%;">
+    You're {{points}} points away from your next reward.
+    <a routerLink="/refer-friend" style="color: black; font-size: 1.3vw; font-weight: 500; margin-left: .5vw; text-decoration: underline">Refer
+      some friends to earn more points!</a>
+  </div>
+  <div class="row justify-content-between" style="margin-bottom: 3.5%;">
+    <div class="order-card">
+      <div class="row justify-content-between">
+        <div class="column">
+          <p>Order #MW3456 is on the way!</p>
+          <p style="font-weight: 400;">Will be delivered on <span style="color: #0CB7CC">January 17th, 7:30pm</span></p>
+        </div>
+        <div class="column">
+          <a href="#" class="material-icons" style="color: #F89833; font-size: 4vw; text-decoration: none; vertical-align: middle;">
+            chevron_right
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="gift-balance-card">
+      <div class="row justify-content-between">
+        <div class="column">
+          <p>Current Gift Card Balance: <span style="color: #0CB7CC">{{giftCredit | currency}}</span></p>
+          <a routerLink="/gift-card" style="color: #0BCDB2; font-size: 1.3vw; text-decoration: none;">Add Credit</a>
+        </div>
+        <div class="column">
+          <a routerLink="/profile" class="material-icons" style="color: #F89833; font-size: 4vw; text-decoration: none; vertical-align: middle;">
+            chevron_right
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
   <div class="carousels">
     <div class="row justify-content-between" style="margin-bottom: 1%; margin-top: 2.5%;">
       <h3 style="margin-left: 11%;">Dorm Room Essentials</h3>

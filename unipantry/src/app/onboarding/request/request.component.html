@@ -1,0 +1,46 @@
+<app-nav></app-nav>
+<div class="card material-elevation mdc-elevation--z3">
+  <form class="container" #requestForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <h3>Request UniPantry at Your School</h3>
+    <div class="form-group">
+      <label for="zip">Zip Code</label>
+      <div class="row">
+        <input type="number" class="form-control" id="zip" pattern="[0-9]{5}" #zip="ngModel" name="zip" placeholder="Zip Code"
+          required [(ngModel)]="request.zip">
+      </div>
+      <div class="alert alert-danger" [hidden]="zip.valid">A valid 5-digit Zip Code is required</div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstName" pattern="^([a-zA-Z]+?)([-\s'][a-zA-Z]+)*?$" placeholder="First Name"
+          name="firstname" #firstName="ngModel" required [(ngModel)]="request.firstName">
+        <div class="alert alert-danger" [hidden]="firstName.valid">First Name is required</div>
+      </div>
+      <div class="col">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" id="lastName" pattern="^([a-zA-Z]+?)([-\s'][a-zA-Z]+)*?$" placeholder="Last Name"
+          name="lastname" #lastName="ngModel" required [(ngModel)]="request.lastName">
+        <div class="alert alert-danger" [hidden]="lastName.valid">Last Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Best Email to Reach You At</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        name="email" placeholder="Email Address" #email="ngModel" required [(ngModel)]="request.email">
+      <div class="alert alert-danger" [hidden]="email.valid">Must contain an email address with format john@doe.com</div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <label for="college">College Name</label>
+        <input type="text" class="form-control" id="college" pattern="^([a-zA-Z]+?)([-\s'][a-zA-Z]+)*?$" placeholder="College"
+          name="college" #college="ngModel" required [(ngModel)]="request.college">
+        <div class="alert alert-danger" [hidden]="college.valid">College Name is required</div>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary submit" [disabled]="!requestForm.valid" routerLink="/complete-request">Submit</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

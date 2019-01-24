@@ -12,7 +12,7 @@
             <p class="card-text" id="item">{{product.name | titlecase}}</p>
             <p class="card-text" id="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del></p>
             <div class="row justify-content-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)" type="button">
+              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)" onclick="this.textContent='Added!'" type="button">
                 Add to Cart</button>
               <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button" id="dropdownMenuButton"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save</button>
@@ -23,7 +23,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item disabled">Kathleen's Birthday Party</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled" style="color: #F89833">+ New List</a>
+                  <a class="dropdown-item disabled" style="color: #F89833" (click)="newList($event)">+ New List</a>
                 </div>
               </div>
             </div>
@@ -41,7 +41,7 @@
             <p class="card-text" id="item">{{product.name | titlecase}}</p>
             <p class="card-text" id="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del></p>
             <div class="row justify-content-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)" type="button">
+              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)" onclick="this.textContent='Added!'" type="button">
                 Add to Cart</button>
               <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button" id="dropdownMenuButton"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save</button>
@@ -52,7 +52,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item disabled">Kathleen's Birthday Party</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled" style="color: #F89833">+ New List</a>
+                  <a class="dropdown-item disabled" style="color: #F89833" (click)="newList($event)">+ New List</a>
                 </div>
               </div>
             </div>

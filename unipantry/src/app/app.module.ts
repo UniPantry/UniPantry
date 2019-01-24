@@ -45,6 +45,18 @@ import { GiftCardComponent } from './gift-card/gift-card.component';
 import { ContactComponent } from './profile/contact/contact.component';
 import { GiftCreditComponent } from './profile/gift-credit/gift-credit.component';
 import { AccountService } from './profile/account.service';
+import { OnboardingComponent } from './onboarding/onboarding.component';
+import { SignupComponent } from './onboarding/signup/signup.component';
+import { PaymentComponent } from './onboarding/payment/payment.component';
+import { ShippingComponent } from './onboarding/shipping/shipping.component';
+import { LoginComponent } from './onboarding/login/login.component';
+import { ConfirmComponent } from './onboarding/confirm/confirm.component';
+import { OnboardingNavComponent } from './onboarding/onboarding-nav/onboarding-nav.component';
+import { FormDataService } from './onboarding/form-data.service';
+import { EqualValidator } from './onboarding/equal-validator.directive';
+import { RequestComponent } from './onboarding/request/request.component';
+import { CompleteRequestComponent } from './onboarding/request/complete-request/complete-request.component';
+import { WelcomeComponent } from './onboarding/welcome/welcome.component';
 
 
 @NgModule({
@@ -85,7 +97,18 @@ import { AccountService } from './profile/account.service';
     CartProductModalComponent,
     GiftCardComponent,
     ContactComponent,
-    GiftCreditComponent
+    GiftCreditComponent,
+    OnboardingComponent,
+    SignupComponent,
+    PaymentComponent,
+    ShippingComponent,
+    LoginComponent,
+    ConfirmComponent,
+    OnboardingNavComponent,
+    EqualValidator,
+    RequestComponent,
+    CompleteRequestComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +121,8 @@ import { AccountService } from './profile/account.service';
     AppComponent,
     ProductService,
     CartService,
-    AccountService
+    AccountService,
+    FormDataService
   ],
   bootstrap: [AppComponent]
 })
