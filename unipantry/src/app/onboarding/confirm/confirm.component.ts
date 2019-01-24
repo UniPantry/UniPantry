@@ -30,4 +30,6 @@ export class ConfirmComponent implements OnInit {
       this.checked = false;
     }
   }
+
+  onSubmit() {}
 }

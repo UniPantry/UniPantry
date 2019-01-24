@@ -63,4 +63,6 @@ export class PaymentComponent implements OnInit, AfterViewChecked {
       this.router.navigate(['/confirm']);
     }
   }
+  
+  onSubmit() {}
 }

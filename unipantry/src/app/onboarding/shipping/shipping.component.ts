@@ -54,4 +54,6 @@ export class ShippingComponent implements OnInit {
 
     client.send();
   }
+  
+  onSubmit() {}
 }
