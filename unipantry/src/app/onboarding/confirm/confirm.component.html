@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <div class="card material-elevation mdc-elevation--z3">
-  <form class="container" #confirmForm="ngForm" novalidate>
+  <form class="container" #confirmForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="row justify-content-center">
       <img class="timeline" src="assets/images/Onboarding/timeline3.png">
     </div>
@@ -81,7 +81,7 @@
     <div class="alert alert-danger" [hidden]="checked">Must accept terms & conditions</div>
     <div class="form-actions">
       <button type="button" class="btn btn-primary back" routerLink="/payment">Back</button>
-      <button type="button" [disabled]="!checked" class="btn btn-primary submit" routerLink="/welcome">Submit</button>
+      <button type="submit" [disabled]="!checked" class="btn btn-primary submit" routerLink="/welcome">Submit</button>
     </div>
   </form>
 </div>

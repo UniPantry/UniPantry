@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <div class="card material-elevation mdc-elevation--z3">
-  <form class="container">
+  <form class="container" #loginForm="ngForm" (ngSubmit)="onSubmit()">
     <h3>Welcome Back to UniPantry!</h3>
     <div class="form-group">
       <label for="email" style="font-weight: 500;">Email</label>

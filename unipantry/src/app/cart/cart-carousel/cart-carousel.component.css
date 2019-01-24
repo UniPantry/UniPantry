@@ -228,7 +228,7 @@ h3 {
 }
 
 .carousel-inner .active+.carousel-item+.carousel-item+.carousel-item .save-menu {
-  margin-left: -8.5vw;
+  margin-left: -200%;
 }
 .carousel-inner .active+.carousel-item+.carousel-item .save-menu {
   margin-left: 0vw;

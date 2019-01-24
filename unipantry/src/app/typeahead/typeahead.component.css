@@ -6,6 +6,10 @@
   font-style: normal;
   font-weight: 500;
   height: 3vw;
+  padding-bottom: .5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: .5vw;
   vertical-align: middle;
   width: 25vw;
 }

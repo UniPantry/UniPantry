@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <div class="card material-elevation mdc-elevation--z3">
-  <form class="container" #requestForm="ngForm" novalidate>
+  <form class="container" #requestForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
     <h3>Request UniPantry at Your School</h3>
     <div class="form-group">
       <label for="zip">Zip Code</label>
@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="form-actions">
-      <button class="btn btn-primary submit" [disabled]="!requestForm.valid" routerLink="/complete-request">Submit</button>
+      <button type="submit" class="btn btn-primary submit" [disabled]="!requestForm.valid" routerLink="/complete-request">Submit</button>
     </div>
   </form>
 </div>

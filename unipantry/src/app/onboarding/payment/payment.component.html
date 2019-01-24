@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <div class="card material-elevation mdc-elevation--z3">
-  <form class="container" #paymentForm="ngForm" novalidate>
+  <form class="container" #paymentForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="row justify-content-center">
       <img class="timeline" src="assets/images/Onboarding/timeline2.png">
     </div>
@@ -126,7 +126,7 @@
     </div>
     <div class="form-actions">
       <button type="button" class="btn btn-primary back" (click)="goToPrevious(paymentForm)">Back</button>
-      <button type="button" class="btn btn-secondary next" [disabled]="!paymentForm.valid" (click)="goToNext(paymentForm)">Next</button>
+      <button type="submit" class="btn btn-secondary next" [disabled]="!paymentForm.valid" (click)="goToNext(paymentForm)">Next</button>
     </div>
   </form>
 </div>

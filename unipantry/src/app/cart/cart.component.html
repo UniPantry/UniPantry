@@ -59,7 +59,7 @@
         {{giftCredit | currency}}</button>
     </div>
     <div *ngIf="total < 30" class="card material-elevation mdc-elevation--z3" id="not-enough">
-      <p>Add <span style="color: #0CB7CC;">{{totalRemaining | currency}}</span> worth of items to<br>reach $30 order
+      <p>Add <span style="color: #FF6A75;">{{totalRemaining | currency}}</span> worth of items to<br>reach $30 order
         minimum.</p>
     </div>
     <div *ngIf="giftCredit && (total >= 30) && giftCreditUsed" class="card material-elevation mdc-elevation--z3" id="subtotal-card-1">
@@ -94,15 +94,45 @@
     </div>
   </div>
   <div class="row" style="margin-left: 10%; width: 80%;">
-    <div *ngIf="total >= 30" class="card material-elevation mdc-elevation--z3" id="note-card">
-      <p style="font-weight: 500; font-size: 1.5vw;">Note to Delivery Person</p>
-      <textarea class="note-input" placeholder="Click to add" maxlength="120"></textarea>
+    <div *ngIf="total >= 30" class="card material-elevation mdc-elevation--z3" id="delivery-card">
+      <p style="font-weight: 500; font-size: 1.5vw;">Delivery Details</p>
+      <div class="row">
+        <div class="column" style="margin-right: 2%; width: 20%">
+          <div class="row justify-content-between" style="margin-bottom: 1vw;">
+            Date:
+            <select style="color: gray;">
+              <option value="" disabled selected>Select a date</option>
+            </select>
+          </div>
+          <div class="row justify-content-between">
+            Time:
+            <select style="color: gray;">
+              <option value="" disabled selected>Select a time</option>
+            </select>
+          </div>
+        </div>
+        <div class="row" style="margin-right: 2%; text-align: right; width: 38%">
+          Deliver<br>to: <div class="card delivery">
+            <div class="row justify-content-between">
+              <p class="delivery-info">{{account.shipping[0].name}}</p>
+              <a style="color: #F89833; cursor: pointer; font-size: 1vw; font-weight: 400; text-decoration: none;">Change</a>
+            </div>
+            <p class="delivery-info">{{account.shipping[0].line1}}</p>
+            <p class="delivery-info">{{account.shipping[0].line2}}</p>
+          </div>
+        </div>
+        <div class="row" style="width: 38%">
+          Notes: <textarea class="note-input" placeholder="Click to add notes to delivery driver (optional)" maxlength="120"></textarea>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="row" style="margin-left: 10%; width: 80%;">
     <button *ngIf="giftCreditUsed && (total >= 30)" class="btn btn-md btn-primary" id="checkout-2">Checkout</button>
   </div>
 </div>
 <div class="container-fluid">
-  <div class="row justify-content-between" style="margin-bottom: 1%; margin-top: 1%;">
+  <div class="row justify-content-between" style="margin-bottom: 1%; margin-top: 5%;">
     <h3 style="margin-left: 11%;">Customers Like You Also Bought</h3>
     <button class="btn btn-primary" type="button" id="view-all">View All</button>
   </div>

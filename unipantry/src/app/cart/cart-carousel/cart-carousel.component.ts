@@ -46,6 +46,14 @@ export class CartCarouselComponent implements OnInit {
     });
   }
 
+  newList(event: MouseEvent) {
+    const str = '<input style="border-radius: .4vw; border-color: #F89833; border-width: .1vw; border-style: solid;' +
+    'padding-left: .25vw; color: black; font-weight: 500; height: 100%; width: 95%;" placeholder="List Name" maxlength="25"></input>';
+    if ((event.target as any).innerHTML !== str) {
+      (event.target as any).innerHTML = str;
+    }
+  }
+
   carousel(products: Product[]) {
     $(document).ready(function () {
       $('#carousel-1').on('slide.bs.carousel', function (e) {

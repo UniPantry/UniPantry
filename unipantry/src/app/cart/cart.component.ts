@@ -1,6 +1,8 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Product } from '../product';
+import { AccountService } from '../profile/account.service';
+import { Account } from '../profile/account';
 
 @Component({
   selector: 'app-cart',
@@ -25,7 +27,12 @@ export class CartComponent implements AfterViewInit, OnInit {
 
   totalRemaining = 30;
 
-  constructor(private cartService: CartService) { }
+  private account: Account;
+
+  constructor(private cartService: CartService, private accountService: AccountService) {
+    accountService.getAccount().subscribe(account => this.account = account);
+    console.log(this.account);
+   }
 
   ngOnInit() {
     this.getCart();

@@ -100,8 +100,11 @@ footer div {
 #too-busy {
   background-color: #0BCDB2;
   border-color: #0BCDB2;
+  border-radius: .5vw;
   font-size: 1.5vw;
-  padding: 1% 2%;
+  margin-top: .75vw;
+  padding: .5% 3%;
+  width: 17.5vw;
 }
 
 #nav-search {
@@ -292,4 +295,46 @@ strong {
   font-weight: 500;
   margin-left: -2.2vw;
   position: absolute;
+}
+
+.progress {
+  border-radius: 1vw;
+  height: 2vw;
+  margin-left: 4%;
+  width: 90%;
+}
+
+.progress-bar {
+  background-color: #0BCDB2;
+}
+
+.order-card {
+  border: .1vw solid gray;
+  border-radius: .15vw;
+  height: 6.5vw;
+  margin-left: 4%;
+  margin-right: 6%;
+  width: 42%;
+  padding: 1vw;
+}
+
+.gift-balance-card {
+  border: .1vw solid gray;
+  border-radius: .15vw;
+  height: 6.5vw;
+  margin-right: 6%;
+  padding: 1vw;
+  width: 42%;
+}
+
+p {
+  font-size: 1.3vw;
+  font-weight: 500;
+  margin-bottom: .1vw;
+}
+
+span {
+  font-size: 1.3vw;
+  font-weight: 500;
+  margin-bottom: .1vw;
 }
