@@ -52,4 +52,6 @@ export class SignupComponent implements OnInit, AfterViewChecked {
     }
     return -1;
   }
+
+  onSubmit() {}
 }

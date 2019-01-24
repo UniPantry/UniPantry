@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component'
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-footer',
@@ -8,9 +8,9 @@ import { AppComponent } from '../app.component'
 })
 export class FooterComponent implements OnInit {
 
-  private loggedIn = this.app.isLoggedIn();
+  loggedIn = this.app.isLoggedIn();
 
-  private onboarding = this.app.isOnboarding();
+  onboarding = this.app.isOnboarding();
 
   constructor(private app: AppComponent) { }
 
