@@ -7,8 +7,12 @@
   </div>
   <div class="card row" style="margin-bottom: 10%;">
     <div class="column c1 align-items-center">
-      <img src="https://cdn.shopify.com/s/files/1/2208/6477/products/GC_Blank_Image_d8b27814-e00b-48d7-9844-c0cb8ca464cb_2000x.png?v=1526936252"
-        class="image">
+      <div class="card img-card">
+        <div class="row justify-content-center">
+          <img src="assets/images/Logos/UniPantry Logo.png"
+            class="image">
+        </div>
+      </div>
       <div style="width: 150%;">
         <p class="title">Description</p>
         <p>Give the gift of UniPantry!</p>
@@ -20,16 +24,19 @@
     <div class="column c2 align-items-center">
       <p class="title">UniPantry Gift Card</p>
       <div class="row">
-        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(25)">$25.00</button>
-        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(50)">$50.00</button>
-        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(75)">$75.00</button>
+        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(25)">$25</button>
+        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(50)">$50</button>
+        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(75)">$75</button>
+        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(100)">$100</button>
+        <form>
+          <input type="number" id="other-amount" placeholder="Other" maxlength="4" min="1" (click)="onSelect(0)" />
+        </form>
       </div>
       <div class="row">
-        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(100)">$100.00</button>
-        <button class="btn btn-primary" type="button" id="amount" (click)="onSelect(125)">$125.00</button>
-        <form>
-          <input type="number" id="other-amount" placeholder="Other Amount" maxlength="4" min="1" (click)="onSelect(0)"/>
-        </form>
+          <input type="text" id="email" placeholder="&#xF040; Add Recipient's Email"/>
+      </div>
+      <div class="row">
+          <input type="text" id="personalize" placeholder="&#xF040; Personalize Message (Optional)"/>
       </div>
       <div class="row">
         <button class="btn btn-primary" type="button" id="add-cart-btn" (click)="addToCart()">Add to Cart</button>

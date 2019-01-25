@@ -16,7 +16,7 @@ p {
 .card {
   border-radius: .75vw;
   font-size: 1vw;
-  height: 40vw;
+  height: 45vw;
   margin-bottom: 1vw;
   margin-left: 10%;
   margin-right: 10%;
@@ -43,47 +43,58 @@ p {
 }
 
 .image {
-  height: 50%;
-  width: 100%;
-  margin-bottom: 40%;
+  height: 100%;
+  width: 120%;
+}
+
+.img-card {
+  background-color: #0BB8CD;
+  border-color: #0BB8CD;
+  height: 42%;
+  width: 84%;
+  margin-left: 0vw;
+  margin-top: 15%;
+  margin-bottom: 45%;
 }
 
 .title {
-  font-size: 1.75vw;
+  font-size: 1.5vw;
   font-weight: 500;
 }
 
 #amount {
   background-color: white;
-  border-color: #0BCDB2;
+  border-color: gray;
   border-radius: .75vw;
   border-width: .15vw;
-  color: #0BCDB2;
+  color: gray;
   font-size: 1.4vw;
-  height: 3vw;
-  margin-right: 3vw;
+  height: 3.5vw;
+  margin-bottom: 2vw;
+  margin-right: 1.5vw;
   margin-top: 2vw;
   padding: 0vw;
   position: relative;
   text-align: center;
-  width: 11vw;
+  width: 6vw;
 }
 
 #other-amount {
   background-color: white;
-  border-color: #0BCDB2;
+  border-color: gray;
   border-radius: .75vw;
   border-style: solid;
   border-width: .15vw;
-  color: #0BCDB2;
+  color: gray;
   font-size: 1.4vw;
-  height: 3vw;
-  margin-right: 3vw;
+  height: 3.5vw;
+  margin-bottom: 2vw;
+  margin-right: 1.5vw;
   margin-top: 2vw;
   padding: 0vw;
   position: relative;
   text-align: center;
-  width: 11vw;
+  width: 6vw;
 }
 
 #add-cart-btn {
@@ -106,6 +117,54 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-::placeholder {
-  color: #0BCDB2;
+#email {
+  border-color: #F89833;
+  border-radius: .5vw;
+  border-style: solid;
+  color: #F89833;
+  font-family: FontAwesome, Arial;
+  font-size: 1.4vw;
+  margin-top: 2vw;
+  padding: .25vw;
+  padding-left: 1vw;
+  width: 36vw;
+}
+
+#personalize {
+  border-color: gray;
+  border-radius: .5vw;
+  border-style: solid;
+  color: gray;
+  font-family: FontAwesome, Arial;
+  font-size: 1.4vw;
+  margin-top: 2vw;
+  padding: .25vw;
+  padding-left: 1vw;
+  width: 36vw;
+}
+
+input[id^="email"]::-webkit-input-placeholder { 
+  color: #F89833;
+}
+input[id^="email"]::-moz-placeholder { 
+  color: #F89833;
+}
+input[id^="email"]:-ms-input-placeholder { 
+  color: #F89833;
+}
+input[id^="email"]:-moz-placeholder { 
+  color: #F89833;
+}
+
+input[id^="personalize"]::-webkit-input-placeholder { 
+  color: gray;
+}
+input[id^="personalize"]::-moz-placeholder { 
+  color: gray;
+}
+input[id^="personalize"]:-ms-input-placeholder { 
+  color: gray;
+}
+input[id^="personalize"]:-moz-placeholder { 
+  color: gray;
 }

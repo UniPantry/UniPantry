@@ -333,6 +333,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   border-color: gray;
   border-radius: .75vw;
   color: #F89833;
+  font-family: FontAwesome, Arial;
   height: 100%;
   margin-left: 3%;
   padding: .5vw;

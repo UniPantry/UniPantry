@@ -3,6 +3,7 @@ import { CartService } from '../cart.service';
 import { Product } from '../product';
 import { AccountService } from '../profile/account.service';
 import { Account } from '../profile/account';
+import { Address } from '../profile/address';
 
 @Component({
   selector: 'app-cart',
@@ -26,6 +27,8 @@ export class CartComponent implements AfterViewInit, OnInit {
   subtotal = 0;
 
   totalRemaining = 30;
+
+  i = 0;
 
   private account: Account;
 
@@ -122,5 +125,18 @@ export class CartComponent implements AfterViewInit, OnInit {
     if (Obj.innerHTML) {
       Obj.innerHTML = str;
     }
+  }
+
+  switchAddress() {
+    const numAddresses = this.account.shipping.length;
+    if (this.i + 1 >= numAddresses) {
+      this.i = 0;
+    } else {
+      this.i++;
+    }
+  }
+
+  newAddress() {
+    return;
   }
 }
