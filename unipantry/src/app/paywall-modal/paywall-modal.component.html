@@ -1,28 +1,43 @@
 <div class="modal fade" id="paywallModal" tabindex="-1" role="dialog" aria-labelledby="paywallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content material-elevation mdc-elevation--z5">
-      <div class="modal-body">
-        <div class="row justify-content-center" style="margin-right: 0px; margin-left: 0px;">
-          <h4 style="margin-top: 2vw;">Ready to get UP?</h4>
-          <h4 style="margin-top: 2vw; text-align: center">Begin your 14-day FREE trial and enjoy:</h4>
-          <div class="column justify-content-center">
-            <ul>
-              <li><i class="material-icons">check_box</i>Free, unlimited 2-day delivery to your doorstep*</li>
-              <li><i class="material-icons">check_box</i>Exclusive discounts on retail store prices</li>
-              <li><i class="material-icons">check_box</i>Access to our app and website featuring<br>
-                <div class="line-2">hundreds of products you use everyday</div>
-            </ul>
-            <img src="assets/images/Paywall modal popup/fastcart.png">
-            <button class="btn btn-dark btn-large material-elevation mdc-elevation--z5" id="paywall-btn-1" routerLink="/signup"
-              type="button" data-dismiss="modal" data-target="#paywallModal">
-              Start Your Free Trial Today</button>
-            <button class="btn btn-light btn-large material-elevation mdc-elevation--z5" id="paywall-btn-2" routerLink="/about"
-              type="button" data-dismiss="modal" data-target="#paywallModal">
-              Learn More</button>
+  <div class="row justify-content-center">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content material-elevation mdc-elevation--z5">
+        <div class="modal-body">
+          <div class="row justify-content-center" style="margin-right: 0px; margin-left: 0px;">
+            <h4 style="font-size: 2vw; margin-top: 2vw;">Ready to get UP?</h4>
+            <h4 style="margin-top: 1vw; text-align: center">Begin your 14-day FREE* trial and enjoy:</h4>
+            <div class="column justify-content-center" style="width: 100%;">
+              <div class="row justify-content-center">
+                <ul>
+                  <li><i class="material-icons">check_box</i>Free, unlimited 2-day delivery to your doorstep</li>
+                  <li><i class="material-icons">check_box</i>Exclusive discounts on retail store prices</li>
+                  <li><i class="material-icons">check_box</i>Auto-subscription service so you can automatically<br>
+                    <div class="line-2">schedule deliveries of items you use the most</div>
+                  </li>
+                  <li><i class="material-icons">check_box</i>Your own human, personal shopper for every order</li>
+                  <li><i class="material-icons">check_box</i>Access to our app and website featuring<br>
+                    <div class="line-2">hundreds of products you use everyday</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="row justify-content-center">
+                <img src="assets/images/Paywall modal popup/fastcart.png">
+              </div>
+              <p>*Membership requires $17.99/mo. payment after trial period ends</p>
+              <div class="row justify-content-center">
+                <button class="btn btn-dark btn-large material-elevation mdc-elevation--z5" id="paywall-btn-1"
+                  routerLink="/signup" type="button" data-dismiss="modal" data-target="#paywallModal">
+                  Start Your Free Trial Today</button>
+              </div>
+              <div class="row justify-content-center">
+                <button class="btn btn-light btn-large material-elevation mdc-elevation--z5" id="paywall-btn-2"
+                  routerLink="/about" type="button" data-dismiss="modal" data-target="#paywallModal">
+                  Learn More</button>
+              </div>
+            </div>
           </div>
+          <a href="#" data-toggle="modal" data-target="#paywallModal">No thanks</a>
         </div>
-        <a href="#" data-toggle="modal" data-target="#paywallModal">No thanks, I want the extra cost and hassle of buying my own groceries in stores.</a>
-        <p>*$30 minimum purchase required per order</p>
       </div>
     </div>
   </div>

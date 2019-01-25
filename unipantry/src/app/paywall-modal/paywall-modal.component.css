@@ -4,8 +4,7 @@
   display: block;
   font-size: 1.75vw;
   margin-bottom: 2vw;
-  margin-left: 22.5%;
-  margin-top: 5vw;
+  margin-top: 1vw;
   padding: .5vw 1vw;
   width: 25vw;
 }
@@ -16,16 +15,16 @@
   color: #F89833;
   display: block;
   font-size: 1.75vw;
-  margin-bottom: 3vw;
-  margin-left: 22.5%;
+  margin-bottom: 2vw;
   padding: .5vw 1vw;
-  width: 22.5vw;
+  width: 25vw;
 }
 
 h4 {
   display: block;
   font-size: 1.5vw;
   font-weight: 500;
+  margin-bottom: 1vw;
   text-align: center;
   width: 100%;
 }
@@ -49,11 +48,10 @@ p {
 
 li {
   font-size: 1.5vw;
-  margin-top: 1.9vw;
+  margin-top: 1.25vw;
 }
 
 ul {
-  margin-top: 2vw;
   list-style: none;
 }
 
@@ -67,8 +65,9 @@ ul {
 }
 
 img {
+  height: 12.5vw;
   margin-top: 2vw;
-  margin-left: 6vw;
+  margin-bottom: 1vw;
   width: 24vw;
 }
 
@@ -77,10 +76,20 @@ img {
 }
 
 .modal-body {
-  padding: 2.5vw;
+  padding: 1vw;
 }
 
 ul {
   margin-bottom: 0vw;
   padding-left: 0vw;
 }
+
+.row {
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
+
+.modal-dialog {
+  width: 50%;
+}
+

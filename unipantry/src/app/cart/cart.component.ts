@@ -31,7 +31,6 @@ export class CartComponent implements AfterViewInit, OnInit {
 
   constructor(private cartService: CartService, private accountService: AccountService) {
     accountService.getAccount().subscribe(account => this.account = account);
-    console.log(this.account);
    }
 
   ngOnInit() {
