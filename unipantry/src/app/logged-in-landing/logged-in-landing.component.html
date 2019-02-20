@@ -3,7 +3,7 @@
   <div class="alert alert-dismissible fade show" role="alert">
     Want to earn some extra $? <a routerLink="/refer-friend" id="refer-link">Refer your friends to UniPantry!</a>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
+      <span aria-hidden="true" style="font-size: 3vw; vertical-align: text-top;">&times;</span>
     </button>
   </div>
 </div>
@@ -33,7 +33,7 @@
           <p style="font-weight: 400;">Will be delivered on <span style="color: #0CB7CC">January 17th, 7:30pm</span></p>
         </div>
         <div class="column">
-          <a href="#" class="material-icons" style="color: #F89833; font-size: 4vw; text-decoration: none; vertical-align: middle;">
+          <a href="#" class="material-icons" style="color: #F89833; font-size: 4vw; text-decoration: none; vertical-align: text-top;">
             chevron_right
           </a>
         </div>
@@ -43,10 +43,10 @@
       <div class="row justify-content-between">
         <div class="column">
           <p>Current Gift Card Balance: <span style="color: #0CB7CC">{{giftCredit | currency}}</span></p>
-          <a routerLink="/gift-card" style="color: #0BCDB2; font-size: 1.3vw; text-decoration: none;">Add Credit</a>
+          <p (click)="addCredit()" style="color: #0BCDB2; cursor: pointer; font-size: 1.3vw; text-decoration: none;">Add Credit</p>
         </div>
         <div class="column">
-          <a routerLink="/profile" class="material-icons" style="color: #F89833; font-size: 4vw; text-decoration: none; vertical-align: middle;">
+          <a routerLink="/profile" class="material-icons" style="color: #F89833; font-size: 4vw; text-decoration: none; vertical-align: text-top;">
             chevron_right
           </a>
         </div>

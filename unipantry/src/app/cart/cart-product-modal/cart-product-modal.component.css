@@ -62,8 +62,8 @@ p {
   background: white;
   border-width: .15vw;
   border-color: #F89833;
-  margin-top: -.3vw;
-  width: 12.5vw;
+  margin-top: -.2vw;
+  width: 15vw;
 }
 
 .dropdown-item {
@@ -89,7 +89,7 @@ p {
   font-size: 1.6vw;
   font-weight: 500;
   margin-left: 2.5vw;
-  max-height: 9vw;
+  max-height: 5vw;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
@@ -100,7 +100,7 @@ p {
   font-size: 2.25vw;
   font-weight: 600;
   margin-left: 2.5vw;
-  margin-top: 3vw;
+  margin-top: 1vw;
 }
 
 .old-price {
@@ -109,6 +109,13 @@ p {
 
 .image {
   height: 30vw;
+  padding-top: 2.5vw;
+  padding-left: 2.5vw;
+  width: 35%;
+}
+
+.nutrition {
+  height: 35vw;
   padding-top: 2.5vw;
   padding-left: 2.5vw;
   width: 35%;
@@ -126,7 +133,7 @@ p {
   font-size: 1.2vw;
   font-weight: 500;
   padding-left: 2.5vw;
-  padding-top: 2vw;
+  margin-top: 2vw;
 }
 
 .allergens {
@@ -153,7 +160,7 @@ p {
   font-size: 2vw;
   font-weight: 800;
   margin-top: 2vw;
-  margin-bottom: 4vw;
+  margin-bottom: 3vw;
   padding: 0px;
   text-align: center;
   width: 3vw;
@@ -170,7 +177,7 @@ p {
   color: black;
   font-size: 1.5vw;
   margin-top: 2vw;
-  margin-bottom: 4vw;
+  margin-bottom: 3vw;
   text-align: center;
   width: 5vw;
 }
@@ -183,12 +190,16 @@ p {
   display: block;
   font-size: 2vw;
   font-weight: 800;
-  margin-bottom: 4vw;
+  margin-bottom: 3vw;
   margin-left: 2.5vw!important;
   margin-top: 2vw;
   padding: 0px;
   text-align: center;
   width: 3vw;
+}
+
+.btn-group {
+  height: 8vw;
 }
 
 a {
@@ -209,10 +220,37 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .exit {
   color: gray!important;
-  font-size: 2.5vw;
+  font-size: 2.9vw;
   font-weight: 300;
   margin-left: 90%;
   margin-top: 4.5vw;
   text-align: right;
   text-decoration: none;
+}
+
+.modal-dialog {
+  width: 52.5%;
+}
+
+.dropdown-menu {
+  min-width: 0vw;
+}
+
+.note {
+  background-color: white;
+  border-color: gray;
+  border-radius: .75vw;
+  color: gray;
+  display: block;
+  font-family: FontAwesome, Arial;
+  font-size: .95vw;
+  margin-left: 2.5vw;
+  margin-top: 1.3vw;
+  padding: .5vw;
+  width: 11vw;
+}
+
+.pencil {
+  font-size: .95vw;
+  margin-right: .1vw;
 }

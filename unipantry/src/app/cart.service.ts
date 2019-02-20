@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Product } from './product';
 import { AccountService } from './profile/account.service';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class CartService {
 
   private subtotal: number;
 
-  constructor(accountService: AccountService) {
+  constructor(accountService: AccountService, private http: HttpClient) {
     accountService.getAccount().subscribe(account => this.giftCredit = account.giftCred);
   }
 

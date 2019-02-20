@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-DemoApplication<webservice>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.unipantry.webservice.DemoApplication",
+      "projectName": "webservice",
+      "args": ""
+    }
+  ]
+}

@@ -1,43 +1,55 @@
 <div *ngIf="product" class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content material-elevation mdc-elevation--z5">
-      <div class="modal-body">
-        <div class="row" style="margin-right: 0px; margin-left: 0px;">
-          <img class="image" src={{product.src}}>
-          <div style="height: 30vw; width: 65%;">
-            <a href="#" class="exit" data-dismiss="modal" data-target="#cartModal">&times;</a>
-            <p class="weight">{{product.weight | titlecase}}</p>
-            <p class="name">{{product.name | titlecase}}</p>
-            <p class="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del></p>
-            <div class="btn-group" role="group" aria-label="Quantity">
-              <button type="button" class="btn btn-secondary decrease" (click)="decreaseQuantity()">-</button>
-              <input id="quantity" type="number" min="1" value="1" OnlyNumber="true" />
-              <button type="button" class="btn btn-secondary increase" (click)="increaseQuantity()">+</button>
-            </div>
-            <div class="row align-items-center">
-              <button class="btn btn-primary btn-lg" id="add-cart-btn" (click)="addToCart()" type="button" data-dismiss="modal"
-                data-target="#cartModal">
-                Add to Cart</button>
-              <div class="dropdown"> <button class="btn btn-secondary btn-lg dropdown-toggle save" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save to List</button>
-                <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item disabled" href="#">Friendsgiving</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled" href="#">Monthly Order</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled" href="#">Kathleen's Birthday Party</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled" style="color: #F89833!important" href="#">+ New List</a>
+  <div class="row justify-content-center">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content material-elevation mdc-elevation--z5">
+        <div class="modal-body">
+          <div class="row" style="margin-right: 0px; margin-left: 0px;">
+            <img class="image" src={{product.src}}>
+            <div style="height: 30vw; width: 65%;">
+              <a href="#" class="exit" data-dismiss="modal" data-target="#cartModal">&times;</a>
+              <p class="weight">{{product.weight | titlecase}}</p>
+              <p class="name">{{product.name | titlecase}}</p>
+              <p class="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del></p>
+              <button class="btn btn-sm btn-secondary note">
+                <i class="material-icons pencil">
+                  edit
+                </i>Add Note to Shopper</button>
+              <div class="btn-group" role="group" aria-label="Quantity">
+                <button type="button" class="btn btn-secondary decrease" (click)="decreaseQuantity()">-</button>
+                <input id="quantity" type="number" min="1" value="1" OnlyNumber="true" />
+                <button type="button" class="btn btn-secondary increase" (click)="increaseQuantity()">+</button>
+              </div>
+              <div class="row align-items-center">
+                <button class="btn btn-primary btn-lg" id="add-cart-btn" (click)="addToCart()" type="button"
+                  data-dismiss="modal" data-target="#cartModal">
+                  Add to Cart</button>
+                <div class="dropdown"> <button class="btn btn-secondary btn-lg dropdown-toggle save" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save to List</button>
+                  <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item disabled" href="#">Friendsgiving</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item disabled" href="#">Monthly Order</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item disabled" href="#">Kathleen's Birthday Party</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item disabled" style="color: #F89833!important" (click)="newList($event)">+ New
+                      List</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="row" style="margin-right: 0px; margin-left: 0px;">
+            <img class="nutrition" src={{product.src}}>
+            <div style="height: 35vw; width: 65%;">
+              <p class="allergens-title">Allergens</p>
+              <p class="allergens">{{product.allergens | uppercase}}</p>
+              <p class="ingredients-title">Ingredients</p>
+              <p class="ingredients">{{product.ingredients | uppercase}}</p>
+            </div>
+          </div>
         </div>
-        <strong class="allergens-title">Allergens</strong>
-        <p class="allergens">{{product.allergens | uppercase}}</p>
-        <strong class="ingredients-title">Ingredients</strong>
-        <p class="ingredients">{{product.ingredients | uppercase}}</p>
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Product } from './product';
 import { PRODUCTS } from './mock-products';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +23,5 @@ export class ProductService {
     this.selectedProduct = product;
   }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }

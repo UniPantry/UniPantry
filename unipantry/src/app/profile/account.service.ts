@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Account } from './account';
 import { ACCOUNTS } from './mock-accounts';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +20,5 @@ export class AccountService {
     return of(this.currAcc);
   }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }

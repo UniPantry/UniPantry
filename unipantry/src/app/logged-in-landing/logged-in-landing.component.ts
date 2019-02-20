@@ -3,6 +3,7 @@ import { Product } from '../product';
 import { ProductService } from '../product.service';
 import { AccountService } from '../profile/account.service';
 import { Account } from '../profile/account';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logged-in-landing',
@@ -17,7 +18,7 @@ export class LoggedInLandingComponent implements OnInit {
   points = 20;
   giftCredit: number;
 
-  constructor(private productService: ProductService, private accountService: AccountService) {
+  constructor(private productService: ProductService, private accountService: AccountService, private router: Router) {
     accountService.getAccount().subscribe(account => this.account = account);
   }
 
@@ -30,6 +31,10 @@ export class LoggedInLandingComponent implements OnInit {
     this.productService.getSelectedProduct()
       .subscribe(product => this.selectedProduct = product);
     return this.selectedProduct;
+  }
+
+  addCredit() {
+    this.router.navigate(['/gift-card']);
   }
 
 }

@@ -57,6 +57,7 @@ import { EqualValidator } from './onboarding/equal-validator.directive';
 import { RequestComponent } from './onboarding/request/request.component';
 import { CompleteRequestComponent } from './onboarding/request/complete-request/complete-request.component';
 import { WelcomeComponent } from './onboarding/welcome/welcome.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -114,7 +115,8 @@ import { WelcomeComponent } from './onboarding/welcome/welcome.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     LoggedInLandingNavComponent,
