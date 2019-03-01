@@ -1,521 +1,263 @@
 <div class="container-fluid">
   <app-nav></app-nav>
 </div>
-<div class="card" id="sidenav">
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <h5 style="margin-top: 1vw; font-weight: bold;">All Categories</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
-          Groceries
-        </label>
-      </div>
-      <div class="subGrocery" style="margin-left: 1vw;">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
+<div class="row">
+  <div class="card material-elevation mdc-elevation--z4" id="sidenav">
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <div class="form-check" style="margin-top: 1vw;">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="all" value="option0"
+            (click)="selectProducts(true, 'all')" checked>
+          <label class="form-check-label" for="all" style="font-weight: bold;">
+            All Categories
+          </label>
+        </div>
+        <div class="form-check" style="margin-left: 1vw;">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="groceries" value="option1"
+            (click)="selectProducts(true, 'groceries')">
+          <label class="form-check-label" for="groceries">
+            Groceries
+          </label>
+        </div>
+        <div class="subGrocery" style="margin-left: 2vw;">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="produce" value="option2"
+              (click)="selectProducts(true, 'produce')">
+            <label class="form-check-label" for="produce">
+              Produce
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="meat & fish" value="option3"
+              (click)="selectProducts(true, 'meat & fish')">
+            <label class="form-check-label" for="meat & fish">
+              Meat & Fish
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="bakery" value="option4"
+              (click)="selectProducts(true, 'bakery')">
+            <label class="form-check-label" for="bakery">
+              Bakery
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="dairy & eggs" value="option5"
+              (click)="selectProducts(true, 'dairy & eggs')">
+            <label class="form-check-label" for="dairy & eggs">
+              Dairy & Eggs
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="beverages" value="option6"
+              (click)="selectProducts(true, 'beverages')">
+            <label class="form-check-label" for="beverages">
+              Beverages
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="snacks" value="option7"
+              (click)="selectProducts(true, 'snacks')">
+            <label class="form-check-label" for="snacks">
+              Snacks
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="packaged foods" value="option8"
+              (click)="selectProducts(true, 'packaged foods')">
+            <label class="form-check-label" for="packaged foods">
+              Packaged Foods
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="frozen foods" value="option9"
+              (click)="selectProducts(true, 'frozen foods')">
+            <label class="form-check-label" for="frozen foods">
+              Frozen Foods
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="baking supplies" value="option10"
+              (click)="selectProducts(true, 'baking supplies')">
+            <label class="form-check-label" for="baking supplies">
+              Baking Supplies
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="specialty & allergy-friendly"
+              value="option11" (click)="selectProducts(true, 'specialty & allergy-friendly')">
+            <label class="form-check-label" for="specialty & allergy-friendly">
+              Specialty & Allergy-Friendly
+            </label>
+          </div>
+        </div>
+        <div class="form-check" style="margin-left: 1vw;">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="personal care" value="option12"
+            (click)="selectProducts(true, 'personal care')">
+          <label class="form-check-label" for="personal care">
             Personal Care
           </label>
         </div>
+        <div class="subGrocery" style="margin-left: 2vw; margin-bottom: 1.5vw;">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="hygiene" value="option13"
+              (click)="selectProducts(true, 'hygiene')">
+            <label class="form-check-label" for="hygiene">
+              Hygiene
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="health" value="option14"
+              (click)="selectProducts(true, 'health')">
+            <label class="form-check-label" for="health">
+              Health
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="paper goods" value="option15"
+              (click)="selectProducts(true, 'paper goods')">
+            <label class="form-check-label" for="paper goods">
+              Paper Goods
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="cleaning supplies" value="option16"
+              (click)="selectProducts(true, 'cleaning supplies')">
+            <label class="form-check-label" for="cleaning supplies">
+              Cleaning Supplies
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="laundry supplies" value="option17"
+              (click)="selectProducts(true, 'laundry supplies')">
+            <label class="form-check-label" for="laundry supplies">
+              Laundry Supplies
+            </label>
+          </div>
+        </div>
+        <h5 style="margin-top: 1vw; font-weight: bold; font-size: 1vw; padding-left: 1vw;">Preference</h5>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Meat & Fish
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+            (click)="selectPreference('organic')">
+          <label class="form-check-label" for="defaultCheck1">
+            Organic
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Bakery
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2"
+            (click)="selectPreference('gluten-free')">
+          <label class="form-check-label" for="defaultCheck2">
+            Gluten-Free
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Dairy & Eggs
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3"
+            (click)="selectPreference('dairy-free')">
+          <label class="form-check-label" for="defaultCheck3">
+            Dairy-Free
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Beverages
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck4"
+            (click)="selectPreference('nut-free')">
+          <label class="form-check-label" for="defaultCheck4">
+            Nut-Free
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Snacks
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck5"
+            (click)="selectPreference('vegan')">
+          <label class="form-check-label" for="defaultCheck5">
+            Vegan
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Packaged Foods
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck6"
+            (click)="selectPreference('kosher')">
+          <label class="form-check-label" for="defaultCheck6">
+            Kosher
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Frozen Foods
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck7"
+            (click)="selectPreference('halal')">
+          <label class="form-check-label" for="defaultCheck7">
+            Halal
           </label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Baking Supplies
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Specialty & Allergy Friendly
-          </label>
-        </div>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
-          Personal Care
-        </label>
-      </div>
-      <div class="subGrocery" style="margin-left: 1vw; margin-bottom: 3vw;">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Personal Care
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Meat & Fish
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Bakery
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Dairy & Eggs
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Beverages
-          </label>
-        </div>
-      </div>
-      <h5 style="margin-top: 1vw; font-weight: bold;">Preferance</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Organic
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Gluten-Free
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Dairy-Free
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Nut-Free
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Vegan
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Kosher
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Halal
-        </label>
-      </div>
-    </blockquote>
-  </div>
-</div>
-<div class="row justify-content-between" style="margin-bottom: 1.75vw; margin-left: 0vw; margin-right: 0vw;">
-  <h3 style="margin-left: 5.6vw; margin-top: 2.1vw;">All Products</h3>
-  <p id="sort">Sort By:</p>
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle shop-lists" type="button" id="PopularityMenuButton" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false">
-      Popularity
-    </button>
-    <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item disabled" href="#"><strong>Alphabetic</strong></a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item disabled" href="#"><strong>Price</strong></a>
+      </blockquote>
     </div>
   </div>
-</div>
-<div class="cards">
-  <div class="row1">
-    <div class="card material-elevation mdc-elevation--z7" id="card1">
-      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card material-elevation mdc-elevation--z7" id="card2">
-      <img class="card-img-top img-fluid" [src]="images[1]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card material-elevation mdc-elevation--z7" id="card3">
-      <img class="card-img-top img-fluid" [src]="images[2]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card material-elevation mdc-elevation--z7" id="card4">
-      <img class="card-img-top img-fluid" [src]="images[3]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row2">
-    <div class="card material-elevation mdc-elevation--z7" id="card5">
-      <img class="card-img-top img-fluid" [src]="images[4]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card material-elevation mdc-elevation--z7" id="card6">
-      <img class="card-img-top img-fluid" [src]="images[5]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card material-elevation mdc-elevation--z7" id="card7">
-      <img class="card-img-top img-fluid" [src]="images[6]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card material-elevation mdc-elevation--z7" id="card8">
-      <img class="card-img-top img-fluid" [src]="images[5]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row3">
-    <div class="card material-elevation mdc-elevation--z7" id="card9">
-      <img class="card-img-top img-fluid" [src]="images[0]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card material-elevation mdc-elevation--z7" id="card10">
-      <img class="card-img-top img-fluid" [src]="images[1]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card material-elevation mdc-elevation--z7" id="card11">
-      <img class="card-img-top img-fluid" [src]="images[2]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card material-elevation mdc-elevation--z7" id="card12">
-      <img class="card-img-top img-fluid" [src]="images[3]" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-title">1 lb.</p>
-        <p class="card-text" id="item">Fuji Apples</p>
-        <p class="card-text" id="price">$1.19 <del style="color:gray">$1.49</del></p>
-        <div class="row justify-content-center">
-          <button class="btn btn-primary btn-md" id="add-cart-btn" type="button">
-            Add to Cart</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle save" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Save
-            </button>
-            <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Friendsgiving</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Monthly Order</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kathleen's Birthday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" style="color: #F89833">+ New List</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="column" style="width: 81%;">
     <div class="row justify-content-between" style="margin-bottom: 1.75vw; margin-left: 0vw; margin-right: 0vw;">
+      <h3 style="font-size: 2vw; margin-left: 10%; margin-top: 2vw;" id="allProducts">All Products</h3>
+      <div style="font-size: 1vw; font-weight: 500; margin-top: 2vw; margin-right: 16.75%;">
+        Sort By:
+        <select (change)="sort()" id="sort"
+          style="border-radius: .5vw; color: gray; font-weight: 400; margin-left: .5vw; height: 2.5vw; width: 15vw;">
+          <option value="alphabetical" selected>Alphabetical</option>
+          <option value="popularity">Popularity</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+    <div style="margin-left: 9%;">
+      <div *ngFor="let product of matchedProducts.slice(start,end)" (click)="onSelect(product)" class="col-sm-3"
+        style="display: inline-block; margin: 1vw; padding: 0vw; width: 25%;">
+        <div class="card material-elevation mdc-elevation--z3">
+          <a data-toggle="modal" data-target="#detailModal" style="text-decoration: none; color: black;">
+            <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
+          </a>
+          <div class="card-body">
+            <p class="card-title">{{product.weight | titlecase}}</p>
+            <p class="card-text" id="item">{{product.name | titlecase}}</p>
+            <p class="card-text" id="price">{{product.price | currency}} <del
+                class="old-price">{{product.oldPrice | currency}}</del></p>
+            <div class="row justify-content-center">
+              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)"
+                onclick="this.textContent='Added!'" type="button">
+                Add to Cart</button>
+              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button"
+                  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Save</button>
+                <div class="dropdown-menu save-menu material-elevation mdc-elevation--z3"
+                  aria-labelledby="dropdownMenuButton">
+                  <div *ngFor="let list of account.lists; let i = index">
+                    <a class="dropdown-item disabled" (click)="save(product, list)">{{list.name}}</a>
+                    <div *ngIf="i<3">
+                      <div class="dropdown-divider"></div>
+                    </div>
+                  </div>
+                  <div *ngIf="!new && (account.lists.length <= 3)">
+                    <a class="dropdown-item disabled" style="color: #F89833" (click)="newList()">+ New List</a>
+                  </div>
+                  <div *ngIf="new">
+                    <input id="new" style="border-radius: .4vw; border-color: #F89833; border-width: .1vw; border-style: solid;
+                      padding-left: .25vw; color: black; font-weight: 500; height: 100%; width: 95%;"
+                      placeholder="List Name" maxlength="25" (keypress)="routing($event)">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 1.5vw; margin-top: 1.5vw; margin-left: 40%; margin-right: 0vw;">
       <nav aria-label="Page navigation example" style="margin-right: -0.35vw">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
+            <a class="page-link" aria-label="Previous" (click)="prev()" style="color: #0BCDB2">
               <span aria-hidden="true">&laquo;</span>
               <span class="sr-only">Previous</span>
             </a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <div *ngFor="let page of pages(selectedProducts.length/12); let i = index">
+            <li class="page-item"><a class="page-link" (click)="goTo(i+1)">{{i + 1}}</a></li>
+          </div>
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
+            <a class="page-link" aria-label="Next" (click)="next()" style="color: #0BCDB2">
               <span aria-hidden="true">&raquo;</span>
               <span class="sr-only">Next</span>
             </a>
@@ -525,4 +267,5 @@
     </div>
   </div>
 </div>
+<app-product-detail [product]="getSelectedProduct()"></app-product-detail>
 <app-footer></app-footer>

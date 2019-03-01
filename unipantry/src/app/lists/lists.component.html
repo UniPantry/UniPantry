@@ -2,64 +2,61 @@
   <div class="container-fluid">
     <app-nav></app-nav>
   </div>
-  <div class="card" id="sidenav">
-    <div class="card-body">
-      <h5>All Lists</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          My Lists
-        </label>
-      </div>
-      <div class="subChecklist" id="subMyLists">
+  <div class="row" style="height: 100%;">
+    <div class="card" id="sidenav">
+      <div class="card-body">
+        <h5 style="font-size: 1.4vw; margin-bottom: 1vw; margin-top: 1vw;">All Lists</h5>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Friendsgiving
+          <input class="form-check-input" checked type="radio" value="" id="defaultCheck1" name="check"
+            (click)="selectLists('all')">
+          <label class="form-check-label" for="defaultCheck1" style="font-size: 1.2vw;">
+            My Lists
           </label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Monthly Order
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Kathleen's Birthday Party
-          </label>
+        <div class="subChecklist" id="subMyLists">
+          <div *ngFor="let list of account.lists">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" value="" id={{list.name}} name="check"
+                (click)="selectLists(list.name)">
+              <label class="form-check-label" for={{list.name}} style="font-size: 1.2vw;">
+                {{list.name}}
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row justify-content-between" style="margin-bottom: 1.75vw; margin-left: 0vw; margin-right: 0vw;">
-    <h1 id="mylists">My Lists</h1>
-    <a class="nav-link active ml-auto" href="#" id="New-List"><i class="material-icons">
-        add_circle_outline
-      </i>Create New List</a>
-  </div>
-  <div class="carousels">
-    <div class="row justify-content-between" style="margin-bottom: 1.75vw; margin-left: 0vw; margin-right: 0vw;">
-      <h3 style="margin-left: 3.5vw;">New Year, New You</h3>
-      <button class="btn btn-primary" type="button" id="view-all" data-toggle="modal" style="margin-right: 18.9vw;"
-        data-target="#paywallModal"> View
-        List </button>
-      <app-lists-carousel style="margin-top: 1.4vw;"></app-lists-carousel>
-    </div>
-    <div class="row justify-content-between" style="margin-bottom: 1.75vw; margin-left: 0vw; margin-right: 0vw;">
-      <h3 style="margin-left: 3.5vw;">New Year, New You</h3>
-      <button class="btn btn-primary" type="button" id="view-all" data-toggle="modal" style="margin-right: 18.9vw;"
-        data-target="#paywallModal"> View
-        List </button>
-      <app-lists-carousel style="margin-top: 1.4vw;"></app-lists-carousel>
-    </div>
-    <div class="row justify-content-between" style="margin-bottom: 1.75vw; margin-left: 0vw; margin-right: 0vw;">
-      <h3 style="margin-left: 3.5vw;">New Year, New You</h3>
-      <button class="btn btn-primary" type="button" id="view-all" data-toggle="modal" style="margin-right: 18.9vw;"
-        data-target="#paywallModal"> View
-        List </button>
-      <app-lists-carousel style="margin-top: 1.4vw;"></app-lists-carousel>
+    <div style="width: 81%;">
+      <div class="row justify-content-between" style="margin-bottom: 1.75vw; margin-left: 0vw; margin-right: 0vw;">
+        <h1 id="mylists">My Lists</h1>
+        <div *ngIf="!new && (account.lists.length <= 3)">
+            <a class="nav-link active" id="newList" (click)="makeNewList()">
+                <i class="material-icons"
+                  style="height: 2vw; font-size: 1.4vw; margin-right: .5vw; width: 2vw; vertical-align: middle;">
+                  add_circle_outline
+                </i>Create New List</a>
+          </div>
+          <div *ngIf="new">
+            <input id="new" style="border-radius: .4vw; border-color: #0BCDB2; border-width: .1vw; border-style: solid;
+              padding-left: .25vw; color: black; font-weight: 500; height: 3vw; width: 17.5vw; margin-top: 2vw; margin-right: 10.5vw"
+              placeholder="List Name" maxlength="25" (keypress)="route($event)">
+          </div>
+      </div>
+      <div *ngFor="let list of selectedLists; let i = index">
+        <div class="container-fluid">
+          <div class="carousels">
+            <div class="row justify-content-between" style="margin-bottom: 1%; margin-top: 0.5%;">
+              <h3 style="font-size: 1.4vw; margin-left: 10%;">{{list.name}}</h3>
+              <div>
+                <button class="btn btn-primary" type="button" id="view-list">View List</button>
+                <button class="btn btn-primary" type="button" id="delete-list" (click)="deleteList(list)">Delete
+                  List</button>
+              </div>
+            </div>
+            <app-lists-carousel [list]=i></app-lists-carousel>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <app-footer></app-footer>

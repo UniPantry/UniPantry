@@ -34,7 +34,7 @@ export class CardCarousel3Component {
 
   getTimeToRestock(timeToRestock: Product[]): void {
     this.products.forEach(function (product) {
-      if (product.promotion === 'time to restock') {
+      if (product.promotion.includes('time to restock')) {
         timeToRestock.push(product);
       }
     });

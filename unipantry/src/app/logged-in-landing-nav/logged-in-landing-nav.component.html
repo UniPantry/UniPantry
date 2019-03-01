@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <nav class="navbar navbar-dark material-elevation mdc-elevation--z15 row align-items-center top-nav" style="margin-bottom: .1%;">
+  <nav class="navbar navbar-dark material-elevation mdc-elevation--z15 row align-items-center top-nav" style="margin-bottom: .1%; padding: .5vw 2vw; padding-top: 1vw;">
     <a routerLink="/logged-in" class="col-2">
       <img class="nav-logo" src="assets/images/Logos/UniPantry Logo.png" alt="Logo">
     </a>
@@ -9,7 +9,7 @@
     <a class="nav-link active col-2 ml-auto" routerLink="/refer-friend">Refer a Friend</a>
     <a class="nav-link active col-2" routerLink="/profile">My Account</a>
   </nav>
-  <nav class="navbar navbar-light justify-content-end material-elevation mdc-elevation--z7 navbar-2" style="background: white; margin-bottom: .1%;">
+  <nav class="navbar navbar-light justify-content-end material-elevation mdc-elevation--z7 navbar-2" style="background: white; margin-bottom: .1%; padding: .5vw 2vw; z-index: 99;">
     <div class="nav-item dropdown has-megamenu col-2 nav-item-3">
       <a class="btn btn-secondary btn-lg dropdown-toggle category" href="#" id="navbarDropdownMenuLink" role="button"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -19,27 +19,27 @@
         <div class="container-fluid">
           <div class="row">
             <div class="column">
-              <a class="dropdown-item disabled" routerLink="/browse"><strong>Groceries</strong></a>
-              <a class="dropdown-item disabled" routerLink="/browse">Produce</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Meat & Fish</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Bakery</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Dairy & Eggs</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Beverages</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Snacks</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Packaged Foods</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Frozen Foods</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Baking Supplies</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Specialty & Allergy-Friendly</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'groceries' }"><strong>Groceries</strong></a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'produce' }">Produce</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'meat & fish' }">Meat & Fish</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'bakery' }">Bakery</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'dairy & eggs' }">Dairy & Eggs</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'beverages' }">Beverages</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'snacks' }">Snacks</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'packaged foods' }">Packaged Foods</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'frozen foods' }">Frozen Foods</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'baking supplies' }">Baking Supplies</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'specialty & allergy-friendly' }">Specialty & Allergy-Friendly</a>
             </div>
             <div>
-              <a class="dropdown-item disabled" routerLink="/browse"><strong>Personal Care</strong></a>
-              <a class="dropdown-item disabled" routerLink="/browse">Hygiene</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Health</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Paper Goods</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Cleaning Supplies</a>
-              <a class="dropdown-item disabled" routerLink="/browse">Laundry Supplies</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'personal care' }"><strong>Personal Care</strong></a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'hygiene' }">Hygiene</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'health' }">Health</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'paper goods' }">Paper Goods</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'cleaning supplies' }">Cleaning Supplies</a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'laundry supplies' }">Laundry Supplies</a>
               <br>
-              <a class="dropdown-item disabled" routerLink="/browse"><strong>Browse All Products</strong></a>
+              <a class="dropdown-item disabled" routerLink="/browse" [queryParams]="{ category: 'all' }"><strong>Browse All Products</strong></a>
             </div>
           </div>
         </div>

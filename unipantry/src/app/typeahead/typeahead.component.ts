@@ -28,8 +28,8 @@ export class TypeaheadComponent {
 
   route(event: KeyboardEvent) {
     if (event.charCode === 13) {
-      const query = (document.getElementById('nav-search') as any).value;
-      this.router.navigateByUrl('/browse');
+      const query = String ((document.getElementById('nav-search') as any).value);
+      this.router.navigate(['/browse'], { queryParams: {category: query.toLowerCase()} });
     }
   }
 

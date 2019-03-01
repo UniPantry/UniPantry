@@ -10,7 +10,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'Whole grain rolled oats',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'packaged foods',
-    promotion: 'dorm room essentials'
+    promotion: 'dorm room essentials',
+    preference: 'N/A',
+    popularity: 1
   },
 
   {
@@ -22,7 +24,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'wheat',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'bakery',
-    promotion: 'dorm room essentials'
+    promotion: 'dorm room essentials',
+    preference: 'N/A',
+    popularity: 2
   },
 
   {
@@ -34,7 +38,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'n/a',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'paper goods',
-    promotion: 'dorm room essentials'
+    promotion: 'dorm room essentials',
+    preference: 'N/A',
+    popularity: 3
   },
 
   {
@@ -46,7 +52,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'apple',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'produce',
-    promotion: 'dorm room essentials'
+    promotion: 'dorm room essentials',
+    preference: 'N/A',
+    popularity: 4
   },
 
   {
@@ -58,7 +66,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'banana',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'produce',
-    promotion: 'dorm room essentials'
+    promotion: 'dorm room essentials',
+    preference: 'N/A',
+    popularity: 2
   },
 
   {
@@ -70,7 +80,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'apple',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'produce',
-    promotion: 'new year, new you'
+    promotion: 'new year, new you',
+    preference: 'N/A',
+    popularity: 9
   },
 
   {
@@ -82,7 +94,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'n/a',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'paper goods',
-    promotion: 'new year, new you'
+    promotion: 'new year, new you',
+    preference: 'nut-free',
+    popularity: 2
   },
 
   {
@@ -94,7 +108,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'wheat',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'bakery',
-    promotion: 'new year, new you'
+    promotion: 'new year, new you',
+    preference: 'N/A',
+    popularity: 20
   },
 
   {
@@ -107,6 +123,8 @@ export const PRODUCTS: Product[] = [
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'produce',
     promotion: 'new year, new you'
+    , preference: 'dairy-free',
+    popularity: 5
   },
 
   {
@@ -118,7 +136,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'Whole grain rolled oats',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'packaged foods',
-    promotion: 'new year, new you'
+    promotion: 'new year, new you',
+    preference: 'N/A',
+    popularity: 10
   },
 
   {
@@ -130,7 +150,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'banana',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'produce',
-    promotion: 'time to restock'
+    promotion: 'time to restock',
+    preference: 'vegan, nut-free, kosher',
+    popularity: 0
   },
 
   {
@@ -142,7 +164,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'Whole grain rolled oats',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'packaged foods',
-    promotion: 'time to restock'
+    promotion: 'time to restock',
+    preference: 'N/A',
+    popularity: 8
   },
 
   {
@@ -154,7 +178,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'n/a',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'paper goods',
-    promotion: 'time to restock'
+    promotion: 'time to restock',
+    preference: 'N/A',
+    popularity: 5
   },
 
   {
@@ -166,7 +192,9 @@ export const PRODUCTS: Product[] = [
     ingredients: 'apple',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'produce',
-    promotion: 'time to restock'
+    promotion: 'time to restock',
+    preference: 'organic, vegan, kosher',
+    popularity: 29
   },
 
   {
@@ -178,6 +206,8 @@ export const PRODUCTS: Product[] = [
     ingredients: 'wheat',
     src: 'https://picsum.photos/200/150?random&t=${Math.random()}',
     category: 'bakery',
-    promotion: 'time to restock'
+    promotion: 'time to restock',
+    preference: 'gluten-free',
+    popularity: 2
   }
 ];

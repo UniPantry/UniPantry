@@ -255,3 +255,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   font-size: .95vw;
   margin-right: .1vw;
 }
+
+.disabled {
+  cursor: pointer;
+}

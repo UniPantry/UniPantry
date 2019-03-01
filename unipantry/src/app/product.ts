@@ -8,4 +8,6 @@ export class Product {
   src: string;
   category: string;
   promotion: string;
+  preference: string;
+  popularity: number;
 }

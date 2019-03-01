@@ -5,11 +5,11 @@ import {Directive, ElementRef, HostListener} from '@angular/core';
 })
 export class OnlyNumberDirective {
 
-  private regex: RegExp = new RegExp(/^[0-9]$|^0[1-9]$|^1[0-9]$|^20$/);
+  private regex: RegExp = new RegExp(/^[0-9]$|^0[1-9]$|^1[0-9]$|^2[0-9]$|^3[0-9]$|^4[0-9]$|^50$/);
 
   // Allow key codes for special events. Reflect :
   // Backspace, tab, end, home
-  private specialKeys: Array<string> = ['Backspace', 'Tab', 'End', 'Home', 'ArrowLeft', 'ArrowRight'];
+  private specialKeys: Array<string> = ['Backspace', 'Tab', 'End', 'Home', 'ArrowLeft', 'ArrowRight', 'Enter'];
 
   constructor(private el: ElementRef) {
   }

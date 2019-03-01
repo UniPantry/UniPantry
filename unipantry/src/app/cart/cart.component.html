@@ -35,7 +35,7 @@
       <div class="column c4 align-items-center">
         <div class="btn-group" role="group" aria-label="Quantity">
           <button type="button" class="btn btn-secondary decrease" (click)="removeFromCart(product, 1)">-</button>
-          <input class="quantity" type="number" min="1" value="1" (change)="updateQuantity(product)" />
+          <input class="quantity" type="number" min="1" OnlyNumber="true" value="1" (change)="updateQuantity(product)" />
           <button type="button" class="btn btn-secondary increase" (click)="addToCart(product, 1)">+</button>
         </div>
       </div>

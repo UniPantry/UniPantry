@@ -33,7 +33,7 @@ export class CardCarousel2Component {
 
   getNewYearNewYou(newYearNewYou: Product[]): void {
     this.products.forEach(function (product) {
-      if (product.promotion === 'new year, new you') {
+      if (product.promotion.includes('new year, new you')) {
         newYearNewYou.push(product);
       }
     });

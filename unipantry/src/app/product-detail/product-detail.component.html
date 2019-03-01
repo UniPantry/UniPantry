@@ -10,7 +10,8 @@
               <a href="#" class="exit" data-dismiss="modal" data-target="#detailModal">&times;</a>
               <p class="weight">{{product.weight | titlecase}}</p>
               <p class="name">{{product.name | titlecase}}</p>
-              <p class="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del></p>
+              <p class="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del>
+              </p>
               <button class="btn btn-sm btn-secondary note">
                 <i class="material-icons pencil">
                   edit
@@ -24,17 +25,25 @@
                 <button class="btn btn-primary btn-lg" id="add-cart-btn" (click)="addToCart()" type="button"
                   data-dismiss="modal" data-target="#detailModal">
                   Add to Cart</button>
-                <div class="dropdown"> <button class="btn btn-secondary btn-lg dropdown-toggle save" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save to List</button>
-                  <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z7" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item disabled" href="#">Friendsgiving</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item disabled" href="#">Monthly Order</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item disabled" href="#">Kathleen's Birthday Party</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item disabled" style="color: #F89833!important" (click)="newList($event)">+ New
-                      List</a>
+                <div class="dropdown"> <button class="btn btn-secondary btn-lg dropdown-toggle save" type="button"
+                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save to
+                    List</button>
+                  <div class="dropdown-menu save-menu material-elevation mdc-elevation--z3"
+                    aria-labelledby="dropdownMenuButton">
+                    <div *ngFor="let list of account.lists; let i = index">
+                      <a class="dropdown-item disabled" (click)="save(product, list)">{{list.name}}</a>
+                      <div *ngIf="i<3">
+                        <div class="dropdown-divider"></div>
+                      </div>
+                    </div>
+                    <div *ngIf="!new && (account.lists.length <= 3)">
+                      <a class="dropdown-item disabled" style="color: #F89833" (click)="newList()">+ New List</a>
+                    </div>
+                    <div *ngIf="new">
+                      <input id="new" style="border-radius: .4vw; border-color: #F89833; border-width: .1vw; border-style: solid;
+                        padding-left: .25vw; color: black; font-weight: 500; height: 100%; width: 95%;"
+                        placeholder="List Name" maxlength="25" (keypress)="route($event)">
+                    </div>
                   </div>
                 </div>
               </div>

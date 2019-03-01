@@ -1,6 +1,9 @@
 import { Component, OnChanges, Input } from '@angular/core';
 import { Product } from '../../product';
 import { CartComponent } from '../cart.component';
+import { Account } from '../../profile/account';
+import { AccountService } from '../../profile/account.service';
+import { List } from '../../profile/list';
 
 @Component({
   selector: 'app-cart-product-modal',
@@ -11,10 +14,38 @@ export class CartProductModalComponent implements OnChanges {
 
   @Input() product: Product;
 
-  constructor(private cart: CartComponent) { }
+  account: Account;
+
+  new = false;
+
+  constructor(private cart: CartComponent, private accountService: AccountService) {
+    accountService.getAccount().subscribe(account => this.account = account);
+  }
 
   ngOnChanges() {
     this.resetQuantity();
+  }
+
+  save(product: Product, list: List) {
+    const listIndex = this.account.lists.indexOf(list);
+    const productList = this.account.lists[listIndex].products;
+    if (!productList.includes(product)) {
+      productList.push(product);
+    }
+  }
+
+  newList() {
+    this.new = true;
+  }
+
+  route(event: KeyboardEvent) {
+    if (event.charCode === 13) {
+      const listName = (event as any).path[0].value;
+      if (listName.length > 0) {
+        this.account.lists.push({ name: listName, products: [] });
+        this.new = false;
+      }
+    }
   }
 
   addToCart() {
@@ -41,13 +72,5 @@ export class CartProductModalComponent implements OnChanges {
       const newQuantity = <number>1;
       (document.getElementById('quantity') as any).value = newQuantity;
     });
-  }
-
-  newList(event: MouseEvent) {
-    const str = '<input style="border-radius: .4vw; border-color: #F89833; border-width: .1vw; border-style: solid;' +
-      'padding-left: .25vw; color: black; font-weight: 500; height: 100%; width: 95%;" placeholder="List Name" maxlength="25"></input>';
-    if ((event.target as any).innerHTML !== str) {
-      (event.target as any).innerHTML = str;
-    }
   }
 }

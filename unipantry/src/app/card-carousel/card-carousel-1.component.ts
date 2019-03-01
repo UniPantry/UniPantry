@@ -34,7 +34,7 @@ export class CardCarousel1Component {
 
   getDormEssentials(dormRoomEssentials: Product[]): void {
     this.products.forEach(function (product) {
-      if (product.promotion === 'dorm room essentials') {
+      if (product.promotion.includes('dorm room essentials')) {
         dormRoomEssentials.push(product);
       }
     });

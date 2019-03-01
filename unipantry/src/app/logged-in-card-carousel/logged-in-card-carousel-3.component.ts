@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 import { LoggedInLandingNavComponent } from '../logged-in-landing-nav/logged-in-landing-nav.component';
+import { AccountService } from '../profile/account.service';
+import { Account } from '../profile/account';
+import { List } from '../profile/list';
 
 @Component({
   selector: 'app-logged-in-card-carousel-3',
@@ -16,10 +19,38 @@ export class LoggedInCardCarousel3Component implements OnInit {
 
   timeToRestock = <Product[]>[];
 
-  constructor(private productService: ProductService, private nav: LoggedInLandingNavComponent) { }
+  account: Account;
+
+  new = false;
+
+  constructor(private productService: ProductService, private nav: LoggedInLandingNavComponent, private accountService: AccountService) {
+    accountService.getAccount().subscribe(account => this.account = account);
+  }
 
   ngOnInit() {
     this.getProducts();
+  }
+
+  save(product: Product, list: List) {
+    const listIndex = this.account.lists.indexOf(list);
+    const productList = this.account.lists[listIndex].products;
+    if (!productList.includes(product)) {
+      productList.push(product);
+    }
+  }
+
+  newList() {
+    this.new = true;
+  }
+
+  route(event: KeyboardEvent) {
+    if (event.charCode === 13) {
+      const listName = (event as any).path[0].value;
+      if (listName.length > 0) {
+        this.account.lists.push({ name: listName, products: [] });
+        this.new = false;
+      }
+    }
   }
 
   addToCart(product: Product) {
@@ -40,18 +71,16 @@ export class LoggedInCardCarousel3Component implements OnInit {
 
   getTimeToRestock(timeToRestock: Product[]): void {
     this.products.forEach(function (product) {
-      if (product.promotion === 'time to restock') {
+      if (product.promotion.includes('time to restock')) {
         timeToRestock.push(product);
       }
     });
   }
 
-  newList(event: MouseEvent) {
-    const str = '<input style="border-radius: .4vw; border-color: #F89833; border-width: .1vw; border-style: solid;' +
-    'padding-left: .25vw; color: black; font-weight: 500; height: 100%; width: 95%;" placeholder="List Name" maxlength="25"></input>';
-    if ((event.target as any).innerHTML !== str) {
-      (event.target as any).innerHTML = str;
-    }
+  getSelectedProduct() {
+    this.productService.getSelectedProduct()
+      .subscribe(product => this.selectedProduct = product);
+    return this.selectedProduct;
   }
 
   carousel(products: Product[]) {

@@ -1,6 +1,10 @@
 import { Component, OnChanges, Input } from '@angular/core';
 import { Product } from '../product';
 import { LoggedInLandingNavComponent } from '../logged-in-landing-nav/logged-in-landing-nav.component';
+import { AccountService } from '../profile/account.service';
+import { Account } from '../profile/account';
+import { List } from '../profile/list';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,10 +14,38 @@ import { LoggedInLandingNavComponent } from '../logged-in-landing-nav/logged-in-
 export class ProductDetailComponent implements OnChanges {
   @Input() product: Product;
 
-  constructor(private nav: LoggedInLandingNavComponent) { }
+  account: Account;
+
+  new = false;
+
+  constructor(private nav: LoggedInLandingNavComponent, private accountService: AccountService, private productService: ProductService) {
+    accountService.getAccount().subscribe(account => this.account = account);
+  }
 
   ngOnChanges() {
-    this.resetQuantity();
+    this.resetQuantity(this.product, this.productService);
+  }
+
+  save(product: Product, list: List) {
+    const listIndex = this.account.lists.indexOf(list);
+    const productList = this.account.lists[listIndex].products;
+    if (!productList.includes(product)) {
+      productList.push(product);
+    }
+  }
+
+  newList() {
+    this.new = true;
+  }
+
+  route(event: KeyboardEvent) {
+    if (event.charCode === 13) {
+      const listName = (event as any).path[0].value;
+      if (listName.length > 0) {
+        this.account.lists.push({ name: listName, products: [] });
+        this.new = false;
+      }
+    }
   }
 
   addToCart() {
@@ -35,18 +67,11 @@ export class ProductDetailComponent implements OnChanges {
     }
   }
 
-  resetQuantity() {
-    $(document).on('hidden.bs.modal', '#detailModal', function () {
+  resetQuantity(product: Product, productService: ProductService) {
+    $(document).on('show.bs.modal', '#detailModal', function () {
       const newQuantity = <number>1;
       (document.getElementById('quantity') as any).value = newQuantity;
+      productService.getSelectedProduct().subscribe(newProduct => product = newProduct);
     });
-  }
-
-  newList(event: MouseEvent) {
-    const str = '<input style="border-radius: .4vw; border-color: #F89833; border-width: .1vw; border-style: solid;' +
-    'padding-left: .25vw; color: black; font-weight: 500; height: 100%; width: 95%;" placeholder="List Name" maxlength="25"></input>';
-    if ((event.target as any).innerHTML !== str) {
-      (event.target as any).innerHTML = str;
-    }
   }
 }

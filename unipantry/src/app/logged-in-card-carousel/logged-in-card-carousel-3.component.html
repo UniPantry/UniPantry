@@ -1,7 +1,47 @@
 <div class="container-fluid">
   <div id="carousel-3" class="carousel slide" data-ride="carousel" data-interval="false">
     <div class="carousel-inner row mx-auto inner-3">
-      <div *ngFor="let product of timeToRestock.slice(0,1)" (click)="onSelect(product)" class="carousel-item col-sm-3 active"
+      <div *ngFor="let product of timeToRestock.slice(0,1)" (click)="onSelect(product)"
+        class="carousel-item col-sm-3 active" id="c3">
+        <div class="card material-elevation mdc-elevation--z3">
+          <a data-toggle="modal" data-target="#detailModal" style="text-decoration: none; color: black;">
+            <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
+          </a>
+          <div class="card-body">
+            <p class="card-title">{{product.weight | titlecase}}</p>
+            <p class="card-text" id="item">{{product.name | titlecase}}</p>
+            <p class="card-text" id="price">{{product.price | currency}} <del
+                class="old-price">{{product.oldPrice | currency}}</del></p>
+            <div class="row justify-content-center">
+              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)"
+                onclick="this.textContent='Added!'" type="button">
+                Add to Cart</button>
+              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button"
+                  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Save</button>
+                <div class="dropdown-menu save-menu material-elevation mdc-elevation--z3"
+                  aria-labelledby="dropdownMenuButton">
+                  <div *ngFor="let list of account.lists; let i = index">
+                    <a class="dropdown-item disabled" (click)="save(product, list)">{{list.name}}</a>
+                    <div *ngIf="i<3">
+                      <div class="dropdown-divider"></div>
+                    </div>
+                  </div>
+                  <div *ngIf="!new && (account.lists.length <= 3)">
+                    <a class="dropdown-item disabled" style="color: #F89833" (click)="newList()">+ New List</a>
+                  </div>
+                  <div *ngIf="new">
+                    <input id="new" style="border-radius: .4vw; border-color: #F89833; border-width: .1vw; border-style: solid;
+                      padding-left: .25vw; color: black; font-weight: 500; height: 100%; width: 95%;"
+                      placeholder="List Name" maxlength="25" (keypress)="route($event)">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let product of timeToRestock.slice(1)" (click)="onSelect(product)" class="carousel-item col-sm-3"
         id="c3">
         <div class="card material-elevation mdc-elevation--z3">
           <a data-toggle="modal" data-target="#detailModal" style="text-decoration: none; color: black;">
@@ -10,48 +50,31 @@
           <div class="card-body">
             <p class="card-title">{{product.weight | titlecase}}</p>
             <p class="card-text" id="item">{{product.name | titlecase}}</p>
-            <p class="card-text" id="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del></p>
+            <p class="card-text" id="price">{{product.price | currency}} <del
+                class="old-price">{{product.oldPrice | currency}}</del></p>
             <div class="row justify-content-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)" onclick="this.textContent='Added!'" type="button">
+              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)"
+                onclick="this.textContent='Added!'" type="button">
                 Add to Cart</button>
-              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save</button>
-                <div class="dropdown-menu save-menu material-elevation mdc-elevation--z3" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item disabled">Friendsgiving</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled">Monthly Order</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled">Kathleen's Birthday Party</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled" style="color: #F89833" (click)="newList($event)">+ New List</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div *ngFor="let product of timeToRestock.slice(1)" (click)="onSelect(product)" class="carousel-item col-sm-3" id="c3">
-        <div class="card material-elevation mdc-elevation--z3">
-          <a data-toggle="modal" data-target="#detailModal" style="text-decoration: none; color: black;">
-            <img class="card-img-top img-fluid" src={{product.src}} alt="Card image cap">
-          </a>
-          <div class="card-body">
-            <p class="card-title">{{product.weight | titlecase}}</p>
-            <p class="card-text" id="item">{{product.name | titlecase}}</p>
-            <p class="card-text" id="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del></p>
-            <div class="row justify-content-center">
-              <button class="btn btn-primary btn-md" id="add-cart-btn" (click)="addToCart(product)" onclick="this.textContent='Added!'" type="button">
-                Add to Cart</button>
-              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save</button>
-                <div class=" dropdown-menu save-menu material-elevation mdc-elevation--z3" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item disabled">Friendsgiving</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled">Monthly Order</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled">Kathleen's Birthday Party</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled" style="color: #F89833" (click)="newList($event)">+ New List</a>
+              <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle save btn-md" type="button"
+                  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Save</button>
+                <div class="dropdown-menu save-menu material-elevation mdc-elevation--z3"
+                  aria-labelledby="dropdownMenuButton">
+                  <div *ngFor="let list of account.lists; let i = index">
+                    <a class="dropdown-item disabled" (click)="save(product, list)">{{list.name}}</a>
+                    <div *ngIf="i<3">
+                      <div class="dropdown-divider"></div>
+                    </div>
+                  </div>
+                  <div *ngIf="!new && (account.lists.length <= 3)">
+                    <a class="dropdown-item disabled" style="color: #F89833" (click)="newList()">+ New List</a>
+                  </div>
+                  <div *ngIf="new">
+                    <input id="new" style="border-radius: .4vw; border-color: #F89833; border-width: .1vw; border-style: solid;
+                      padding-left: .25vw; color: black; font-weight: 500; height: 100%; width: 95%;"
+                      placeholder="List Name" maxlength="25" (keypress)="route($event)">
+                  </div>
                 </div>
               </div>
             </div>
@@ -60,13 +83,15 @@
       </div>
     </div>
     <div class="carousel-control-prev" id="left-control">
-      <a class="material-icons" id="left-chevron" href="#carousel-3" role="button" data-slide="prev" aria-hidden="true">chevron_left</a>
+      <a class="material-icons" id="left-chevron" href="#carousel-3" role="button" data-slide="prev"
+        aria-hidden="true">chevron_left</a>
       <span class="sr-only">Previous</span>
     </div>
     <div class="carousel-control-next" id="right-control">
-      <a class="material-icons" id="right-chevron" href="#carousel-3" role="button" data-slide="next" aria-hidden="true">chevron_right</a>
+      <a class="material-icons" id="right-chevron" href="#carousel-3" role="button" data-slide="next"
+        aria-hidden="true">chevron_right</a>
       <span class="sr-only">Next</span>
     </div>
   </div>
 </div>
-<app-product-detail [product]="selectedProduct"></app-product-detail>
+<app-product-detail [product]="getSelectedProduct()"></app-product-detail>
