@@ -15,8 +15,10 @@ export class AccountService {
   pw: string = '2';
 
   getAccount(): Observable<Account> {
-    const match = ACCOUNTS.filter(acc => (this.email === acc.email && this.pw === acc.pw));
-    this.currAcc = match[0];
+    if (!this.currAcc) {
+      const match = ACCOUNTS.filter(acc => (this.email === acc.email && this.pw === acc.pw));
+      this.currAcc = match[0];
+    }
     return of(this.currAcc);
   }
 
