@@ -33,7 +33,7 @@
           <p style="font-weight: 400;">Will be delivered on <span style="color: #0CB7CC">January 17th, 7:30pm</span></p>
         </div>
         <div class="column">
-          <a href="#" class="material-icons" style="color: #F89833; font-size: 4vw; text-decoration: none; vertical-align: text-top;">
+          <a routerLink="/profile" class="material-icons" style="color: #F89833; font-size: 4vw; text-decoration: none; vertical-align: text-top;">
             chevron_right
           </a>
         </div>
@@ -59,21 +59,21 @@
   <div class="carousels">
     <div class="row justify-content-between" style="margin-bottom: 1%; margin-top: 2.5%;">
       <h3 style="margin-left: 11%;">Dorm Room Essentials</h3>
-      <button class="btn btn-primary" type="button" id="view-all">View All</button>
+      <button class="btn btn-primary" type="button" id="view-all" routerLink="/browse" [queryParams]="{category: 'all'}">View All</button>
     </div>
     <app-logged-in-card-carousel-1></app-logged-in-card-carousel-1>
   </div>
   <div class="carousels">
     <div class="row justify-content-between" style="margin-bottom: 1%;">
       <h3 style="margin-left: 11%;">New Year, New You</h3>
-      <button class="btn btn-primary" type="button" id="view-all">View All</button>
+      <button class="btn btn-primary" type="button" id="view-all" routerLink="/browse" [queryParams]="{category: 'all'}">View All</button>
     </div>
     <app-logged-in-card-carousel-2></app-logged-in-card-carousel-2>
   </div>
   <div class="carousels">
     <div class="row justify-content-between" style="margin-bottom: 1%;">
       <h3 style="margin-left: 11%;">Time to Restock</h3>
-      <button class="btn btn-primary" type="button" id="view-all">View All</button>
+      <button class="btn btn-primary" type="button" id="view-all" routerLink="/browse" [queryParams]="{category: 'all'}">View All</button>
     </div>
     <app-logged-in-card-carousel-3></app-logged-in-card-carousel-3>
   </div>

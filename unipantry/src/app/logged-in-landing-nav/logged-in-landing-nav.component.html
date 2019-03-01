@@ -11,7 +11,7 @@
   </nav>
   <nav class="navbar navbar-light justify-content-end material-elevation mdc-elevation--z7 navbar-2" style="background: white; margin-bottom: .1%; padding: .5vw 2vw; z-index: 99;">
     <div class="nav-item dropdown has-megamenu col-2 nav-item-3">
-      <a class="btn btn-secondary btn-lg dropdown-toggle category" href="#" id="navbarDropdownMenuLink" role="button"
+      <a class="btn btn-secondary btn-lg dropdown-toggle category" routerLink="/browse" [queryParams]="{category: 'all'}" id="navbarDropdownMenuLink" role="button"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Shop By Category
       </a>
@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="nav-item dropdown col-1 nav-item-2" style="position: static;">
-      <a class="btn btn-secondary btn-lg dropdown-toggle shop-lists" href="#" id="navbarDropdownMenuLink" role="button"
+      <a class="btn btn-secondary btn-lg dropdown-toggle shop-lists" routerLink="/lists" id="navbarDropdownMenuLink" role="button"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Shop Lists
       </a>
