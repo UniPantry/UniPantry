@@ -29,7 +29,8 @@ export class GiftCardComponent implements OnInit {
         src: 'https://cdn.shopify.com/s/files/1/2208/6477/products/' +
           'GC_Blank_Image_d8b27814-e00b-48d7-9844-c0cb8ca464cb_2000x.png?v=1526936252',
         category: 'N/A',
-        promotion: 'N/A'
+        promotion: 'N/A',
+        note: ''
       };
       this.productService.setSelectedProduct(this.selectedCard);
     } else {
@@ -43,7 +44,8 @@ export class GiftCardComponent implements OnInit {
         src: 'https://cdn.shopify.com/s/files/1/2208/6477/products/' +
           'GC_Blank_Image_d8b27814-e00b-48d7-9844-c0cb8ca464cb_2000x.png?v=1526936252',
         category: 'N/A',
-        promotion: 'N/A'
+        promotion: 'N/A',
+        note: ''
       };
       this.productService.setSelectedProduct(this.selectedCard);
     }
@@ -54,7 +56,8 @@ export class GiftCardComponent implements OnInit {
       if (this.selectedCard.price === 0) {
         this.selectedCard.price = (document.getElementById('other-amount') as any).value;
       }
-       this.nav.addToCart(this.selectedCard, 1);
+      this.selectedCard.note = (document.getElementById('email') as any).value;
+      this.nav.addToCart(this.selectedCard, 1);
     }
     this.selectedCard = null;
   }
