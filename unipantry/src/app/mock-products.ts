@@ -12,7 +12,8 @@ export const PRODUCTS: Product[] = [
     category: 'packaged foods',
     promotion: 'dorm room essentials',
     preference: 'N/A',
-    popularity: 1
+    popularity: 1,
+    note: ''
   },
 
   {
@@ -26,7 +27,8 @@ export const PRODUCTS: Product[] = [
     category: 'bakery',
     promotion: 'dorm room essentials',
     preference: 'N/A',
-    popularity: 2
+    popularity: 2,
+    note: ''
   },
 
   {
@@ -40,7 +42,8 @@ export const PRODUCTS: Product[] = [
     category: 'paper goods',
     promotion: 'dorm room essentials',
     preference: 'N/A',
-    popularity: 3
+    popularity: 3,
+    note: ''
   },
 
   {
@@ -54,7 +57,8 @@ export const PRODUCTS: Product[] = [
     category: 'produce',
     promotion: 'dorm room essentials',
     preference: 'N/A',
-    popularity: 4
+    popularity: 4,
+    note: ''
   },
 
   {
@@ -68,7 +72,8 @@ export const PRODUCTS: Product[] = [
     category: 'produce',
     promotion: 'dorm room essentials',
     preference: 'N/A',
-    popularity: 2
+    popularity: 2,
+    note: ''
   },
 
   {
@@ -82,7 +87,8 @@ export const PRODUCTS: Product[] = [
     category: 'produce',
     promotion: 'new year, new you',
     preference: 'N/A',
-    popularity: 9
+    popularity: 9,
+    note: ''
   },
 
   {
@@ -96,7 +102,8 @@ export const PRODUCTS: Product[] = [
     category: 'paper goods',
     promotion: 'new year, new you',
     preference: 'nut-free',
-    popularity: 2
+    popularity: 2,
+    note: ''
   },
 
   {
@@ -110,7 +117,8 @@ export const PRODUCTS: Product[] = [
     category: 'bakery',
     promotion: 'new year, new you',
     preference: 'N/A',
-    popularity: 20
+    popularity: 20,
+    note: ''
   },
 
   {
@@ -124,7 +132,8 @@ export const PRODUCTS: Product[] = [
     category: 'produce',
     promotion: 'new year, new you'
     , preference: 'dairy-free',
-    popularity: 5
+    popularity: 5,
+    note: ''
   },
 
   {
@@ -138,7 +147,8 @@ export const PRODUCTS: Product[] = [
     category: 'packaged foods',
     promotion: 'new year, new you',
     preference: 'N/A',
-    popularity: 10
+    popularity: 10,
+    note: ''
   },
 
   {
@@ -152,7 +162,8 @@ export const PRODUCTS: Product[] = [
     category: 'produce',
     promotion: 'time to restock',
     preference: 'vegan, nut-free, kosher',
-    popularity: 0
+    popularity: 0,
+    note: ''
   },
 
   {
@@ -166,7 +177,8 @@ export const PRODUCTS: Product[] = [
     category: 'packaged foods',
     promotion: 'time to restock',
     preference: 'N/A',
-    popularity: 8
+    popularity: 8,
+    note: ''
   },
 
   {
@@ -180,7 +192,8 @@ export const PRODUCTS: Product[] = [
     category: 'paper goods',
     promotion: 'time to restock',
     preference: 'N/A',
-    popularity: 5
+    popularity: 5,
+    note: ''
   },
 
   {
@@ -194,7 +207,8 @@ export const PRODUCTS: Product[] = [
     category: 'produce',
     promotion: 'time to restock',
     preference: 'organic, vegan, kosher',
-    popularity: 29
+    popularity: 29,
+    note: ''
   },
 
   {
@@ -208,6 +222,7 @@ export const PRODUCTS: Product[] = [
     category: 'bakery',
     promotion: 'time to restock',
     preference: 'gluten-free',
-    popularity: 2
+    popularity: 2,
+    note: ''
   }
 ];

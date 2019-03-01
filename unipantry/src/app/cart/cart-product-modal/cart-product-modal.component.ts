@@ -18,6 +18,8 @@ export class CartProductModalComponent implements OnChanges {
 
   new = false;
 
+  note = false;
+
   constructor(private cart: CartComponent, private accountService: AccountService) {
     accountService.getAccount().subscribe(account => this.account = account);
   }
@@ -50,6 +52,9 @@ export class CartProductModalComponent implements OnChanges {
 
   addToCart() {
     const quantity = parseInt((document.getElementById('quantity') as any).value, 10);
+    if (this.note) {
+      this.product.note = (document.getElementById('note-text') as any).value;
+    }
     this.cart.addToCart(this.product, quantity);
   }
 
@@ -72,5 +77,10 @@ export class CartProductModalComponent implements OnChanges {
       const newQuantity = <number>1;
       (document.getElementById('quantity') as any).value = newQuantity;
     });
+    this.note = false;
+  }
+
+  addNote() {
+    this.note = true;
   }
 }

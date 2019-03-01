@@ -6,20 +6,24 @@
   <div class="row details">
 
     <div *ngFor="let addy of user.shipping" style="margin-left:2%; margin-bottom:3%; position:relative; border: 1px solid #909090; border-radius:10px; width:48%">
-      <button (click)="allowEdit()" class="btn btn-secondary" type="button" name="button" style="background-color: white;border-color: white; color: #F89833; position:absolute; right:1%; top: 1%;">
+      <button class="btn btn-secondary" type="button" name="button" (click)="edit()" routerLink="/add-new-address" style="background-color: white;border-color: white; color: #F89833; position:absolute; right:1%; top: 1%;">
         EDIT</button>
       <div style="margin: 7% 7%;">
-        <div class="info">{{addy.name}}</div>
-        <div class="info">{{addy.line1}}</div>
-        <div class="info">{{addy.line2}}</div>
+        <div class="info" (ngModel)="currAddy.name">{{addy.name}}</div>
+        <div class="info">{{addy.street}}</div>
+        <div class="info">{{line2(addy.city, addy.state, addy.zip)}}</div>
+        <div *ngIf="!addy.dorm" class="info" style="padding-top: 2%; font-size: .85vw; font-style:italic;">This is not a dorm address.</div>
       </div>
     </div>
 
     <div style="width:48%; margin-left: 10px; padding:30px 20px; border: 1px solid #909090; border-radius:10px; text-align: center;">
-      <a class="add" href="#"><i class="material-icons" id="add">add_circle_outline</i>
-        <div style="color:black;">Add New Address</div>
+      <a class="add" routerLink="/add-new-address">
+        <i class="material-icons" id="add">add_circle_outline</i>
+        <div style="color:black; font-weight:200;">Add New Address</div>
       </a>
     </div>
 
   </div>
 </div>
+
+<!--app-add-new-address [user]="user"></app-add-new-address>-->

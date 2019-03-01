@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Account } from './account';
+import { AccountService } from './account.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,6 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+
+  user: Account;
+
+  constructor(private accountService: AccountService) { }
+
+  ngOnInit() {
+    this.getAccount();
+  }
+
+  getAccount(): void {
+    this.accountService.getAccount()
+      .subscribe(user => this.user = user);
+  }
 
   accCollapse = false;
   ordCollapse = true;
@@ -16,7 +31,7 @@ export class ProfileComponent implements OnInit {
 
   }
 
-  getAccount() {
+  showAccount() {
     this.ordCollapse = true;
     this.accCollapse = false;
     this.giftCollapse = true;
@@ -64,9 +79,6 @@ export class ProfileComponent implements OnInit {
     document.getElementById('contact').style.color = '#0BCDB2';
   }
 
-  constructor() { }
 
-  ngOnInit() {
-  }
 
 }

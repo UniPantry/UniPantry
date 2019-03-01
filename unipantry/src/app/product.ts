@@ -10,4 +10,5 @@ export class Product {
   promotion: string;
   preference: string;
   popularity: number;
+  note: string;
 }

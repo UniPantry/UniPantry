@@ -18,6 +18,8 @@ export class ProductDetailComponent implements OnChanges {
 
   new = false;
 
+  note = false;
+
   constructor(private nav: LoggedInLandingNavComponent, private accountService: AccountService, private productService: ProductService) {
     accountService.getAccount().subscribe(account => this.account = account);
   }
@@ -50,6 +52,9 @@ export class ProductDetailComponent implements OnChanges {
 
   addToCart() {
     const quantity = parseInt((document.getElementById('quantity') as any).value, 10);
+    if (this.note) {
+      this.product.note = (document.getElementById('note-text') as any).value;
+    }
     this.nav.addToCart(this.product, quantity);
   }
 
@@ -73,5 +78,10 @@ export class ProductDetailComponent implements OnChanges {
       (document.getElementById('quantity') as any).value = newQuantity;
       productService.getSelectedProduct().subscribe(newProduct => product = newProduct);
     });
+    this.note = false;
+  }
+
+  addNote() {
+    this.note = true;
   }
 }

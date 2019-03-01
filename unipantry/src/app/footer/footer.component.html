@@ -1,5 +1,57 @@
 <div *ngIf="!loggedIn || onboarding else foot2">
-  <nav class="navbar navbar-expand-xl navbar-dark sticky-bottom" style="background: rgb(52, 52, 52);">
+  <section id="footer">
+    <div class="container">
+      <div class="row text-center text-xs-center text-sm-left text-md-left">
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a routerLink="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>For Shoppers</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a routerLink="/logged-out"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li><a routerLink="/login"><i class="fa fa-angle-double-right"></i>Log In</a></li>
+            <li><a routerLink="/signup" data-toggle="modal" data-target="#paywallModal"><i
+                  class="fa fa-angle-double-right"></i>Sign Up</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Gift Cards</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>For Drivers</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Work For Us!</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Driver Log In</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Driver Application</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Email</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>team@unipantry.com</a></li>
+            <li style="margin-top: 2vw;"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>
+                <img src="assets/images/Logos/UniPantry Logo.png" style="height: 3vw; width: 8vw;" alt="Logo">
+              </a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>2019 UniPantry, Inc. All rights
+                reserved</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Social Media</h5>
+          <ul class="list-unstyled quick-links">
+            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <nav class="navbar navbar-expand-xl navbar-dark sticky-bottom" style="background: rgb(52, 52, 52);">
     <div class="container">
       <div class="d-flex flex-column align-items-start w-100">
         <ul class="navbar-nav centered-nav">
@@ -22,7 +74,7 @@
         <img class="centered-nav" id="footer-logo" src="assets/images/Logos/UniPantry Logo.png" alt="Logo">
       </div>
     </div>
-  </nav>
+  </nav> -->
 </div>
 
 <ng-template #foot2>

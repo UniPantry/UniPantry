@@ -24,18 +24,24 @@
       </div>
       <div class="column c3 align-items-center">
         <p class="note">Note to Shopper</p>
-        <a class="add-note">
-          <div (click)="addNote(product)">
-            <i class="material-icons pencil">
-              edit
-            </i> Add?
-          </div>
-        </a>
+        <div *ngIf="product.note.length < 1">
+          <a class="add-note">
+            <div (click)="addNote(product)">
+              <i class="material-icons pencil">
+                edit
+              </i> Add?
+            </div>
+          </a>
+        </div>
+        <div *ngIf="product.note.length >= 1">
+            <textarea id="existing" style="border-radius: .75vw; border-color: #F89833; margin-top: 0vw; color: #F89833; width: 90%;" [(ngModel)]="product.note" placeholder="Click to add" maxlength="70"></textarea>
+        </div>
       </div>
       <div class="column c4 align-items-center">
         <div class="btn-group" role="group" aria-label="Quantity">
           <button type="button" class="btn btn-secondary decrease" (click)="removeFromCart(product, 1)">-</button>
-          <input class="quantity" type="number" min="1" OnlyNumber="true" value="1" (change)="updateQuantity(product)" />
+          <input class="quantity" type="number" min="1" OnlyNumber="true" value="1"
+            (change)="updateQuantity(product)" />
           <button type="button" class="btn btn-secondary increase" (click)="addToCart(product, 1)">+</button>
         </div>
       </div>
@@ -62,24 +68,30 @@
       <p>Add <span style="color: #FF6A75;">{{totalRemaining | currency}}</span> worth of items to<br>reach $30 order
         minimum.</p>
     </div>
-    <div *ngIf="giftCredit && (total >= 30) && giftCreditUsed" class="card material-elevation mdc-elevation--z3" id="subtotal-card-1">
+    <div *ngIf="giftCredit && (total >= 30) && giftCreditUsed" class="card material-elevation mdc-elevation--z3"
+      id="subtotal-card-1">
       <div class="row">
         <div class="column total-1">
           <p>Total ({{cartQuantity}} items):</p>
           <p>Gift Credit:</p>
-          <div style="border-top-width: .1vw; border-top-style: solid; border-top-color: gray; width: 100%; margin-top: 1vw; margin-bottom: 1vw;"></div>
+          <div
+            style="border-top-width: .1vw; border-top-style: solid; border-top-color: gray; width: 100%; margin-top: 1vw; margin-bottom: 1vw;">
+          </div>
           <p style="color: rgb(.5,.5,.5,.8);">Subtotal:</p>
         </div>
         <div class="column total-2">
           <p>{{total | currency}}</p>
           <p class="credit-total">-{{giftCredit | currency}}</p>
-          <div style="border-top-width: .1vw; border-top-style: solid; border-top-color: gray; width: 100%; margin-top: 1vw; margin-bottom: 1vw"></div>
+          <div
+            style="border-top-width: .1vw; border-top-style: solid; border-top-color: gray; width: 100%; margin-top: 1vw; margin-bottom: 1vw">
+          </div>
           <p style="color: rgb(.5,.5,.5,.7);">{{subtotal | currency}}</p>
         </div>
       </div>
     </div>
     <div class="column subtotal-column">
-      <div *ngIf="!giftCredit || (total < 30) || !giftCreditUsed" class="card material-elevation mdc-elevation--z3" id="subtotal-card-2">
+      <div *ngIf="!giftCredit || (total < 30) || !giftCreditUsed" class="card material-elevation mdc-elevation--z3"
+        id="subtotal-card-2">
         <div class="row">
           <div class="column total-1">
             <p>Subtotal ({{cartQuantity}} items):</p>
@@ -122,8 +134,9 @@
                   (click)="newAddress()">Add New</a>
               </div>
             </div>
-            <p class="delivery-info">{{account.shipping[i].line1}}</p>
-            <p class="delivery-info">{{account.shipping[i].line2}}</p>
+            <p class="delivery-info">{{account.shipping[i].street}}</p>
+            <p class="delivery-info">{{account.shipping[i].city}}, {{account.shipping[i].state}}
+              {{account.shipping[i].zip}}</p>
           </div>
         </div>
         <div class="row" style="width: 38%">

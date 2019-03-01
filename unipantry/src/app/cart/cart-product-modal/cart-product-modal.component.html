@@ -12,10 +12,17 @@
               <p class="name">{{product.name | titlecase}}</p>
               <p class="price">{{product.price | currency}} <del class="old-price">{{product.oldPrice | currency}}</del>
               </p>
-              <button class="btn btn-sm btn-secondary note">
-                <i class="material-icons pencil">
-                  edit
-                </i>Add Note to Shopper</button>
+              <div *ngIf="!note">
+                  <button class="btn btn-sm btn-secondary note" (click)="addNote()">
+                    <i class="material-icons pencil">
+                      edit
+                    </i>Add Note to Shopper</button>
+                </div>
+                <div *ngIf="note">
+                  <textarea
+                    id="note-text" style="border-radius: .75vw; color: gray; display: block; font-size: .95vw; margin-left: 2.5vw; margin-top: 1.3vw; padding: .5vw; width: 11vw;"
+                    placeholder="Click to add" maxlength="50"></textarea>
+                </div>
               <div class="btn-group" role="group" aria-label="Quantity">
                 <button type="button" class="btn btn-secondary decrease" (click)="decreaseQuantity()">-</button>
                 <input id="quantity" type="number" min="1" value="1" OnlyNumber="true" />

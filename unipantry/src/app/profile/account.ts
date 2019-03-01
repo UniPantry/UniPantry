@@ -11,5 +11,7 @@ export class Account {
   shipping: Address[];
   billing: Billing[];
   giftCred: number;
+  points: number;
   lists: List[];
+  //orders: number[];
 }

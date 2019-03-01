@@ -1,0 +1,151 @@
+<body>
+<app-nav></app-nav>
+  <div *ngIf="!edit; else editing" class="card material-elevation mdc-elevation--z3">
+    <form class="container" #shippingForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+      <h3>Add A New Shipping Address</h3>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Name" #name required name="name"
+          >
+        <div class="alert alert-danger" >Name is required</div>
+      </div>
+      <div class="form-group">
+        <label for="street">Street Address</label>
+        <input type="text" class="form-control" id="street" placeholder="Street Address" #street required name="street"
+          >
+        <div class="alert alert-danger" >Address is required</div>
+      </div>
+      <div class="form-row">
+        <div class="form-group city">
+          <label for="city">City</label>
+          <input type="text" class="form-control" placeholder="City" id="city"  required name="city"
+            #city>
+        </div>
+        <div class="form-group state">
+          <label for="state">State</label>
+          <select id="state" class="form-control" #state required name="state" >
+            <option value="" disabled selected>Select</option>
+            <option>AL</option>
+            <option>AK</option>
+            <option>AZ</option>
+            <option>AR</option>
+            <option>CA</option>
+            <option>CO</option>
+            <option>CT</option>
+            <option>DE</option>
+            <option>FL</option>
+            <option>GA</option>
+            <option>HI</option>
+            <option>ID</option>
+            <option>IL</option>
+            <option>IN</option>
+            <option>IA</option>
+            <option>KS</option>
+            <option>KY</option>
+            <option>LA</option>
+            <option>ME</option>
+            <option>MD</option>
+            <option>MA</option>
+            <option>MI</option>
+            <option>MN</option>
+            <option>MS</option>
+            <option>MO</option>
+            <option>MT</option>
+            <option>NE</option>
+            <option>NV</option>
+            <option>NH</option>
+            <option>NJ</option>
+            <option>NM</option>
+            <option>NY</option>
+            <option>NC</option>
+            <option>ND</option>
+            <option>OH</option>
+            <option>OK</option>
+            <option>OR</option>
+            <option>PA</option>
+            <option>RI</option>
+            <option>SC</option>
+            <option>SD</option>
+            <option>TN</option>
+            <option>TX</option>
+            <option>UT</option>
+            <option>VT</option>
+            <option>VA</option>
+            <option>WA</option>
+            <option>WV</option>
+            <option>WI</option>
+            <option>WY</option>
+          </select>
+        </div>
+        <div class="form-group zipcode">
+          <label for="zip">Zip Code</label>
+          <input type="text" class="form-control" placeholder="Zip Code" id="zip" pattern="[0-9]{5}" name="zip"
+            required #zip >
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <label class="checkbox-container">
+              <input type="checkbox" id="checkbox"  name="dorm">
+            <span class="checkmark"></span>
+            This is a dorm address
+          </label>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="btn btn-primary back" (click)="save(name.value, street.value, city.value, state.value, zip.value)" routerLink="/profile">Save</button>
+      </div>
+    </form>
+  </div>
+  <ng-template class="card material-elevation mdc-elevation--z3" #editing>
+    <div class="card material-elevation mdc-elevation--z3">
+      <form class="container" #shippingForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        <h3>Add A New Shipping Address</h3>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="{{address}}" #name required name="name"
+            >
+          <div class="alert alert-danger" >Name is required</div>
+        </div>
+        <div class="form-group">
+          <label for="street">Street Address</label>
+          <input type="text" class="form-control" id="street" placeholder="Street Address" #street required name="street"
+            >
+          <div class="alert alert-danger" >Address is required</div>
+        </div>
+        <div class="form-row">
+          <div class="form-group city">
+            <label for="city">City</label>
+            <input type="text" class="form-control" placeholder="City" id="city"  required name="city"
+              #city>
+          </div>
+          <div class="form-group state">
+            <label for="state">State</label>
+            <select id="state" class="form-control" #state required name="state" >
+              <option value="" disabled selected>Select</option>
+              
+            </select>
+          </div>
+          <div class="form-group zipcode">
+            <label for="zip">Zip Code</label>
+            <input type="text" class="form-control" placeholder="Zip Code" id="zip" pattern="[0-9]{5}" name="zip"
+              required #zip >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox">
+            <label class="checkbox-container">
+                <input type="checkbox" id="checkbox"  name="dorm">
+              <span class="checkmark"></span>
+              This is a dorm address
+            </label>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary back" (click)="save(name.value, street.value, city.value, state.value, zip.value)" routerLink="/profile">Save</button>
+        </div>
+      </form>
+    </div>
+  </ng-template>
+<app-footer></app-footer>
+</body>

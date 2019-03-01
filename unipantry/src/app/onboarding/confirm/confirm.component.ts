@@ -29,17 +29,18 @@ export class ConfirmComponent implements OnInit {
       pw: this.formData.password,
       startOfMem: date.toLocaleDateString(),
       shipping: [
-        { name: this.formData.firstName + ' ' + this.formData.lastName, line1: this.formData.address , line2: this.formData.city + ', ' +
-        this.formData.state + ' ' + this.formData.zip }
+        { name: this.formData.firstName + ' ' + this.formData.lastName, street: this.formData.address, city: this.formData.city,
+        state: this.formData.state, zip: parseInt(this.formData.zip, 10), dorm: this.formData.dorm }
       ],
       billing: [
         {
           name: this.formData.cardName, cardNum: parseInt(this.formData.cardNumber, 10), exp: this.formData.expirationDate,
-          address: { name: this.formData.cardName, line1: this.formData.billingAddress, line2: this.formData.billingCity + ', ' +
-          this.formData.billingState + ' ' + this.formData.billingZip }
+          address: { name: this.formData.cardName, street: this.formData.billingAddress, city: this.formData.billingCity,
+          state: this.formData.billingState, zip: parseInt(this.formData.billingZip, 10), dorm: false }
         }
       ],
       giftCred: 0,
+      points: 0,
       lists: []
     };
     this.formData = this.formDataService.resetFormData();

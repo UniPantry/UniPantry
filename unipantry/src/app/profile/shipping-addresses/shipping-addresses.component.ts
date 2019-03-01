@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Account } from '../account';
-import { AccountService } from '../account.service';
+import { Address } from '../address';
 
 @Component({
   selector: 'app-shipping-addresses',
@@ -9,17 +9,22 @@ import { AccountService } from '../account.service';
 })
 export class ShippingAddressesComponent implements OnInit {
 
-  user: Account;
+  @Input() user: Account;
+  currAddy: Address;
 
-  constructor(private accountService: AccountService) { }
+  edit(name) {
+    this.currAddy = {name: name, street: 'street', city: 'city', state: 'state', zip: 10458, dorm: false};
+  }
+
+  constructor() { }
 
   ngOnInit() {
-    this.getAccount();
+    this.currAddy = {name: 'name', street: 'street', city: 'city', state: 'state', zip: 10458, dorm: false};
   }
 
-  getAccount(): void {
-    this.accountService.getAccount()
-      .subscribe(user => this.user = user);
+  line2(city, state, zip) {
+    return city + ', ' + state + ', ' + zip; 
   }
+
 
 }

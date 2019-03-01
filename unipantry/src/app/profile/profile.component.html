@@ -3,13 +3,13 @@
   <div class="container-fluid row">
     <div class="sidenav material-elevation mdc-elevation--z5">
       <div style="width:100%; border-bottom: 1px solid gray; padding-bottom: 20px; padding-left: 20px; padding-top:20px;">
-        <a id="account" class="nav-link2 active ml-auto" (click)="getAccount()" routerLink="/profile">My Account</a>
+        <a id="account" class="nav-link2 active ml-auto" (click)="showAccount()" routerLink="/profile">My Account</a>
         <a id="order" class="nav-link2 active" (click)="getOrder()" routerLink="/profile">My Orders</a>
         <a id="gifty" class="nav-link2 active" (click)="getGift()" routerLink="/profile">Gift Credit</a>
       </div>
       <div style="width:100%; border-bottom: 1px solid gray; padding-bottom: 20px; padding-left: 20px; padding-top:20px;">
         <a class="nav-link2 active ml-auto" routerLink="/refer-friend">Refer A Friend</a>
-        <a class="nav-link2 active" routerLink="">Buy A Gift Card</a>
+        <a class="nav-link2 active" routerLink="/gift-card">Buy A Gift Card</a>
       </div>
       <div style="width:100%; border-bottom: 1px solid gray; padding-bottom: 20px; padding-left: 20px; padding-top:20px;">
         <a id="contact" class="nav-link2 active ml-auto" (click)="getContact()" routerLink="/profile">Contact Us</a>
@@ -25,9 +25,9 @@
         <!-- show my account section if accCollapse = false and hide otherwise-->
         <div class="page">
           <h2 style="font-weight: 400;">My Account</h2>
-          <app-account-details></app-account-details>
-          <app-shipping-addresses></app-shipping-addresses>
-          <app-payment-methods></app-payment-methods>
+          <app-account-details [user]="user"></app-account-details>
+          <app-shipping-addresses [user]="user"></app-shipping-addresses>
+          <app-payment-methods [user]="user"></app-payment-methods>
         </div>
       </div>
 
@@ -43,7 +43,7 @@
         <!-- show my gift credit section if giftCollapse = false and hide otherwise-->
         <div class="page">
           <h2 style="font-weight: 400;">Gift Credit</h2>
-          <app-gift-credit></app-gift-credit>
+          <app-gift-credit [user]="user"></app-gift-credit>
         </div>
       </div>
 
