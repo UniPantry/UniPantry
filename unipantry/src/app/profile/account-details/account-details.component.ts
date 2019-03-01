@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Account } from '../account';
-import { AccountService } from '../account.service';
 
 @Component({
   selector: 'app-account-details',
@@ -9,7 +8,7 @@ import { AccountService } from '../account.service';
 })
 export class AccountDetailsComponent implements OnInit {
 
-  user: Account;
+  @Input() user: Account;
 
   edit = false;
 
@@ -24,15 +23,10 @@ export class AccountDetailsComponent implements OnInit {
     this.edit = false;
   }
 
-  constructor(private accountService: AccountService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getAccount();
   }
 
-  getAccount(): void {
-    this.accountService.getAccount()
-      .subscribe(user => this.user = user);
-  }
 
 }

@@ -17,6 +17,7 @@ import { LoginComponent } from './onboarding/login/login.component';
 import { RequestComponent } from './onboarding/request/request.component';
 import { CompleteRequestComponent } from './onboarding/request/complete-request/complete-request.component';
 import { WelcomeComponent } from './onboarding/welcome/welcome.component';
+import { AddNewAddressComponent } from './profile/shipping-addresses/add-new-address/add-new-address.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/logged-out', pathMatch: 'full' },
@@ -36,7 +37,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'request', component: RequestComponent },
   { path: 'complete-request', component: CompleteRequestComponent },
-  { path: 'welcome', component: WelcomeComponent }
+  { path: 'welcome', component: WelcomeComponent },
+  { path: 'add-new-address', component: AddNewAddressComponent }
 ];
 
 @NgModule({

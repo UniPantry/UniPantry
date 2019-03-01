@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Account } from '../account';
-import { AccountService } from '../account.service';
 
 @Component({
   selector: 'app-gift-credit',
@@ -9,18 +8,11 @@ import { AccountService } from '../account.service';
 })
 export class GiftCreditComponent implements OnInit {
 
-  user: Account;
+  @Input() user: Account;
 
-  constructor(private accountService: AccountService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getAccount();
   }
-
-  getAccount(): void {
-    this.accountService.getAccount()
-      .subscribe(user => this.user = user);
-  }
-
 
 }

@@ -5,7 +5,27 @@
 
   <div class="row details">
 
-    <div *ngFor="let bill of user.billing" style="position:relative; margin-bottom: 5%; padding:3% 20px; border: 1px solid #909090; border-radius:5px; width:100%;">
+      <div style="padding-top:3%; border: 1px solid #909090; border-radius:5px; text-align: center; height: 10vh; width:100%;position:relative;">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-1">
+              <a class="add" href="#"><i style="position: absolute;" class="material-icons" id="add">add_circle_outline</i>
+                <!--<span style="position: absolute; top:3vh; left:8vw; font-weight:200;">Add New Payment
+                  Methods
+                </span> -->
+              </a>
+            </div>
+            <div class="col-md-5">
+              <span href="#" style="font-weight:200; line-height: 4vw;">Add New Payment
+                Methods
+              </span> 
+            </div>
+            <div class="col-md-3"></div>
+    
+          </div>
+      </div>
+
+    <div *ngFor="let bill of user.billing" style="position:relative; margin-top: 5%; padding:3% 20px; border: 1px solid #909090; border-radius:5px; width:100%;">
 
       <div class="row" style="padding-left:2%;">
         <div style="width:100%;"><span>Visa Card ending in {{bill.cardNum%10000}}</span></div>
@@ -33,11 +53,7 @@
 
     </div>
 
-    <div style="padding:20px; border: 1px solid #909090; border-radius:5px; text-align: center; height: 10vh; width:100%;position:relative;">
-      <a class="add" href="#"><i style="position: absolute;top:2.5vh; left: 2.5vw;" class="material-icons" id="add">add_circle</i>
-        <span style="position: absolute; border: 1px solid black; top:3vh; left:8vw; font-weight:200;">Add New Payment
-          Methods</span> </a>
-    </div>
+    
 
   </div>
 </div>

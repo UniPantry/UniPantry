@@ -1,5 +1,9 @@
+
 export class Address {
   name: string;
-  line1: string;
-  line2: string;
+  street: string;
+  city: string;
+  state: string;
+  zip: number;
+  dorm: boolean;
 }

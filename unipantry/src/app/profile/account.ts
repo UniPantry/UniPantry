@@ -1,5 +1,6 @@
 import { Billing } from './billing';
 import { Address } from './address';
+import { List } from '../lists/list';
 
 export class Account {
   name: string;
@@ -10,4 +11,7 @@ export class Account {
   shipping: Address[];
   billing: Billing[];
   giftCred: number;
+  points: number;
+  lists: List[];
+  //orders: number[];
 }

@@ -58,6 +58,7 @@ import { RequestComponent } from './onboarding/request/request.component';
 import { CompleteRequestComponent } from './onboarding/request/complete-request/complete-request.component';
 import { WelcomeComponent } from './onboarding/welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddNewAddressComponent } from './profile/shipping-addresses/add-new-address/add-new-address.component';
 
 
 @NgModule({
@@ -109,7 +110,8 @@ import { HttpClientModule } from '@angular/common/http';
     EqualValidator,
     RequestComponent,
     CompleteRequestComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AddNewAddressComponent
   ],
   imports: [
     BrowserModule,
