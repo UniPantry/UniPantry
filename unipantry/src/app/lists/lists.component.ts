@@ -11,7 +11,7 @@ import { ListService } from '../list.service';
 })
 export class ListsComponent implements OnInit, OnChanges {
 
-  private account: Account;
+  account: Account;
 
   selectedLists: List[];
 
