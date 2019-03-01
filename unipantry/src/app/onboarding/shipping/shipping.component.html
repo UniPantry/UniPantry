@@ -15,11 +15,11 @@
       <div class="form-group city">
         <label for="city">City</label>
         <input type="text" class="form-control" placeholder="City" id="city" #city="ngModel" required name="city"
-          [(ngModel)]="shipping.city" disabled>
+          [(ngModel)]="shipping.city">
       </div>
       <div class="form-group state">
         <label for="state">State</label>
-        <select id="state" class="form-control" #state="ngModel" required name="state" [(ngModel)]="shipping.state" disabled>
+        <select id="state" class="form-control" #state="ngModel" required name="state" [(ngModel)]="shipping.state">
           <option value="" disabled selected>Select</option>
           <option>AL</option>
           <option>AK</option>
